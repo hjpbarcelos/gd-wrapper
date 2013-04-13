@@ -18,7 +18,7 @@ abstract class AbstractResource {
 	/**
 	 * @var resource Keeps a GD2 image resource.
 	 */
-	private $rawResource;
+	private $raw;
 
 	/**
 	 * Constructor for AbstractResource objects.
@@ -41,7 +41,7 @@ abstract class AbstractResource {
 		if (is_string($resource)) {
 			$this->createResource($resource);
 		} else {
-			$this->setRawResource($resource);	
+			$this->setRaw($resource);	
 		}
 	}
 
@@ -49,8 +49,8 @@ abstract class AbstractResource {
 	 * Destroys the image resource if it still exists.
 	 */
 	final public function __destruct() {
-		if (is_resource($this->rawResource)) {
-			imagedestroy($this->rawResource);
+		if (is_resource($this->raw)) {
+			imagedestroy($this->raw);
 		}
 	}
 
@@ -61,7 +61,7 @@ abstract class AbstractResource {
 	 */
 	final public function __clone() 
 	{
-		$this->rawResource = $this->cloneResource();
+		$this->raw = $this->cloneResource();
 	}
 
 	/**
@@ -71,7 +71,7 @@ abstract class AbstractResource {
 	 */
 	private function cloneResource() {
 		ob_start();
-		imagegd2($this->rawResource);
+		imagegd2($this->raw);
 		return imagecreatefromstring(ob_get_clean());
 	}
 
@@ -84,27 +84,24 @@ abstract class AbstractResource {
 	 * @throws \InvalidArgumentException If <code>$resource</code> is not a
 	 * 		valid resource.
 	 */
-	public function setRawResource($resource) 
+	public function setRaw($resource) 
 	{
 		if (!is_resource($resource)) {
 			throw new \InvalidArgumentException(
 				'Invalid resource passed to ' . get_class($this)
 			);
 		}
-		$this->rawResource = $resource;
+		$this->raw = $resource;
 	}
 
 	/**
 	 * Obtains the raw GD2 image resource of this wrapper object.
 	 * 
-	 * If $copy is true, a cloned resource will be returned instead of 
-	 * the original one.
-	 *  
 	 * @return resource A valid GD2 image resource.
 	 */
 	public function raw() 
 	{
-		return $this->rawResource;
+		return $this->raw;
 	}
 
 	/**
@@ -122,7 +119,7 @@ abstract class AbstractResource {
 			);
 		}
 
-		$this->setRawResource($this->doCreateResource($filepath));
+		$this->setRaw($this->doCreateResource($filepath));
 	}
 
 	/**

@@ -33,14 +33,14 @@
 </g>
 <!-- \\GdWrapper\\Resource\\PngResource -->
 <g id="node3" class="node"><title>\\GdWrapper\\Resource\\PngResource</title>
-<a xlink:href="GdWrapper.Resource.PngResource.html" xlink:title="PngResource" target="_parent">
+<a xlink:href="Resource.PngResource.html" xlink:title="PngResource" target="_parent">
 <polygon fill="none" stroke="black" points="316,-214 226,-214 226,-178 316,-178 316,-214"/>
 <text text-anchor="middle" x="271" y="-193.1" font-family="Courier,monospace" font-size="11.00">PngResource</text>
 </a>
 </g>
 <!-- \\GdWrapper\\Resource\\AbstractResource -->
 <g id="node6" class="node"><title>\\GdWrapper\\Resource\\AbstractResource</title>
-<a xlink:href="GdWrapper.Resource.AbstractResource.html" xlink:title="«abstract»&lt;br/&gt;AbstractResource" target="_parent">
+<a xlink:href="Resource.AbstractResource.html" xlink:title="«abstract»&lt;br/&gt;AbstractResource" target="_parent">
 <polygon fill="none" stroke="black" points="150,-160 24,-160 24,-124 150,-124 150,-160"/>
 <text text-anchor="start" x="53" y="-147.433" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
 <text text-anchor="start" x="32.5" y="-134.233" font-family="Courier,monospace" font-size="11.00">AbstractResource</text>
@@ -53,7 +53,7 @@
 </g>
 <!-- \\GdWrapper\\Resource\\JpegResource -->
 <g id="node4" class="node"><title>\\GdWrapper\\Resource\\JpegResource</title>
-<a xlink:href="GdWrapper.Resource.JpegResource.html" xlink:title="JpegResource" target="_parent">
+<a xlink:href="Resource.JpegResource.html" xlink:title="JpegResource" target="_parent">
 <polygon fill="none" stroke="black" points="320,-160 222,-160 222,-124 320,-124 320,-160"/>
 <text text-anchor="middle" x="271" y="-139.1" font-family="Courier,monospace" font-size="11.00">JpegResource</text>
 </a>
@@ -65,7 +65,7 @@
 </g>
 <!-- \\GdWrapper\\Resource\\GifResource -->
 <g id="node5" class="node"><title>\\GdWrapper\\Resource\\GifResource</title>
-<a xlink:href="GdWrapper.Resource.GifResource.html" xlink:title="GifResource" target="_parent">
+<a xlink:href="Resource.GifResource.html" xlink:title="GifResource" target="_parent">
 <polygon fill="none" stroke="black" points="316,-106 226,-106 226,-70 316,-70 316,-106"/>
 <text text-anchor="middle" x="271" y="-85.1" font-family="Courier,monospace" font-size="11.00">GifResource</text>
 </a>
@@ -77,7 +77,7 @@
 </g>
 <!-- \\GdWrapper\\Preset -->
 <g id="node7" class="node"><title>\\GdWrapper\\Preset</title>
-<a xlink:href="GdWrapper.Preset.html" xlink:title="Preset" target="_parent">
+<a xlink:href="Preset.html" xlink:title="Preset" target="_parent">
 <polygon fill="none" stroke="black" points="299,-52 243,-52 243,-16 299,-16 299,-52"/>
 <text text-anchor="middle" x="271" y="-31.1" font-family="Courier,monospace" font-size="11.00">Preset</text>
 </a>
