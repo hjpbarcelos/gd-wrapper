@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="">
+  <file path="autoload.php" hash="f2d23269b7bb98a9b06ec6bba9f53d9c" package="Default">
+    <include line="7" type="Require Once" package="Default">
+      <name/>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file autoload.php</error>
+    </parse_markers>
+  </file>
+  <file path="GdWrapper/Preset.php" hash="9f93e1123f8c13ce8273887e0b81a8b1" package="Default">
+    <docblock line="2">
+      <description>Defines Preset "enum".</description>
+      <long-description/>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <interface namespace="GdWrapper" line="18" package="GdWrapper">
+      <name>Preset</name>
+      <full_name>\GdWrapper\Preset</full_name>
+      <docblock line="10">
+        <description>Contains some preset definitions for image output quality.</description>
+        <long-description>&lt;p&gt;Simulates a Java enum.&lt;/p&gt;</long-description>
+        <tag line="10" name="author" description="Henrique Barcelos"/>
+        <tag line="10" name="package" description="GdWrapper"/>
+      </docblock>
+      <constant namespace="GdWrapper" line="25" package="GdWrapper">
+        <name>IMAGE_QUALITY_MAX</name>
+        <full_name>IMAGE_QUALITY_MAX</full_name>
+        <value>100</value>
+        <docblock line="20">
+          <description>100</description>
+          <long-description/>
+          <tag line="20" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="GdWrapper" line="32" package="GdWrapper">
+        <name>IMAGE_QUALITY_HIGH</name>
+        <full_name>IMAGE_QUALITY_HIGH</full_name>
+        <value>90</value>
+        <docblock line="27">
+          <description>90</description>
+          <long-description/>
+          <tag line="27" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="GdWrapper" line="39" package="GdWrapper">
+        <name>IMAGE_QUALITY_MED</name>
+        <full_name>IMAGE_QUALITY_MED</full_name>
+        <value>60</value>
+        <docblock line="34">
+          <description>60</description>
+          <long-description/>
+          <tag line="34" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="GdWrapper" line="46" package="GdWrapper">
+        <name>IMAGE_QUALITY_LOW</name>
+        <full_name>IMAGE_QUALITY_LOW</full_name>
+        <value>40</value>
+        <docblock line="41">
+          <description>40</description>
+          <long-description/>
+          <tag line="41" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="GdWrapper" line="53" package="GdWrapper">
+        <name>IMAGE_QUALITY_DRAFT</name>
+        <full_name>IMAGE_QUALITY_DRAFT</full_name>
+        <value>30</value>
+        <docblock line="48">
+          <description>30</description>
+          <long-description/>
+          <tag line="48" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </constant>
+    </interface>
+  </file>
+  <file path="GdWrapper/Resource/PngResource.php" hash="9b1e8beb9e429bce9da001a74355239d" package="Default">
+    <docblock line="2">
+      <description>Defines PngResource class.</description>
+      <long-description/>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="GdWrapper\Resource" line="17" package="GdWrapper\Resource">
+      <extends>\GdWrapper\Resource\AbstractResource</extends>
+      <name>PngResource</name>
+      <full_name>\GdWrapper\Resource\PngResource</full_name>
+      <docblock line="11">
+        <description>Represents a PNG image resource.</description>
+        <long-description/>
+        <tag line="11" name="author" description="Henrique Barcelos"/>
+        <tag line="11" name="package" description="GdWrapper\Resource"/>
+      </docblock>
+      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="26" package="GdWrapper\Resource">
+        <name>doCreateResource</name>
+        <full_name>doCreateResource</full_name>
+        <docblock line="19">
+          <description>Creates a resource with `imagecreatefrompng` function.</description>
+          <long-description>&lt;p&gt;{@inheritdoc}&lt;/p&gt;</long-description>
+          <tag line="19" name="return" description="A new PngResource instance." type="\GdWrapper\Resource\JpegResource">
+            <type by_reference="false">\GdWrapper\Resource\JpegResource</type>
+          </tag>
+          <tag line="19" name="see" description="\GdWrapper\Resource.AbstractResource::doCreateResource()" refers="\GdWrapper\Resource.AbstractResource::doCreateResource()"/>
+        </docblock>
+        <argument line="26">
+          <name>$filepath</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="37" package="GdWrapper\Resource">
+        <name>doOutput</name>
+        <full_name>doOutput</full_name>
+        <docblock line="31">
+          <description>Outputs a resource with `imagepng` function.</description>
+          <long-description>&lt;p&gt;{@inheritdoc}&lt;/p&gt;</long-description>
+          <tag line="31" name="see" description="\GdWrapper\Resource.AbstractResource::doOutput()" refers="\GdWrapper\Resource.AbstractResource::doOutput()"/>
+        </docblock>
+        <argument line="38">
+          <name>$filename</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$quality</name>
+          <default>\GdWrapper\Preset::IMAGE_QUALITY_MAX</default>
+          <type/>
+        </argument>
+        <argument line="40">
+          <name>$additionalParameters</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="19" code="50015">Argument $filepath is missing from the Docblock of doCreateResource()</error>
+      <error line="31" code="50015">Argument $filename is missing from the Docblock of doOutput()</error>
+      <error line="31" code="50015">Argument $quality is missing from the Docblock of doOutput()</error>
+      <error line="31" code="50015">Argument $additionalParameters is missing from the Docblock of doOutput()</error>
+    </parse_markers>
+  </file>
+  <file path="GdWrapper/Resource/JpegResource.php" hash="1a7bbde13a5bd69563d117349ff3bf1c" package="Default">
+    <docblock line="2">
+      <description>Defines JpegResource class.</description>
+      <long-description/>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="GdWrapper\Resource" line="18" package="GdWrapper\Resource">
+      <extends>\GdWrapper\Resource\AbstractResource</extends>
+      <name>JpegResource</name>
+      <full_name>\GdWrapper\Resource\JpegResource</full_name>
+      <docblock line="12">
+        <description>Represents a Jpeg image resource.</description>
+        <long-description/>
+        <tag line="12" name="author" description="Henrique Barcelos"/>
+        <tag line="12" name="package" description="GdWrapper\Resource"/>
+      </docblock>
+      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="27" package="GdWrapper\Resource">
+        <name>doCreateResource</name>
+        <full_name>doCreateResource</full_name>
+        <docblock line="20">
+          <description>Creates a resource with `imagecreatefromjpeg` function.</description>
+          <long-description>&lt;p&gt;{@inheritdoc}&lt;/p&gt;</long-description>
+          <tag line="20" name="return" description="A new JpegResource instance." type="\GdWrapper\Resource\JpegResource">
+            <type by_reference="false">\GdWrapper\Resource\JpegResource</type>
+          </tag>
+          <tag line="20" name="see" description="\GdWrapper\Resource.AbstractResource::doCreateResource()" refers="\GdWrapper\Resource.AbstractResource::doCreateResource()"/>
+        </docblock>
+        <argument line="27">
+          <name>$filepath</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="38" package="GdWrapper\Resource">
+        <name>doOutput</name>
+        <full_name>doOutput</full_name>
+        <docblock line="32">
+          <description>Outputs a resource with `imagejpeg` function.</description>
+          <long-description>&lt;p&gt;{@inheritdoc}&lt;/p&gt;</long-description>
+          <tag line="32" name="see" description="\GdWrapper\Resource.AbstractResource::doOutput()" refers="\GdWrapper\Resource.AbstractResource::doOutput()"/>
+        </docblock>
+        <argument line="39">
+          <name>$filename</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="40">
+          <name>$quality</name>
+          <default>\GdWrapper\Preset::IMAGE_QUALITY_MAX</default>
+          <type/>
+        </argument>
+        <argument line="41">
+          <name>$additionalParameters</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="20" code="50015">Argument $filepath is missing from the Docblock of doCreateResource()</error>
+      <error line="32" code="50015">Argument $filename is missing from the Docblock of doOutput()</error>
+      <error line="32" code="50015">Argument $quality is missing from the Docblock of doOutput()</error>
+      <error line="32" code="50015">Argument $additionalParameters is missing from the Docblock of doOutput()</error>
+    </parse_markers>
+  </file>
+  <file path="GdWrapper/Resource/GifResource.php" hash="d40f2aa7d18ffcce9722d360077a9d2e" package="Default">
+    <docblock line="2">
+      <description>Defines GifResource class.</description>
+      <long-description/>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="GdWrapper\Resource" line="17" package="GdWrapper\Resource">
+      <extends>\GdWrapper\Resource\AbstractResource</extends>
+      <name>GifResource</name>
+      <full_name>\GdWrapper\Resource\GifResource</full_name>
+      <docblock line="11">
+        <description>Represents a GIF image resource.</description>
+        <long-description/>
+        <tag line="11" name="author" description="Henrique Barcelos"/>
+        <tag line="11" name="package" description="GdWrapper\Resource"/>
+      </docblock>
+      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="26" package="GdWrapper\Resource">
+        <name>doCreateResource</name>
+        <full_name>doCreateResource</full_name>
+        <docblock line="19">
+          <description>Creates a resource with `imagecreatefromgif` function.</description>
+          <long-description>&lt;p&gt;{@inheritdoc}&lt;/p&gt;</long-description>
+          <tag line="19" name="return" description="A new GifResource instance." type="\GdWrapper\Resource\JpegResource">
+            <type by_reference="false">\GdWrapper\Resource\JpegResource</type>
+          </tag>
+          <tag line="19" name="see" description="\GdWrapper\Resource.AbstractResource::doCreateResource()" refers="\GdWrapper\Resource.AbstractResource::doCreateResource()"/>
+        </docblock>
+        <argument line="26">
+          <name>$filepath</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="37" package="GdWrapper\Resource">
+        <name>doOutput</name>
+        <full_name>doOutput</full_name>
+        <docblock line="31">
+          <description>Outputs a resource with `imagegif` function.</description>
+          <long-description>&lt;p&gt;{@inheritdoc}&lt;/p&gt;</long-description>
+          <tag line="31" name="see" description="\GdWrapper\Resource.AbstractResource::doOutput()" refers="\GdWrapper\Resource.AbstractResource::doOutput()"/>
+        </docblock>
+        <argument line="38">
+          <name>$filename</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="39">
+          <name>$quality</name>
+          <default>\GdWrapper\Preset::IMAGE_QUALITY_MAX</default>
+          <type/>
+        </argument>
+        <argument line="40">
+          <name>$additionalParameters</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="19" code="50015">Argument $filepath is missing from the Docblock of doCreateResource()</error>
+      <error line="31" code="50015">Argument $filename is missing from the Docblock of doOutput()</error>
+      <error line="31" code="50015">Argument $quality is missing from the Docblock of doOutput()</error>
+      <error line="31" code="50015">Argument $additionalParameters is missing from the Docblock of doOutput()</error>
+    </parse_markers>
+  </file>
+  <file path="GdWrapper/Resource/AbstractResource.php" hash="2f973f9b276539b580ed0e3e71423bc2" package="Default">
+    <docblock line="2">
+      <description>Defines AbstractResource class.</description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="true" namespace="GdWrapper\Resource" line="17" package="GdWrapper\Resource">
+      <extends/>
+      <name>AbstractResource</name>
+      <full_name>\GdWrapper\Resource\AbstractResource</full_name>
+      <docblock line="10">
+        <description>Wrapper for GD2 image resource type.</description>
+        <long-description></long-description>
+        <tag line="10" name="uses" description="\GdWrapper\Preset" refers="\GdWrapper\Preset"/>
+        <tag line="10" name="author" description="Henrique Barcelos"/>
+        <tag line="10" name="package" description="GdWrapper\Resource"/>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="21" namespace="GdWrapper\Resource" package="Default">
+        <name>$rawResource</name>
+        <default></default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+          <tag line="18" name="var" description="Keeps a GD2 image resource." type="resource">
+            <type by_reference="false">resource</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="39" package="GdWrapper\Resource">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="23">
+          <description>Constructor for AbstractResource objects.</description>
+          <long-description>&lt;p&gt;This constructor has 2 possible assignatures:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;self::__construct($resource})&lt;/code&gt; if you already have a valid resource&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;self::__construct($filepath})&lt;/code&gt; will try to create a resource from
+    a file in &lt;code&gt;$filepath&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</long-description>
+          <tag line="23" name="param" description="A GD2 image resource or a filepath&#10;&#9;&#9;from which try to create one." type="resource|string" variable="$resource">
+            <type by_reference="false">resource</type>
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="23" name="throws" description="If constructor 1 is used&#10;&#9;&#9;and &lt;code&gt;$resource&lt;/code&gt; is not a valid resource." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+          <tag line="23" name="throws" description="If constructor 2 is used&#10;&#9;&#9;and &lt;code&gt;$resource&lt;/code&gt; is not a path to a valid file." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="39">
+          <name>$resource</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="51" package="GdWrapper\Resource">
+        <name>__destruct</name>
+        <full_name>__destruct</full_name>
+        <docblock line="48">
+          <description>Destroys the image resource if it still exists.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="62" package="GdWrapper\Resource">
+        <name>__clone</name>
+        <full_name>__clone</full_name>
+        <docblock line="57">
+          <description>Clones the current object.</description>
+          <long-description></long-description>
+          <tag line="57" name="return" description="" type="\GdWrapper\Resource\AbstractResource">
+            <type by_reference="false">\GdWrapper\Resource\AbstractResource</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="GdWrapper\Resource" line="72" package="GdWrapper\Resource">
+        <name>cloneResource</name>
+        <full_name>cloneResource</full_name>
+        <docblock line="67">
+          <description>Workarround method for cloning a GD2 image resource.</description>
+          <long-description></long-description>
+          <tag line="67" name="return" description="" type="resource">
+            <type by_reference="false">resource</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="87" package="GdWrapper\Resource">
+        <name>setRawResource</name>
+        <full_name>setRawResource</full_name>
+        <docblock line="79">
+          <description>Sets a GD2 image resource to this wrapper object.</description>
+          <long-description></long-description>
+          <tag line="79" name="param" description="A valid GD2 image resource." type="resource" variable="$resource">
+            <type by_reference="false">resource</type>
+          </tag>
+          <tag line="79" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+          <tag line="79" name="throws" description="If &lt;code&gt;$resource&lt;/code&gt; is not a&#10;&#9;&#9;valid resource." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="87">
+          <name>$resource</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="105" package="GdWrapper\Resource">
+        <name>raw</name>
+        <full_name>raw</full_name>
+        <docblock line="97">
+          <description>Obtains the raw GD2 image resource of this wrapper object.</description>
+          <long-description>&lt;p&gt;If $copy is true, a cloned resource will be returned instead of
+the original one.&lt;/p&gt;</long-description>
+          <tag line="97" name="return" description="A valid GD2 image resource." type="resource">
+            <type by_reference="false">resource</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="GdWrapper\Resource" line="118" package="GdWrapper\Resource">
+        <name>createResource</name>
+        <full_name>createResource</full_name>
+        <docblock line="110">
+          <description>Tries to create an image resource based on a filepath.</description>
+          <long-description></long-description>
+          <tag line="110" name="param" description="The path to a valid image." type="string" variable="$filepath">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="110" name="return" description="A new concrete object of type AbstractResource." type="resource">
+            <type by_reference="false">resource</type>
+          </tag>
+          <tag line="110" name="throws" description="If &lt;code&gt;$filepath&lt;/code&gt; is not a&#10;&#9;&#9;path to a valid file." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="118">
+          <name>$filepath</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Resource" line="134" package="GdWrapper\Resource">
+        <name>doCreateResource</name>
+        <full_name>doCreateResource</full_name>
+        <docblock line="128">
+          <description>Creates an image resource based on a valid filepath.</description>
+          <long-description></long-description>
+          <tag line="128" name="param" description="A path to a valid file." type="string" variable="$filepath">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="128" name="return" description="A new concrete object of type AbstractResource." type="resource">
+            <type by_reference="false">resource</type>
+          </tag>
+        </docblock>
+        <argument line="134">
+          <name>$filepath</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="156" package="GdWrapper\Resource">
+        <name>output</name>
+        <full_name>output</full_name>
+        <docblock line="136">
+          <description>Outputs the resource as an image.</description>
+          <long-description>&lt;p&gt;If &lt;code&gt;$filename&lt;/code&gt; points to a file, this method will try
+to (over)write it.&lt;/p&gt;
+
+&lt;p&gt;Otherwise if it is null or just a extension name, like &lt;code&gt;'png'&lt;/code&gt; or
+        &lt;code&gt;'jpeg'&lt;/code&gt;, the output will be send to the browser instead.&lt;/p&gt;</long-description>
+          <tag line="136" name="param" description="(optional) A filename to save a file or&#10;&#9;&#9;`null` if you want to send the output the browser." type="string|null" variable="$filename">
+            <type by_reference="false">string</type>
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="136" name="param" description="(optional) The quality of the generated image.&#10;&#9;&#9;It MUST be in a range from 0 (worst) to 100 (best)" type="integer" variable="$quality">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="136" name="param" description="(optional) additional parameters&#10;&#9;&#9;to generate output." type="mixed" variable="$additionalParameters">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="136" name="return" description="If resource was succesfully outputed." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="136" name="throws" description="If you are trying to save a file in&#10;&#9;&#9;an inexistent or unwritable directory or if the quality is not&#10;&#9;&#9;valid." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="157">
+          <name>$filename</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="158">
+          <name>$quality</name>
+          <default>\GdWrapper\Preset::IMAGE_QUALITY_MAX</default>
+          <type/>
+        </argument>
+        <argument line="159">
+          <name>$additionalParameters</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Resource" line="205" package="GdWrapper\Resource">
+        <name>doOutput</name>
+        <full_name>doOutput</full_name>
+        <docblock line="195">
+          <description>Actually creates the output.</description>
+          <long-description></long-description>
+          <tag line="195" name="param" description="(optional) A filename to save a file or&#10;&#9;&#9;`null` if you want to send the output the browser." type="string|null" variable="$filename">
+            <type by_reference="false">string</type>
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="195" name="param" description="(optional) The quality of the generated image.&#10;&#9;&#9;It MUST be in a range from 0 (worst) to 100 (best)" type="integer" variable="$quality">
+            <type by_reference="false">integer</type>
+          </tag>
+          <tag line="195" name="param" description="(optional)" type="mixed" variable="$additionalParameters">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="195" name="return" description="If resource was succesfully outputed." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="206">
+          <name>$filename</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="207">
+          <name>$quality</name>
+          <default>\GdWrapper\Preset::IMAGE_QUALITY_MAX</default>
+          <type/>
+        </argument>
+        <argument line="208">
+          <name>$additionalParameters</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="GdWrapper\Resource" line="221" package="GdWrapper\Resource">
+        <name>factory</name>
+        <full_name>factory</full_name>
+        <docblock line="211">
+          <description>Returns a concrete instance of a AbstractResource based on the file
+extension of `$path`.</description>
+          <long-description></long-description>
+          <tag line="211" name="param" description="the path to an image file." type="string" variable="$path">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="211" name="return" description="A concrete implementation of AbstractResource" type="\GdWrapper\Resource\AbstractResource">
+            <type by_reference="false">\GdWrapper\Resource\AbstractResource</type>
+          </tag>
+          <tag line="211" name="throws" description="If the file type is not currently supported." type="\DomainException">
+            <type by_reference="false">\DomainException</type>
+          </tag>
+          <tag line="211" name="throws" description="If &lt;code&gt;$filepath&lt;/code&gt; is not a&#10;&#9;&#9;path to a valid file." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="221">
+          <name>$path</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="GdWrapper\Resource" line="248" package="GdWrapper\Resource">
+        <name>copy</name>
+        <full_name>copy</full_name>
+        <docblock line="231">
+          <description>Creates a new AbstractResource concrete instance as a copy of `$orig`.</description>
+          <long-description>&lt;p&gt;If &lt;code&gt;$newType&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;, this method will just return a clone of the
+        original object.&lt;/p&gt;
+
+&lt;p&gt;Otherwise it will try to create an instance for the type &lt;code&gt;$newType&lt;/code&gt;,
+hading it a copy of the raw resource of this object in its constructor.&lt;/p&gt;
+
+&lt;p&gt;This method is useful when you try to convert an image into a
+different type.&lt;/p&gt;</long-description>
+          <tag line="231" name="param" description="The prototype resource." type="\GdWrapper\Resource\AbstractResource" variable="$orig">
+            <type by_reference="false">\GdWrapper\Resource\AbstractResource</type>
+          </tag>
+          <tag line="231" name="param" description="(optional) The desired type of resource." type="string|null" variable="$newType">
+            <type by_reference="false">string</type>
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="231" name="throws" description="If &lt;code&gt;$newType&lt;/code&gt; is not a currently&#10;&#9;&#9;supported file type." type="\DomainException">
+            <type by_reference="false">\DomainException</type>
+          </tag>
+        </docblock>
+        <argument line="248">
+          <name>$orig</name>
+          <default></default>
+          <type>\GdWrapper\Resource\AbstractResource</type>
+        </argument>
+        <argument line="248">
+          <name>$newType</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="GdWrapper" full_name="GdWrapper">
+    <package name="Resource" full_name="GdWrapper\Resource"/>
+  </package>
+  <namespace name="GdWrapper" full_name="GdWrapper">
+    <namespace name="Resource" full_name="GdWrapper\Resource"/>
+  </namespace>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
