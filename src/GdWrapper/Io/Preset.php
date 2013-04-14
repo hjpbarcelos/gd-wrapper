@@ -5,17 +5,14 @@
  * @author Henrique Barcelos
  */
 
-namespace GdWrapper;
+namespace GdWrapper\Io;
 
 /**
  * Contains some preset definitions for image output quality.
  * 
  * Simulates a Java enum.
- * 
- * @author Henrique Barcelos
- * @package GdWrapper
  */
-interface Preset 
+interface Preset
 {
 	/**
 	 * 100
