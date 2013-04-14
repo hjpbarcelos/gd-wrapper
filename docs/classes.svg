@@ -21,14 +21,14 @@
 <text text-anchor="middle" x="365" y="-688.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">GdWrapper</text>
 </g>
 <g id="graph3" class="cluster"><title>cluster_GdWrapper\Image</title>
-<polyline fill="none" stroke="gray" points="611,-188 681,-188 "/>
-<path fill="none" stroke="gray" d="M681,-188C687,-188 693,-194 693,-200"/>
-<polyline fill="none" stroke="gray" points="693,-200 693,-250 "/>
-<path fill="none" stroke="gray" d="M693,-250C693,-256 687,-262 681,-262"/>
-<polyline fill="none" stroke="gray" points="681,-262 611,-262 "/>
-<path fill="none" stroke="gray" d="M611,-262C605,-262 599,-256 599,-250"/>
-<polyline fill="none" stroke="gray" points="599,-250 599,-200 "/>
-<path fill="none" stroke="gray" d="M599,-200C599,-194 605,-188 611,-188"/>
+<polyline fill="none" stroke="gray" points="623,-188 669,-188 "/>
+<path fill="none" stroke="gray" d="M669,-188C675,-188 681,-194 681,-200"/>
+<polyline fill="none" stroke="gray" points="681,-200 681,-250 "/>
+<path fill="none" stroke="gray" d="M681,-250C681,-256 675,-262 669,-262"/>
+<polyline fill="none" stroke="gray" points="669,-262 623,-262 "/>
+<path fill="none" stroke="gray" d="M623,-262C617,-262 611,-256 611,-250"/>
+<polyline fill="none" stroke="gray" points="611,-250 611,-200 "/>
+<path fill="none" stroke="gray" d="M611,-200C611,-194 617,-188 623,-188"/>
 <text text-anchor="middle" x="646" y="-248.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">Image</text>
 </g>
 <g id="graph4" class="cluster"><title>cluster_GdWrapper\Io</title>
@@ -75,11 +75,11 @@
 <path fill="none" stroke="gray" d="M602,-118C602,-112 608,-106 614,-106"/>
 <text text-anchor="middle" x="646" y="-166.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">Resource</text>
 </g>
-<!-- \\GdWrapper\\Image\\ImageInfo -->
-<g id="node3" class="node"><title>\\GdWrapper\\Image\\ImageInfo</title>
-<a xlink:href="Image.ImageInfo.html" xlink:title="ImageInfo" target="_parent">
-<polygon fill="none" stroke="black" points="684,-232 608,-232 608,-196 684,-196 684,-232"/>
-<text text-anchor="middle" x="646" y="-211.1" font-family="Courier,monospace" font-size="11.00">ImageInfo</text>
+<!-- \\GdWrapper\\Image\\Info -->
+<g id="node3" class="node"><title>\\GdWrapper\\Image\\Info</title>
+<a xlink:href="Image.Info.html" xlink:title="Info" target="_parent">
+<polygon fill="none" stroke="black" points="673,-232 619,-232 619,-196 673,-196 673,-232"/>
+<text text-anchor="middle" x="646" y="-211.1" font-family="Courier,monospace" font-size="11.00">Info</text>
 </a>
 </g>
 <!-- \\SplFileInfo -->
@@ -87,9 +87,9 @@
 <ellipse fill="none" stroke="black" cx="434" cy="-18" rx="65.0538" ry="18.3848"/>
 <text text-anchor="middle" x="434" y="-14.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\SplFileInfo</text>
 </g>
-<!-- \\GdWrapper\\Image\\ImageInfo&#45;&gt;\\SplFileInfo -->
-<g id="edge20" class="edge"><title>\\GdWrapper\\Image\\ImageInfo&#45;&gt;\\SplFileInfo</title>
-<path fill="none" stroke="black" d="M608.561,-195.944C603.301,-192.436 598.248,-188.446 594,-184 545.932,-133.701 575.424,-89.569 522,-45 515.135,-39.2727 507.068,-34.7592 498.651,-31.2025"/>
+<!-- \\GdWrapper\\Image\\Info&#45;&gt;\\SplFileInfo -->
+<g id="edge20" class="edge"><title>\\GdWrapper\\Image\\Info&#45;&gt;\\SplFileInfo</title>
+<path fill="none" stroke="black" d="M618.823,-202.116C610.142,-197.386 600.985,-191.309 594,-184 545.932,-133.701 575.424,-89.569 522,-45 515.135,-39.2727 507.068,-34.7592 498.651,-31.2025"/>
 <polygon fill="none" stroke="black" points="499.638,-27.8341 489.047,-27.5797 497.168,-34.3837 499.638,-27.8341"/>
 </g>
 <!-- \\GdWrapper\\Io\\Reader\\Reader -->

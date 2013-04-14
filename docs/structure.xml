@@ -299,7 +299,7 @@
   <file path="Io/Writer/Writer.php" hash="82465bf60a78571eb0ca21a35442f71f" package="Default">
     <docblock line="2">
       <description>Defines Writer interface.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <interface namespace="GdWrapper\Io\Writer" line="16" package="Default">
@@ -307,14 +307,14 @@
       <full_name>\GdWrapper\Io\Writer\Writer</full_name>
       <docblock line="13">
         <description>Represents an output "device" for resources.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="32" package="Default">
         <name>write</name>
         <full_name>write</full_name>
         <docblock line="17">
           <description>Provides an output to an image resource.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="17" name="param" description="(optional) A path where to save the resource." type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
@@ -353,7 +353,7 @@
         <full_name>getResource</full_name>
         <docblock line="38">
           <description>Obtains the Resource instance in which this object is working on.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="38" name="return" description="$resource" type="\GdWrapper\Resource\Resource">
             <type by_reference="false">\GdWrapper\Resource\Resource</type>
           </tag>
@@ -364,7 +364,7 @@
         <full_name>setResource</full_name>
         <docblock line="45">
           <description>Obtains the Resource instance in which this object is working on.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="45" name="param" description="" type="\GdWrapper\Resource\Resource" variable="$resource">
             <type by_reference="false">\GdWrapper\Resource\Resource</type>
           </tag>
@@ -374,7 +374,7 @@
         </docblock>
         <argument line="51">
           <name>$resource</name>
-          <default></default>
+          <default/>
           <type>\GdWrapper\Resource\Resource</type>
         </argument>
       </method>
@@ -731,26 +731,26 @@ based on a file extension.&lt;/p&gt;</long-description>
       </docblock>
     </class>
   </file>
-  <file path="Image/ImageInfo.php" hash="abd03a0ce94910bc048ce080c72cb690" package="Default">
+  <file path="Image/Info.php" hash="a39c0ee02326cfc4cc3621b4fd84125a" package="Default">
     <docblock line="2">
       <description>Defines ImageInfo class.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="false" namespace="GdWrapper\Image" line="13" package="Default">
       <extends>\SplFileInfo</extends>
-      <name>ImageInfo</name>
-      <full_name>\GdWrapper\Image\ImageInfo</full_name>
+      <name>Info</name>
+      <full_name>\GdWrapper\Image\Info</full_name>
       <docblock line="10">
         <description>Holds information about an image on file system.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
       <property final="false" static="false" visibility="private" line="17" namespace="GdWrapper\Image" package="Default">
         <name>$width</name>
         <default>null</default>
         <docblock line="14">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="14" name="var" description="The image width" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -760,8 +760,8 @@ based on a file extension.&lt;/p&gt;</long-description>
         <name>$height</name>
         <default>null</default>
         <docblock line="19">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="19" name="var" description="The image height" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -772,7 +772,7 @@ based on a file extension.&lt;/p&gt;</long-description>
         <full_name>getWidth</full_name>
         <docblock line="24">
           <description>Get image width.</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="24" name="return" description="The image width" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -783,7 +783,7 @@ based on a file extension.&lt;/p&gt;</long-description>
         <full_name>getHeight</full_name>
         <docblock line="37">
           <description>Get image height.</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="37" name="return" description="The image height" type="int">
             <type by_reference="false">int</type>
           </tag>
