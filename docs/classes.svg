@@ -43,15 +43,15 @@
 <text text-anchor="middle" x="365" y="-658.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">Io</text>
 </g>
 <g id="graph5" class="cluster"><title>cluster_GdWrapper\Io\Reader</title>
-<polyline fill="none" stroke="gray" points="193,-514 694,-514 "/>
+<polyline fill="none" stroke="gray" points="36,-514 694,-514 "/>
 <path fill="none" stroke="gray" d="M694,-514C700,-514 706,-520 706,-526"/>
 <polyline fill="none" stroke="gray" points="706,-526 706,-630 "/>
 <path fill="none" stroke="gray" d="M706,-630C706,-636 700,-642 694,-642"/>
-<polyline fill="none" stroke="gray" points="694,-642 193,-642 "/>
-<path fill="none" stroke="gray" d="M193,-642C187,-642 181,-636 181,-630"/>
-<polyline fill="none" stroke="gray" points="181,-630 181,-526 "/>
-<path fill="none" stroke="gray" d="M181,-526C181,-520 187,-514 193,-514"/>
-<text text-anchor="middle" x="443.5" y="-628.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">Reader</text>
+<polyline fill="none" stroke="gray" points="694,-642 36,-642 "/>
+<path fill="none" stroke="gray" d="M36,-642C30,-642 24,-636 24,-630"/>
+<polyline fill="none" stroke="gray" points="24,-630 24,-526 "/>
+<path fill="none" stroke="gray" d="M24,-526C24,-520 30,-514 36,-514"/>
+<text text-anchor="middle" x="365" y="-628.1" font-family="Times Roman,serif" font-size="11.00" fill="gray">Reader</text>
 </g>
 <g id="graph6" class="cluster"><title>cluster_GdWrapper\Io\Writer</title>
 <polyline fill="none" stroke="gray" points="36,-378 694,-378 "/>
@@ -83,20 +83,20 @@
 </a>
 </g>
 <!-- \\SplFileInfo -->
-<g id="node31" class="node"><title>\\SplFileInfo</title>
+<g id="node34" class="node"><title>\\SplFileInfo</title>
 <ellipse fill="none" stroke="black" cx="434" cy="-18" rx="65.0538" ry="18.3848"/>
 <text text-anchor="middle" x="434" y="-14.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\SplFileInfo</text>
 </g>
 <!-- \\GdWrapper\\Image\\Info&#45;&gt;\\SplFileInfo -->
-<g id="edge20" class="edge"><title>\\GdWrapper\\Image\\Info&#45;&gt;\\SplFileInfo</title>
+<g id="edge24" class="edge"><title>\\GdWrapper\\Image\\Info&#45;&gt;\\SplFileInfo</title>
 <path fill="none" stroke="black" d="M618.823,-202.116C610.142,-197.386 600.985,-191.309 594,-184 545.932,-133.701 575.424,-89.569 522,-45 515.135,-39.2727 507.068,-34.7592 498.651,-31.2025"/>
 <polygon fill="none" stroke="black" points="499.638,-27.8341 489.047,-27.5797 497.168,-34.3837 499.638,-27.8341"/>
 </g>
 <!-- \\GdWrapper\\Io\\Reader\\Reader -->
 <g id="node6" class="node"><title>\\GdWrapper\\Io\\Reader\\Reader</title>
 <a xlink:href="Io.Reader.Reader.html" xlink:title="Reader" target="_parent">
-<polygon fill="none" stroke="black" points="246,-585 190,-585 190,-549 246,-549 246,-585"/>
-<text text-anchor="middle" x="218" y="-564.1" font-family="Courier,monospace" font-size="11.00">Reader</text>
+<polygon fill="none" stroke="black" points="89,-585 33,-585 33,-549 89,-549 89,-585"/>
+<text text-anchor="middle" x="61" y="-564.1" font-family="Courier,monospace" font-size="11.00">Reader</text>
 </a>
 </g>
 <!-- \\GdWrapper\\Io\\Reader\\JpegReader -->
@@ -106,10 +106,18 @@
 <text text-anchor="middle" x="434" y="-537.1" font-family="Courier,monospace" font-size="11.00">JpegReader</text>
 </a>
 </g>
-<!-- \\GdWrapper\\Io\\Reader\\JpegReader&#45;&gt;\\GdWrapper\\Io\\Reader\\Reader -->
-<g id="edge24" class="edge"><title>\\GdWrapper\\Io\\Reader\\JpegReader&#45;&gt;\\GdWrapper\\Io\\Reader\\Reader</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M391.84,-545.27C352.675,-550.166 294.828,-557.396 256.784,-562.152"/>
-<polygon fill="none" stroke="black" points="256.099,-558.71 246.611,-563.424 256.968,-565.656 256.099,-558.71"/>
+<!-- \\GdWrapper\\Io\\Reader\\AbstractReader -->
+<g id="node9" class="node"><title>\\GdWrapper\\Io\\Reader\\AbstractReader</title>
+<a xlink:href="Io.Reader.AbstractReader.html" xlink:title="«abstract»&lt;br/&gt;AbstractReader" target="_parent">
+<polygon fill="none" stroke="black" points="274,-585 162,-585 162,-549 274,-549 274,-585"/>
+<text text-anchor="start" x="184" y="-572.433" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
+<text text-anchor="start" x="170.5" y="-559.233" font-family="Courier,monospace" font-size="11.00">AbstractReader</text>
+</a>
+</g>
+<!-- \\GdWrapper\\Io\\Reader\\JpegReader&#45;&gt;\\GdWrapper\\Io\\Reader\\AbstractReader -->
+<g id="edge18" class="edge"><title>\\GdWrapper\\Io\\Reader\\JpegReader&#45;&gt;\\GdWrapper\\Io\\Reader\\AbstractReader</title>
+<path fill="none" stroke="black" d="M391.84,-545.27C361.334,-549.083 319.496,-554.313 284.508,-558.686"/>
+<polygon fill="none" stroke="black" points="283.853,-555.241 274.365,-559.954 284.722,-562.187 283.853,-555.241"/>
 </g>
 <!-- \\GdWrapper\\Io\\Reader\\ReaderFactory -->
 <g id="node8" class="node"><title>\\GdWrapper\\Io\\Reader\\ReaderFactory</title>
@@ -118,39 +126,44 @@
 <text text-anchor="middle" x="646" y="-591.1" font-family="Courier,monospace" font-size="11.00">ReaderFactory</text>
 </a>
 </g>
+<!-- \\GdWrapper\\Io\\Reader\\AbstractReader&#45;&gt;\\GdWrapper\\Io\\Reader\\Reader -->
+<g id="edge28" class="edge"><title>\\GdWrapper\\Io\\Reader\\AbstractReader&#45;&gt;\\GdWrapper\\Io\\Reader\\Reader</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M161.763,-567C141.22,-567 118.459,-567 99.7757,-567"/>
+<polygon fill="none" stroke="black" points="99.5752,-563.5 89.5752,-567 99.5752,-570.5 99.5752,-563.5"/>
+</g>
 <!-- \\GdWrapper\\Io\\Reader\\PngReader -->
-<g id="node9" class="node"><title>\\GdWrapper\\Io\\Reader\\PngReader</title>
+<g id="node10" class="node"><title>\\GdWrapper\\Io\\Reader\\PngReader</title>
 <a xlink:href="Io.Reader.PngReader.html" xlink:title="PngReader" target="_parent">
 <polygon fill="none" stroke="black" points="472,-612 396,-612 396,-576 472,-576 472,-612"/>
 <text text-anchor="middle" x="434" y="-591.1" font-family="Courier,monospace" font-size="11.00">PngReader</text>
 </a>
 </g>
-<!-- \\GdWrapper\\Io\\Reader\\PngReader&#45;&gt;\\GdWrapper\\Io\\Reader\\Reader -->
-<g id="edge26" class="edge"><title>\\GdWrapper\\Io\\Reader\\PngReader&#45;&gt;\\GdWrapper\\Io\\Reader\\Reader</title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M395.384,-589.173C356.174,-584.272 295.804,-576.726 256.6,-571.825"/>
-<polygon fill="none" stroke="black" points="256.984,-568.346 246.627,-570.578 256.116,-575.292 256.984,-568.346"/>
+<!-- \\GdWrapper\\Io\\Reader\\PngReader&#45;&gt;\\GdWrapper\\Io\\Reader\\AbstractReader -->
+<g id="edge20" class="edge"><title>\\GdWrapper\\Io\\Reader\\PngReader&#45;&gt;\\GdWrapper\\Io\\Reader\\AbstractReader</title>
+<path fill="none" stroke="black" d="M395.384,-589.173C364.548,-585.319 320.627,-579.828 284.205,-575.276"/>
+<polygon fill="none" stroke="black" points="284.505,-571.786 274.148,-574.019 283.637,-578.732 284.505,-571.786"/>
 </g>
 <!-- \\GdWrapper\\Io\\Reader\\JpgReader -->
-<g id="node10" class="node"><title>\\GdWrapper\\Io\\Reader\\JpgReader</title>
+<g id="node11" class="node"><title>\\GdWrapper\\Io\\Reader\\JpgReader</title>
 <a xlink:href="Io.Reader.JpgReader.html" xlink:title="JpgReader" target="_parent">
 <polygon fill="none" stroke="black" points="684,-558 608,-558 608,-522 684,-522 684,-558"/>
 <text text-anchor="middle" x="646" y="-537.1" font-family="Courier,monospace" font-size="11.00">JpgReader</text>
 </a>
 </g>
 <!-- \\GdWrapper\\Io\\Reader\\JpgReader&#45;&gt;\\GdWrapper\\Io\\Reader\\JpegReader -->
-<g id="edge18" class="edge"><title>\\GdWrapper\\Io\\Reader\\JpgReader&#45;&gt;\\GdWrapper\\Io\\Reader\\JpegReader</title>
+<g id="edge22" class="edge"><title>\\GdWrapper\\Io\\Reader\\JpgReader&#45;&gt;\\GdWrapper\\Io\\Reader\\JpegReader</title>
 <path fill="none" stroke="black" d="M607.116,-540C573.244,-540 523.84,-540 486.471,-540"/>
 <polygon fill="none" stroke="black" points="486.273,-536.5 476.273,-540 486.273,-543.5 486.273,-536.5"/>
 </g>
 <!-- \\GdWrapper\\Io\\Writer\\PngWriter -->
-<g id="node12" class="node"><title>\\GdWrapper\\Io\\Writer\\PngWriter</title>
+<g id="node13" class="node"><title>\\GdWrapper\\Io\\Writer\\PngWriter</title>
 <a xlink:href="Io.Writer.PngWriter.html" xlink:title="PngWriter" target="_parent">
 <polygon fill="none" stroke="black" points="472,-476 396,-476 396,-440 472,-440 472,-476"/>
 <text text-anchor="middle" x="434" y="-455.1" font-family="Courier,monospace" font-size="11.00">PngWriter</text>
 </a>
 </g>
 <!-- \\GdWrapper\\Io\\Writer\\AbstractWriter -->
-<g id="node17" class="node"><title>\\GdWrapper\\Io\\Writer\\AbstractWriter</title>
+<g id="node18" class="node"><title>\\GdWrapper\\Io\\Writer\\AbstractWriter</title>
 <a xlink:href="Io.Writer.AbstractWriter.html" xlink:title="«abstract»&lt;br/&gt;AbstractWriter" target="_parent">
 <polygon fill="none" stroke="black" points="274,-449 162,-449 162,-413 274,-413 274,-449"/>
 <text text-anchor="start" x="184" y="-436.433" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
@@ -163,28 +176,28 @@
 <polygon fill="none" stroke="black" points="284.505,-435.786 274.148,-438.019 283.637,-442.732 284.505,-435.786"/>
 </g>
 <!-- \\GdWrapper\\Io\\Writer\\Writer -->
-<g id="node13" class="node"><title>\\GdWrapper\\Io\\Writer\\Writer</title>
+<g id="node14" class="node"><title>\\GdWrapper\\Io\\Writer\\Writer</title>
 <a xlink:href="Io.Writer.Writer.html" xlink:title="Writer" target="_parent">
 <polygon fill="none" stroke="black" points="89,-449 33,-449 33,-413 89,-413 89,-449"/>
 <text text-anchor="middle" x="61" y="-428.1" font-family="Courier,monospace" font-size="11.00">Writer</text>
 </a>
 </g>
 <!-- \\GdWrapper\\Io\\Writer\\WriterFactory -->
-<g id="node14" class="node"><title>\\GdWrapper\\Io\\Writer\\WriterFactory</title>
+<g id="node15" class="node"><title>\\GdWrapper\\Io\\Writer\\WriterFactory</title>
 <a xlink:href="Io.Writer.WriterFactory.html" xlink:title="WriterFactory" target="_parent">
 <polygon fill="none" stroke="black" points="698,-476 594,-476 594,-440 698,-440 698,-476"/>
 <text text-anchor="middle" x="646" y="-455.1" font-family="Courier,monospace" font-size="11.00">WriterFactory</text>
 </a>
 </g>
 <!-- \\GdWrapper\\Io\\Writer\\JpgWriter -->
-<g id="node15" class="node"><title>\\GdWrapper\\Io\\Writer\\JpgWriter</title>
+<g id="node16" class="node"><title>\\GdWrapper\\Io\\Writer\\JpgWriter</title>
 <a xlink:href="Io.Writer.JpgWriter.html" xlink:title="JpgWriter" target="_parent">
 <polygon fill="none" stroke="black" points="684,-422 608,-422 608,-386 684,-386 684,-422"/>
 <text text-anchor="middle" x="646" y="-401.1" font-family="Courier,monospace" font-size="11.00">JpgWriter</text>
 </a>
 </g>
 <!-- \\GdWrapper\\Io\\Writer\\JpegWriter -->
-<g id="node16" class="node"><title>\\GdWrapper\\Io\\Writer\\JpegWriter</title>
+<g id="node17" class="node"><title>\\GdWrapper\\Io\\Writer\\JpegWriter</title>
 <a xlink:href="Io.Writer.JpegWriter.html" xlink:title="JpegWriter" target="_parent">
 <polygon fill="none" stroke="black" points="476,-422 392,-422 392,-386 476,-386 476,-422"/>
 <text text-anchor="middle" x="434" y="-401.1" font-family="Courier,monospace" font-size="11.00">JpegWriter</text>
@@ -201,26 +214,26 @@
 <polygon fill="none" stroke="black" points="283.853,-419.241 274.365,-423.954 284.722,-426.187 283.853,-419.241"/>
 </g>
 <!-- \\GdWrapper\\Io\\Writer\\AbstractWriter&#45;&gt;\\GdWrapper\\Io\\Writer\\Writer -->
-<g id="edge22" class="edge"><title>\\GdWrapper\\Io\\Writer\\AbstractWriter&#45;&gt;\\GdWrapper\\Io\\Writer\\Writer</title>
+<g id="edge26" class="edge"><title>\\GdWrapper\\Io\\Writer\\AbstractWriter&#45;&gt;\\GdWrapper\\Io\\Writer\\Writer</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M161.763,-431C141.22,-431 118.459,-431 99.7757,-431"/>
 <polygon fill="none" stroke="black" points="99.5752,-427.5 89.5752,-431 99.5752,-434.5 99.5752,-427.5"/>
 </g>
 <!-- \\GdWrapper\\Io\\Preset -->
-<g id="node18" class="node"><title>\\GdWrapper\\Io\\Preset</title>
+<g id="node19" class="node"><title>\\GdWrapper\\Io\\Preset</title>
 <a xlink:href="Io.Preset.html" xlink:title="Preset" target="_parent">
 <polygon fill="none" stroke="black" points="674,-368 618,-368 618,-332 674,-332 674,-368"/>
 <text text-anchor="middle" x="646" y="-347.1" font-family="Courier,monospace" font-size="11.00">Preset</text>
 </a>
 </g>
 <!-- \\GdWrapper\\Io\\Exception -->
-<g id="node19" class="node"><title>\\GdWrapper\\Io\\Exception</title>
+<g id="node20" class="node"><title>\\GdWrapper\\Io\\Exception</title>
 <a xlink:href="Io.Exception.html" xlink:title="Exception" target="_parent">
 <polygon fill="none" stroke="black" points="684,-314 608,-314 608,-278 684,-278 684,-314"/>
 <text text-anchor="middle" x="646" y="-293.1" font-family="Courier,monospace" font-size="11.00">Exception</text>
 </a>
 </g>
 <!-- \\LogicException -->
-<g id="node25" class="node"><title>\\LogicException</title>
+<g id="node26" class="node"><title>\\LogicException</title>
 <ellipse fill="none" stroke="black" cx="434" cy="-72" rx="87.1802" ry="18.3848"/>
 <text text-anchor="middle" x="434" y="-68.4" font-family="Times Roman,serif" font-size="14.00" fill="gray">\LogicException</text>
 </g>
@@ -230,7 +243,7 @@
 <polygon fill="none" stroke="black" points="453.944,-96.2422 445.482,-89.8667 448.121,-100.128 453.944,-96.2422"/>
 </g>
 <!-- \\GdWrapper\\Resource\\Resource -->
-<g id="node23" class="node"><title>\\GdWrapper\\Resource\\Resource</title>
+<g id="node24" class="node"><title>\\GdWrapper\\Resource\\Resource</title>
 <a xlink:href="Resource.Resource.html" xlink:title="Resource" target="_parent">
 <polygon fill="none" stroke="black" points="681,-150 611,-150 611,-114 681,-114 681,-150"/>
 <text text-anchor="middle" x="646" y="-129.1" font-family="Courier,monospace" font-size="11.00">Resource</text>

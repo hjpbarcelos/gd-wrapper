@@ -6,28 +6,26 @@
  */
 namespace GdWrapper\Io\Reader;
 
+use GdWrapper\Io\Exception;
 use GdWrapper\Resource\Resource;
 
 /**
  * Defines an implementation of a I/O device for PNG files.
  */
-class PngReader implements Reader {
+class PngReader extends AbstractReader { 
 	/**
 	 * Creates an image resource with `imagecreatefrompng` function.
 	 *
 	 * {@inheritdoc}
 	 * 
-	 * @throws \InvalidArgumentException If $path does not point to a valid 
-	 * 		PNG file.
-	 * 
-	 * @see GdWrapper\Io\Reader\Reader::read()
+	 * @see \GdWrapper\Io\Reader\AbstractReader::doRead()
 	 */
-	public function read($path)
+	protected function doRead($path)
 	{
 		try {
 			return new Resource(imagecreatefrompng($path));
 		} catch(\InvalidArgumentException $e) {
-			throw new \InvalidArgumentException(
+			throw new Exception(
 				"Could not create a PNG resource from path '{$path}'"
 			);
 		}

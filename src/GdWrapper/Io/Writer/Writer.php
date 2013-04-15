@@ -25,7 +25,7 @@ interface Writer {
 	 * 
 	 * @return void
 	 * 
-	 * @throws Exception If can't write the contents on file system.
+	 * @throws Exception If cannot write the contents on file system.
 	 * 
 	 * @see \GdWrapper\Io\Preset
 	 */
@@ -38,7 +38,7 @@ interface Writer {
 	/**
 	 * Obtains the Resource instance in which this object is working on.
 	 * 
-	 * @return \GdWrapper\Resource\Resource $resource
+	 * @return \GdWrapper\Resource\Resource
 	 */
 	public function getResource();
 	

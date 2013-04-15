@@ -48,7 +48,7 @@ class Resource {
 	/**
 	 * Clones the current object.
 	 *
-	 * @return AbstractResource
+	 * @return Resource
 	 */
 	final public function __clone()
 	{
