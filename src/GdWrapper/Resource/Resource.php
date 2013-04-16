@@ -1,7 +1,7 @@
 <?php
 /**
- * Creates class GdWrapper\Resource\
- *  
+ * Creates class \GdWrapper\Resource\
+ *
  * @author Henrique Barcelos
  */
 namespace GdWrapper\Resource;
@@ -27,19 +27,21 @@ class Resource {
 	
 	/**
 	 * Creates a new wrapper to a raw GD2 image resource.
-	 * 
+	 *
 	 * @param resource $resource A valid GD2 image resource.
 	 * @throws \InvalidArgumentException If <code>$resource</code> is not a
 	 * 		valid resource.
 	 */
-	public function __construct($resource) {
+	public function __construct($resource)
+	{
 		$this->setRaw($resource);
 	}
 	
 	/**
 	 * Destroys the image resource if it still exists.
 	 */
-	final public function __destruct() {
+	final public function __destruct()
+	{
 		if (is_resource($this->raw)) {
 			imagedestroy($this->raw);
 		}
@@ -60,7 +62,8 @@ class Resource {
 	 *
 	 * @return resource
 	 */
-	private function cloneResource() {
+	private function cloneResource()
+	{
 		ob_start();
 		imagegd2($this->raw);
 		return imagecreatefromstring(ob_get_clean());
@@ -77,9 +80,7 @@ class Resource {
 	public function setRaw($resource)
 	{
 		if (!is_resource($resource)) {
-			throw new \InvalidArgumentException(
-				'Invalid resource passed to ' . get_class($this)
-			);
+			throw new \InvalidArgumentException('Invalid resource passed to ' . get_class($this));
 		}
 		$this->raw = $resource;
 	}
@@ -96,11 +97,12 @@ class Resource {
 	
 	/**
 	 * Get image width.
-	 * 
+	 *
 	 * @return int The image width
 	 */
-	public function getWidth() {
-		if($this->width === null) {
+	public function getWidth()
+	{
+		if ($this->width === null) {
 			$this->width = imagesx($this->raw);
 		}
 		return $this->width;
@@ -111,8 +113,9 @@ class Resource {
 	 *
 	 * @return int The image height
 	 */
-	public function getHeight() {
-		if($this->height === null) {
+	public function getHeight()
+	{
+		if ($this->height === null) {
 			$this->height = imagesy($this->raw);
 		}
 		return $this->height;

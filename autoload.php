@@ -1,12 +1,19 @@
 <?php
 spl_autoload_register(function($className){
-	$ds = DIRECTORY_SEPARATOR;	
-	$path = stream_resolve_include_path(
-		'src' . $ds . str_replace('\\', $ds, $className) . '.php'
-	);
-	
-	if($path !== false) {
-		require_once $path;
+	$className = ltrim($className, '\\');
+    $fileName  = '';
+    $namespace = '';
+    
+    if ($lastNsPos = strrpos($className, '\\')) {
+        $namespace = substr($className, 0, $lastNsPos);
+        $className = substr($className, $lastNsPos + 1);
+        $fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
+    }
+
+    $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
+    $fileName = 'src' . DIRECTORY_SEPARATOR . $fileName;
+    
+	if (is_file($fileName)) {
+    	require $fileName;
 	}
 });
-

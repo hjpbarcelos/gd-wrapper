@@ -141,7 +141,7 @@
 </div>
 <a id="method_write"></a><div class="element clickable method public method_write" data-toggle="collapse" data-target=".method_write .collapse">
 <h2>Provides an output to an image resource.</h2>
-<pre>write(string $path, int $quality, mixed $_) : void</pre>
+<pre>write($path, int $quality, $_) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -150,20 +150,14 @@
 <td><a href="Io.Writer.Writer.html#%5CGdWrapper%5CIo%5CWriter%5CWriter::write()">\GdWrapper\Io\Writer\Writer::write()</a></td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$path</h4>
-<code>string</code><p>(optional) A path where to save the resource.</p>
-</div>
+<div class="subelement argument"><h4>$path</h4></div>
 <div class="subelement argument">
 <h4>$quality</h4>
 <code>int</code><p>(optional) The quality of generated image.
-        Its value MUST be in a range from 0 to 100.</p>
+        Its value MUST be in a range from 0 to 100.
+     Otherwise, it will be converted using <code>$quality % 101</code></p>
 </div>
-<div class="subelement argument">
-<h4>$_</h4>
-<code>mixed</code><p>(optional) Additional parameters passed to
-        the concrete implementation method.</p>
-</div>
+<div class="subelement argument"><h4>$_</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="../classes/GdWrapper.Io.Exception.html">\GdWrapper\Io\Exception</a></code></th>
@@ -176,8 +170,7 @@
 <pre>doWrite(string $path, int $quality, mixed $_) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"><p>This is method is executed at the end of
-<a href="\GdWrapper\Io\Writer\AbstractWriter::write()">\GdWrapper\Io\Writer\AbstractWriter::write()</a></p></div>
+<div class="long_description"><p>This is method is executed at the end of <a href="\GdWrapper\Io\Writer\AbstractWriter::write()">\GdWrapper\Io\Writer\AbstractWriter::write()</a></p></div>
 <table class="table table-bordered"><tr>
 <th>see</th>
 <td><a href="Io.Preset.html#%5CGdWrapper%5CIo%5CPreset">\GdWrapper\Io\Preset</a></td>
@@ -185,7 +178,7 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$path</h4>
-<code>string</code><p>(optional) A path where to save the resource.</p>
+<code>string</code><p>(optiojnal) A path where to save the resource.</p>
 </div>
 <div class="subelement argument">
 <h4>$quality</h4>
@@ -194,8 +187,7 @@
 </div>
 <div class="subelement argument">
 <h4>$_</h4>
-<code>mixed</code><p>(optional) Additional parameters passed to
-        the concrete implementation method.</p>
+<code>mixed</code><p>(optional) Additional parameters passed to the concrete implementation method.</p>
 </div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
@@ -219,7 +211,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-04-16T02:00:55+02:00.<br></footer></div>
+            generated on 2013-04-16T12:23:05+02:00.<br></footer></div>
 </div>
 </body>
 </html>

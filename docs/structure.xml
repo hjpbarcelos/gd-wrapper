@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="2.0.0a12" title="">
-  <file path="Resource/Resource.php" hash="68aad21d113a22b8a6ddae03f444d14c" package="Default">
+  <file path="Resource/Resource.php" hash="1fa57504c401cb13a29af2373d5cc90c" package="Default">
     <docblock line="2">
-      <description>Creates class GdWrapper\Resource\</description>
+      <description>Creates class \GdWrapper\Resource\</description>
       <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
@@ -66,94 +66,94 @@
           <type/>
         </argument>
       </method>
-      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="42" package="Default">
+      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="43" package="Default">
         <name>__destruct</name>
         <full_name>__destruct</full_name>
-        <docblock line="39">
+        <docblock line="40">
           <description>Destroys the image resource if it still exists.</description>
           <long-description/>
         </docblock>
       </method>
-      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="53" package="Default">
+      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="55" package="Default">
         <name>__clone</name>
         <full_name>__clone</full_name>
-        <docblock line="48">
+        <docblock line="50">
           <description>Clones the current object.</description>
           <long-description/>
-          <tag line="48" name="return" description="" type="Resource">
+          <tag line="50" name="return" description="" type="Resource">
             <type by_reference="false">Resource</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="GdWrapper\Resource" line="63" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="GdWrapper\Resource" line="65" package="Default">
         <name>cloneResource</name>
         <full_name>cloneResource</full_name>
-        <docblock line="58">
+        <docblock line="60">
           <description>Workarround method for cloning a GD2 image resource.</description>
           <long-description/>
-          <tag line="58" name="return" description="" type="resource">
+          <tag line="60" name="return" description="" type="resource">
             <type by_reference="false">resource</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="77" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="80" package="Default">
         <name>setRaw</name>
         <full_name>setRaw</full_name>
-        <docblock line="69">
+        <docblock line="72">
           <description>Sets a GD2 image resource to this wrapper object.</description>
           <long-description/>
-          <tag line="69" name="param" description="A valid GD2 image resource." type="resource" variable="$resource">
+          <tag line="72" name="param" description="A valid GD2 image resource." type="resource" variable="$resource">
             <type by_reference="false">resource</type>
           </tag>
-          <tag line="69" name="return" description="" type="void">
+          <tag line="72" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
-          <tag line="69" name="throws" description="If &lt;code&gt;$resource&lt;/code&gt; is not a&#10;&#9;&#9;valid resource." type="\InvalidArgumentException">
+          <tag line="72" name="throws" description="If &lt;code&gt;$resource&lt;/code&gt; is not a&#10;&#9;&#9;valid resource." type="\InvalidArgumentException">
             <type by_reference="false">\InvalidArgumentException</type>
           </tag>
         </docblock>
-        <argument line="77">
+        <argument line="80">
           <name>$resource</name>
           <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="92" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="93" package="Default">
         <name>getRaw</name>
         <full_name>getRaw</full_name>
-        <docblock line="87">
+        <docblock line="88">
           <description>Obtains the raw GD2 image resource of this wrapper object.</description>
           <long-description/>
-          <tag line="87" name="return" description="A valid GD2 image resource." type="resource">
+          <tag line="88" name="return" description="A valid GD2 image resource." type="resource">
             <type by_reference="false">resource</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="102" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="103" package="Default">
         <name>getWidth</name>
         <full_name>getWidth</full_name>
-        <docblock line="97">
+        <docblock line="98">
           <description>Get image width.</description>
           <long-description/>
-          <tag line="97" name="return" description="The image width" type="int">
+          <tag line="98" name="return" description="The image width" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="114" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="116" package="Default">
         <name>getHeight</name>
         <full_name>getHeight</full_name>
-        <docblock line="109">
+        <docblock line="111">
           <description>Get image height.</description>
           <long-description/>
-          <tag line="109" name="return" description="The image height" type="int">
+          <tag line="111" name="return" description="The image height" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Io/Preset.php" hash="a626cc9f2d29527ec44e3646df3499d7" package="Default">
+  <file path="Io/Preset.php" hash="6e299f264d10ca85687191210ae3b56e" package="Default">
     <docblock line="2">
       <description>Defines Preset "enum".</description>
       <long-description/>
@@ -228,7 +228,7 @@
       </constant>
     </interface>
   </file>
-  <file path="Io/Exception.php" hash="9423325828b7132a85d36e9816e0271c" package="Default">
+  <file path="Io/Exception.php" hash="b74886562d01332337800c9ccd8731bd" package="Default">
     <docblock line="2">
       <description>Defines Exception class</description>
       <long-description/>
@@ -244,7 +244,7 @@
       </docblock>
     </class>
   </file>
-  <file path="Io/Writer/PngWriter.php" hash="fb6f22bcb7d87ced860870b677d241fc" package="Default">
+  <file path="Io/Writer/PngWriter.php" hash="611f81d3a15e5f9804992c85145c8afc" package="Default">
     <docblock line="2">
       <description>Defines PngWritter class.</description>
       <long-description/>
@@ -296,7 +296,7 @@
       <error line="16" code="50015">Argument $filters is missing from the Docblock of doWrite()</error>
     </parse_markers>
   </file>
-  <file path="Io/Writer/Writer.php" hash="cfeb048fc0937e08dd20422c44a912d4" package="Default">
+  <file path="Io/Writer/Writer.php" hash="d6f950c29f3021c740f1a6c95493fd9e" package="Default">
     <docblock line="2">
       <description>Defines Writer interface.</description>
       <long-description/>
@@ -380,7 +380,7 @@
       </method>
     </interface>
   </file>
-  <file path="Io/Writer/WriterFactory.php" hash="276b69392cf580a697251402dacb0ae6" package="Default">
+  <file path="Io/Writer/WriterFactory.php" hash="b299f0f96828f9312092a47556a01bea" package="Default">
     <docblock line="2">
       <description>Defines WriterFactory class.</description>
       <long-description/>
@@ -394,13 +394,19 @@
         <description>Defines an abstract implementation of a input "device" for resources.</description>
         <long-description/>
       </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="GdWrapper\Io\Writer" line="29" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="GdWrapper\Io\Writer" line="37" package="Default">
         <name>factory</name>
         <full_name>factory</full_name>
         <docblock line="17">
-          <description>Returns a concrete instance of a Writer based on the file
-extension `$type`.</description>
-          <long-description/>
+          <description>Returns a concrete instance of a Writer based on the file extension `$type`.</description>
+          <long-description>&lt;p&gt;Note:&lt;/p&gt;
+
+&lt;p&gt;For custom implementations of Writer interface, it must follow the convention:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\GdWrapper\Io\Writer\&amp;lt;TYPE&amp;gt;Writer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that &lt;code&gt;&amp;amp;lt;TYPE&amp;amp;gt;&lt;/code&gt; MUST be in &lt;code&gt;StudlyCaps&lt;/code&gt;.&lt;/p&gt;</long-description>
           <tag line="17" name="param" description="The type of the image that will be written." type="string" variable="$type">
             <type by_reference="false">string</type>
           </tag>
@@ -414,12 +420,12 @@ extension `$type`.</description>
             <type by_reference="false">\DomainException</type>
           </tag>
         </docblock>
-        <argument line="29">
+        <argument line="37">
           <name>$type</name>
           <default/>
           <type/>
         </argument>
-        <argument line="29">
+        <argument line="37">
           <name>$resource</name>
           <default/>
           <type>\GdWrapper\Resource\Resource</type>
@@ -427,7 +433,7 @@ extension `$type`.</description>
       </method>
     </class>
   </file>
-  <file path="Io/Writer/JpgWriter.php" hash="763036c9a50ace5389ad7bb2fcfa7cdd" package="Default">
+  <file path="Io/Writer/JpgWriter.php" hash="94bc85b5db68d40cdc5bb8d8d82ae15a" package="Default">
     <docblock line="2">
       <description>Defines JpgWritter class.</description>
       <long-description/>
@@ -445,7 +451,7 @@ based on a file extension.&lt;/p&gt;</long-description>
       </docblock>
     </class>
   </file>
-  <file path="Io/Writer/JpegWriter.php" hash="a757a173a68fdc1ca572ebb69ddab11b" package="Default">
+  <file path="Io/Writer/JpegWriter.php" hash="491a26ff8ed5113f9fa00a558eb75af4" package="Default">
     <docblock line="2">
       <description>Defines JpegWritter class.</description>
       <long-description/>
@@ -493,7 +499,7 @@ based on a file extension.&lt;/p&gt;</long-description>
       <error line="16" code="50015">Argument $_ is missing from the Docblock of doWrite()</error>
     </parse_markers>
   </file>
-  <file path="Io/Writer/AbstractWriter.php" hash="9ea809575c5ec287ef342c956230342a" package="Default">
+  <file path="Io/Writer/AbstractWriter.php" hash="66c880141706664a34d40dc37bb1ed85" package="Default">
     <docblock line="2">
       <description>Defines AbstractWriter class.</description>
       <long-description/>
@@ -558,65 +564,67 @@ based on a file extension.&lt;/p&gt;</long-description>
           <type>\GdWrapper\Resource\Resource</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="58" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="61" package="Default">
         <name>write</name>
         <full_name>write</full_name>
         <docblock line="53">
           <description>{@inheritdoc}</description>
           <long-description/>
+          <tag line="53" name="param" description="(optional) The quality of generated image.&#10;&#9;&#9;Its value MUST be in a range from 0 to 100.&#10;     Otherwise, it will be converted using `$quality % 101`" type="int" variable="$quality">
+            <type by_reference="false">int</type>
+          </tag>
           <tag line="53" name="see" description="\GdWrapper\Io\Writer\Writer::write()" refers="\GdWrapper\Io\Writer\Writer::write()"/>
         </docblock>
-        <argument line="59">
+        <argument line="62">
           <name>$path</name>
           <default>null</default>
           <type/>
         </argument>
-        <argument line="60">
+        <argument line="63">
           <name>$quality</name>
           <default>\GdWrapper\Io\Preset::IMAGE_QUALITY_MAX</default>
           <type/>
         </argument>
-        <argument line="61">
+        <argument line="64">
           <name>$_</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Io\Writer" line="93" package="Default">
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Io\Writer" line="96" package="Default">
         <name>doWrite</name>
         <full_name>doWrite</full_name>
-        <docblock line="76">
+        <docblock line="81">
           <description>Concrete implementors should implement this operation.</description>
-          <long-description>&lt;p&gt;This is method is executed at the end of
-{@link \GdWrapper\Io\Writer\AbstractWriter::write()}&lt;/p&gt;</long-description>
-          <tag line="76" name="param" description="(optional) A path where to save the resource." type="string" variable="$path">
+          <long-description>&lt;p&gt;This is method is executed at the end of {@link \GdWrapper\Io\Writer\AbstractWriter::write()}&lt;/p&gt;</long-description>
+          <tag line="81" name="param" description="(optiojnal) A path where to save the resource." type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="76" name="param" description="(optional) The quality of generated image.&#10;&#9;&#9;Its value MUST be in a range from 0 to 100." type="int" variable="$quality">
+          <tag line="81" name="param" description="(optional) The quality of generated image.&#10;&#9;&#9;Its value MUST be in a range from 0 to 100." type="int" variable="$quality">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="76" name="param" description="(optional) Additional parameters passed to&#10;&#9;&#9;the concrete implementation method." type="mixed" variable="$_">
+          <tag line="81" name="param" description="(optional) Additional parameters passed to the concrete implementation method." type="mixed" variable="$_">
             <type by_reference="false">mixed</type>
           </tag>
-          <tag line="76" name="return" description="" type="void">
+          <tag line="81" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
-          <tag line="76" name="throws" description="If can't write the contents on file system." type="\GdWrapper\Io\Exception">
+          <tag line="81" name="throws" description="If can't write the contents on file system." type="\GdWrapper\Io\Exception">
             <type by_reference="false">\GdWrapper\Io\Exception</type>
           </tag>
-          <tag line="76" name="see" description="\GdWrapper\Io\Preset" refers="\GdWrapper\Io\Preset"/>
+          <tag line="81" name="see" description="\GdWrapper\Io\Preset" refers="\GdWrapper\Io\Preset"/>
         </docblock>
-        <argument line="94">
+        <argument line="97">
           <name>$path</name>
           <default>null</default>
           <type/>
         </argument>
-        <argument line="95">
+        <argument line="98">
           <name>$quality</name>
           <default>\GdWrapper\Io\Preset::IMAGE_QUALITY_MAX</default>
           <type/>
         </argument>
-        <argument line="96">
+        <argument line="99">
           <name>$_</name>
           <default>null</default>
           <type/>
@@ -625,15 +633,15 @@ based on a file extension.&lt;/p&gt;</long-description>
     </class>
     <parse_markers>
       <error line="43" code="50015">Argument $resource is missing from the Docblock of setResource()</error>
-      <error line="53" code="50015">Argument $path is missing from the Docblock of write()</error>
+      <error line="53" code="50014">Name of argument $path does not match with the DocBlock's name $quality in write()</error>
       <error line="53" code="50015">Argument $quality is missing from the Docblock of write()</error>
       <error line="53" code="50015">Argument $_ is missing from the Docblock of write()</error>
     </parse_markers>
   </file>
-  <file path="Io/Reader/Reader.php" hash="d73b0704546405687f9de5cd1ff93fd4" package="Default">
+  <file path="Io/Reader/Reader.php" hash="2d0ec245fdcf38c8d3fe2348918cdee4" package="Default">
     <docblock line="2">
       <description>Defines Reader interface.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <interface namespace="GdWrapper\Io\Reader" line="12" package="Default">
@@ -641,14 +649,14 @@ based on a file extension.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Io\Reader\Reader</full_name>
       <docblock line="9">
         <description>Represents an input "device" to resources.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Reader" line="25" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Reader" line="24" package="Default">
         <name>read</name>
         <full_name>read</full_name>
         <docblock line="14">
           <description>Creates an image resource based on a filepath.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="14" name="param" description="The path to a valid image." type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
@@ -658,19 +666,19 @@ based on a file extension.&lt;/p&gt;</long-description>
           <tag line="14" name="throws" description="If cannot read from file system" type="\GdWrapper\Io\Exception">
             <type by_reference="false">\GdWrapper\Io\Exception</type>
           </tag>
-          <tag line="14" name="throws" description="If `$path` does not point to a&#10;&#9;&#9;valid file." type="\InvalidArgumentException">
+          <tag line="14" name="throws" description="If `$path` does not point to a valid file." type="\InvalidArgumentException">
             <type by_reference="false">\InvalidArgumentException</type>
           </tag>
         </docblock>
-        <argument line="25">
+        <argument line="24">
           <name>$path</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
     </interface>
   </file>
-  <file path="Io/Reader/JpegReader.php" hash="2f4da9e65301a96f1ae21ca987a20226" package="Default">
+  <file path="Io/Reader/JpegReader.php" hash="c7c295acf3e80e5ec6a6c7094e0342de" package="Default">
     <docblock line="2">
       <description>Defines JpegReader class.</description>
       <long-description/>
@@ -703,7 +711,7 @@ based on a file extension.&lt;/p&gt;</long-description>
       <error line="16" code="50015">Argument $path is missing from the Docblock of doRead()</error>
     </parse_markers>
   </file>
-  <file path="Io/Reader/ReaderFactory.php" hash="6245631058e81770df0e32340df1dbc2" package="Default">
+  <file path="Io/Reader/ReaderFactory.php" hash="dbf0c7df3227f24b0a0eb1e971fed398" package="Default">
     <docblock line="2">
       <description>Defines ReaderFactory class.</description>
       <long-description/>
@@ -717,13 +725,19 @@ based on a file extension.&lt;/p&gt;</long-description>
         <description>Defines an abstract implementation of a input "device" for resources.</description>
         <long-description/>
       </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="GdWrapper\Io\Reader" line="26" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="GdWrapper\Io\Reader" line="34" package="Default">
         <name>factory</name>
         <full_name>factory</full_name>
         <docblock line="16">
-          <description>Returns a concrete instance of a Reader based on the file
-extension of `$path`.</description>
-          <long-description/>
+          <description>Returns a concrete instance of a Reader based on the file extension of `$path`.</description>
+          <long-description>&lt;p&gt;Note:&lt;/p&gt;
+
+&lt;p&gt;For custom implementations of Writer interface, it must follow the convention:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\GdWrapper\Io\Writer\&amp;lt;TYPE&amp;gt;Writer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that &lt;code&gt;&amp;lt;TYPE&amp;gt;&lt;/code&gt; MUST be in &lt;code&gt;StudlyCaps&lt;/code&gt;.&lt;/p&gt;</long-description>
           <tag line="16" name="param" description="the path to an image file." type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
@@ -734,7 +748,7 @@ extension of `$path`.</description>
             <type by_reference="false">\DomainException</type>
           </tag>
         </docblock>
-        <argument line="26">
+        <argument line="34">
           <name>$path</name>
           <default/>
           <type/>
@@ -742,10 +756,10 @@ extension of `$path`.</description>
       </method>
     </class>
   </file>
-  <file path="Io/Reader/AbstractReader.php" hash="954f344f9bbd56e2e29dabb96d537956" package="Default">
+  <file path="Io/Reader/AbstractReader.php" hash="40a2aa8f6ac4a87038ab11b9f1f6b853" package="Default">
     <docblock line="2">
       <description>Defines AbstractReader class.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="true" namespace="GdWrapper\Io\Reader" line="16" package="Default">
@@ -755,42 +769,41 @@ extension of `$path`.</description>
       <full_name>\GdWrapper\Io\Reader\AbstractReader</full_name>
       <docblock line="13">
         <description>Defines an abstract implementation of a I/O device for resources.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Reader" line="23" package="Default">
         <name>read</name>
         <full_name>read</full_name>
         <docblock line="18">
           <description>{@inheritdoc}</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="18" name="see" description="\GdWrapper\Io\Reader\Reader::read()" refers="\GdWrapper\Io\Reader\Reader::read()"/>
         </docblock>
         <argument line="23">
           <name>$path</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Io\Reader" line="49" package="Default">
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Io\Reader" line="44" package="Default">
         <name>doRead</name>
         <full_name>doRead</full_name>
-        <docblock line="40">
+        <docblock line="36">
           <description>Concrete implementors should implement this operation.</description>
-          <long-description>&lt;p&gt;This is method is executed at the end of
-{@link \GdWrapper\Io\Reader\Reader::write()}&lt;/p&gt;</long-description>
-          <tag line="40" name="param" description="The path to a valid image." type="string" variable="$path">
+          <long-description>&lt;p&gt;This is method is executed at the end of {@link \GdWrapper\Io\Reader\Reader::write()}&lt;/p&gt;</long-description>
+          <tag line="36" name="param" description="The path to a valid image." type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="40" name="return" description="A new Resource object." type="Resource">
+          <tag line="36" name="return" description="A new Resource object." type="Resource">
             <type by_reference="false">Resource</type>
           </tag>
-          <tag line="40" name="throws" description="If cannot read from file system" type="\GdWrapper\Io\Exception">
+          <tag line="36" name="throws" description="If cannot read from file system" type="\GdWrapper\Io\Exception">
             <type by_reference="false">\GdWrapper\Io\Exception</type>
           </tag>
         </docblock>
-        <argument line="49">
+        <argument line="44">
           <name>$path</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -799,7 +812,7 @@ extension of `$path`.</description>
       <error line="18" code="50015">Argument $path is missing from the Docblock of read()</error>
     </parse_markers>
   </file>
-  <file path="Io/Reader/PngReader.php" hash="e3b3a8c42fef23326b79c60c4db0b26d" package="Default">
+  <file path="Io/Reader/PngReader.php" hash="5de58bbbff678cd282c93216555decc0" package="Default">
     <docblock line="2">
       <description>Defines PngReader class.</description>
       <long-description/>
@@ -832,28 +845,27 @@ extension of `$path`.</description>
       <error line="16" code="50015">Argument $path is missing from the Docblock of doRead()</error>
     </parse_markers>
   </file>
-  <file path="Io/Reader/JpgReader.php" hash="4dc7c60b318ec196da79329d4740ea59" package="Default">
+  <file path="Io/Reader/JpgReader.php" hash="f58653ccac19cc8cf9ca1d881ac59cb0" package="Default">
     <docblock line="2">
       <description>Defines JpgReader class.</description>
       <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
-    <class final="false" abstract="false" namespace="GdWrapper\Io\Reader" line="18" package="Default">
+    <class final="false" abstract="false" namespace="GdWrapper\Io\Reader" line="17" package="Default">
       <extends>\GdWrapper\Io\Reader\JpegReader</extends>
       <name>JpgReader</name>
       <full_name>\GdWrapper\Io\Reader\JpgReader</full_name>
       <docblock line="11">
         <description>Defines an implementation of a I/O device for JPEG files.</description>
-        <long-description>&lt;p&gt;Because JPEG files can have &lt;code&gt;.jpg&lt;/code&gt; and &lt;code&gt;.jpeg&lt;/code&gt; extensions, this class is needed
-for the right operation of &lt;code&gt;ReaderFactory&lt;/code&gt;, which tries to create a reader
-based on a file extension.&lt;/p&gt;</long-description>
+        <long-description>&lt;p&gt;Because JPEG files can have &lt;code&gt;.jpg&lt;/code&gt; and &lt;code&gt;.jpeg&lt;/code&gt; extensions, this class is needed for the right
+operation of &lt;code&gt;ReaderFactory&lt;/code&gt;, which tries to create a reader based on a file extension.&lt;/p&gt;</long-description>
       </docblock>
     </class>
   </file>
-  <file path="Image/Info.php" hash="a39c0ee02326cfc4cc3621b4fd84125a" package="Default">
+  <file path="Image/Info.php" hash="09f6453751d20d5b6159632d821dcc0d" package="Default">
     <docblock line="2">
       <description>Defines ImageInfo class.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="false" namespace="GdWrapper\Image" line="13" package="Default">
@@ -862,14 +874,14 @@ based on a file extension.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Image\Info</full_name>
       <docblock line="10">
         <description>Holds information about an image on file system.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
       <property final="false" static="false" visibility="private" line="17" namespace="GdWrapper\Image" package="Default">
         <name>$width</name>
         <default>null</default>
         <docblock line="14">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="14" name="var" description="The image width" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -879,8 +891,8 @@ based on a file extension.&lt;/p&gt;</long-description>
         <name>$height</name>
         <default>null</default>
         <docblock line="19">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="19" name="var" description="The image height" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -891,19 +903,19 @@ based on a file extension.&lt;/p&gt;</long-description>
         <full_name>getWidth</full_name>
         <docblock line="24">
           <description>Get image width.</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="24" name="return" description="The image width" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Image" line="42" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Image" line="43" package="Default">
         <name>getHeight</name>
         <full_name>getHeight</full_name>
-        <docblock line="37">
+        <docblock line="38">
           <description>Get image height.</description>
-          <long-description/>
-          <tag line="37" name="return" description="The image height" type="int">
+          <long-description></long-description>
+          <tag line="38" name="return" description="The image height" type="int">
             <type by_reference="false">int</type>
           </tag>
         </docblock>

@@ -6,7 +6,7 @@
  */
 namespace GdWrapper\Io\Reader;
 
-use GdWrapper\Resource\Resource;
+use \GdWrapper\Resource\Resource;
 
 /**
  * Defines an abstract implementation of a input "device" for resources.
@@ -14,8 +14,16 @@ use GdWrapper\Resource\Resource;
 class ReaderFactory
 {
 	/**
-	 * Returns a concrete instance of a Reader based on the file
-	 * extension of `$path`.
+	 * Returns a concrete instance of a Reader based on the file extension of `$path`.
+	 *
+	 * Note:
+	 *
+	 * For custom implementations of Writer interface, it must follow the convention:
+	 * <code>
+	 * \GdWrapper\Io\Writer\&lt;TYPE&gt;Writer
+	 * </code>
+	 *
+	 * Notice that `<TYPE>` MUST be in `StudlyCaps`.
 	 *
 	 * @param string $path the path to an image file.
 	 *
@@ -35,4 +43,3 @@ class ReaderFactory
 		}
 	}
 }
-

@@ -6,9 +6,9 @@
  */
 namespace GdWrapper\Io\Writer;
 
-use GdWrapper\Io\Exception;
-use GdWrapper\Resource\Resource;
-use GdWrapper\Io\Preset;
+use \GdWrapper\Io\Exception;
+use \GdWrapper\Resource\Resource;
+use \GdWrapper\Io\Preset;
 
 /**
  * Represents an output "device" for resources.
@@ -22,11 +22,11 @@ interface Writer {
 	 * 		Its value MUST be in a range from 0 to 100.
 	 * @param mixed $_ (optional) Additional parameters passed to
 	 * 		the concrete implementation method.
-	 * 
+	 *
 	 * @return void
-	 * 
+	 *
 	 * @throws Exception If cannot write the contents on file system.
-	 * 
+	 *
 	 * @see \GdWrapper\Io\Preset
 	 */
 	public function write(
@@ -37,14 +37,14 @@ interface Writer {
 	
 	/**
 	 * Obtains the Resource instance in which this object is working on.
-	 * 
+	 *
 	 * @return \GdWrapper\Resource\Resource
 	 */
 	public function getResource();
 	
 	/**
 	 * Obtains the Resource instance in which this object is working on.
-	 * 
+	 *
 	 * @param \GdWrapper\Resource\Resource $resource
 	 * @return void
 	 */
