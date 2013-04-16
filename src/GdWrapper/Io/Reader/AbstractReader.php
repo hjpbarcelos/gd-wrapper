@@ -18,14 +18,20 @@ abstract class AbstractReader implements Reader
 	/**
 	 * {@inheritdoc}
 	 * 
-	 * @throws Exception If `$path` is not a readable file.
-	 * 
 	 * @see \GdWrapper\Io\Reader\Reader::read()
 	 */
 	public function read($path)
 	{
-		if(!is_readable($path)) {
-			throw new Exception("You do not have permissions to read the file '{$path}'");	
+		if (!is_file($path)) {
+			throw new \InvalidArgumentException(
+				"Path '{$path}' does not point to a file"
+			);
+		}
+		
+		if (!is_readable($path)) {
+			throw new Exception(
+				"You do not have permissions to read the file '{$path}'"
+			);	
 		}
 		
 		return $this->doRead($path);

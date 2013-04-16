@@ -14,12 +14,12 @@ use GdWrapper\Resource\Resource;
 class ReaderFactory
 {
 	/**
-	 * Returns a concrete instance of a AbstractReader based on the file
+	 * Returns a concrete instance of a Reader based on the file
 	 * extension of `$path`.
 	 *
 	 * @param string $path the path to an image file.
 	 *
-	 * @return Reader A concrete implementation of AbstractIo\
+	 * @return \GdWrapper\Io\Reader\Reader A concrete implementation of Reader
 	 *
 	 * @throws \DomainException If the file type is not currently supported.
 	 */
@@ -28,9 +28,11 @@ class ReaderFactory
 		$type = pathinfo($path, PATHINFO_EXTENSION);
 		$className = __NAMESPACE__ . '\\' . ucfirst(strtolower($type)) . 'Reader';
 		try {
-			return (new \ReflectionClass($className))->newInstance();
+			$reflection = new \ReflectionClass($className);
+			return $reflection->newInstance();
 		} catch(\ReflectionException $e) {
 			throw new \DomainException("Extension '{$type}' not supported!");
 		}
 	}
 }
+

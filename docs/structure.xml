@@ -380,7 +380,7 @@
       </method>
     </interface>
   </file>
-  <file path="Io/Writer/WriterFactory.php" hash="ca8d0077ad01cb3abea8f15e80753808" package="Default">
+  <file path="Io/Writer/WriterFactory.php" hash="276b69392cf580a697251402dacb0ae6" package="Default">
     <docblock line="2">
       <description>Defines WriterFactory class.</description>
       <long-description/>
@@ -398,8 +398,8 @@
         <name>factory</name>
         <full_name>factory</full_name>
         <docblock line="17">
-          <description>Returns a concrete instance of a AbstractWriter based on the file
-extension of `$path`.</description>
+          <description>Returns a concrete instance of a Writer based on the file
+extension `$type`.</description>
           <long-description/>
           <tag line="17" name="param" description="The type of the image that will be written." type="string" variable="$type">
             <type by_reference="false">string</type>
@@ -493,10 +493,10 @@ based on a file extension.&lt;/p&gt;</long-description>
       <error line="16" code="50015">Argument $_ is missing from the Docblock of doWrite()</error>
     </parse_markers>
   </file>
-  <file path="Io/Writer/AbstractWriter.php" hash="bc949fa5f07cafdc5e531226e9eb44f5" package="Default">
+  <file path="Io/Writer/AbstractWriter.php" hash="9ea809575c5ec287ef342c956230342a" package="Default">
     <docblock line="2">
       <description>Defines AbstractWriter class.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="true" namespace="GdWrapper\Io\Writer" line="16" package="Default">
@@ -506,14 +506,14 @@ based on a file extension.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Io\Writer\AbstractWriter</full_name>
       <docblock line="13">
         <description>Defines an abstract implementation of a I/O device for resources.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <property final="false" static="false" visibility="private" line="21" namespace="GdWrapper\Io\Writer" package="Default">
         <name>$resource</name>
-        <default></default>
+        <default/>
         <docblock line="18">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="18" name="var" description="The Resource object this object will work on." type="Resource">
             <type by_reference="false">Resource</type>
           </tag>
@@ -524,14 +524,14 @@ based on a file extension.&lt;/p&gt;</long-description>
         <full_name>__construct</full_name>
         <docblock line="23">
           <description>Creates a new output "device".</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="23" name="param" description="An image resource." type="\GdWrapper\Resource\Resource" variable="$resource">
             <type by_reference="false">\GdWrapper\Resource\Resource</type>
           </tag>
         </docblock>
         <argument line="28">
           <name>$resource</name>
-          <default></default>
+          <default/>
           <type>\GdWrapper\Resource\Resource</type>
         </argument>
       </method>
@@ -540,7 +540,7 @@ based on a file extension.&lt;/p&gt;</long-description>
         <full_name>getResource</full_name>
         <docblock line="33">
           <description>{@inheritdoc}</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="33" name="see" description="\GdWrapper\Io\Writer::getResource()" refers="\GdWrapper\Io\Writer::getResource()"/>
         </docblock>
       </method>
@@ -549,12 +549,12 @@ based on a file extension.&lt;/p&gt;</long-description>
         <full_name>setResource</full_name>
         <docblock line="43">
           <description>{@inheritdoc}</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="43" name="see" description="\GdWrapper\Io\Writer::setResource()" refers="\GdWrapper\Io\Writer::setResource()"/>
         </docblock>
         <argument line="48">
           <name>$resource</name>
-          <default></default>
+          <default/>
           <type>\GdWrapper\Resource\Resource</type>
         </argument>
       </method>
@@ -563,8 +563,8 @@ based on a file extension.&lt;/p&gt;</long-description>
         <full_name>write</full_name>
         <docblock line="53">
           <description>{@inheritdoc}</description>
-          <long-description></long-description>
-          <tag line="53" name="see" description="\GdWrapper\Io\Writer\Writer::write" refers="\GdWrapper\Io\Writer\Writer::write"/>
+          <long-description/>
+          <tag line="53" name="see" description="\GdWrapper\Io\Writer\Writer::write()" refers="\GdWrapper\Io\Writer\Writer::write()"/>
         </docblock>
         <argument line="59">
           <name>$path</name>
@@ -630,10 +630,10 @@ based on a file extension.&lt;/p&gt;</long-description>
       <error line="53" code="50015">Argument $_ is missing from the Docblock of write()</error>
     </parse_markers>
   </file>
-  <file path="Io/Reader/Reader.php" hash="3f0089598e757fbed2c1c78ff32d2235" package="Default">
+  <file path="Io/Reader/Reader.php" hash="d73b0704546405687f9de5cd1ff93fd4" package="Default">
     <docblock line="2">
       <description>Defines Reader interface.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <interface namespace="GdWrapper\Io\Reader" line="12" package="Default">
@@ -641,14 +641,14 @@ based on a file extension.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Io\Reader\Reader</full_name>
       <docblock line="9">
         <description>Represents an input "device" to resources.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Reader" line="23" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Reader" line="25" package="Default">
         <name>read</name>
         <full_name>read</full_name>
         <docblock line="14">
           <description>Creates an image resource based on a filepath.</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="14" name="param" description="The path to a valid image." type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
@@ -662,9 +662,9 @@ based on a file extension.&lt;/p&gt;</long-description>
             <type by_reference="false">\InvalidArgumentException</type>
           </tag>
         </docblock>
-        <argument line="23">
+        <argument line="25">
           <name>$path</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -703,7 +703,7 @@ based on a file extension.&lt;/p&gt;</long-description>
       <error line="16" code="50015">Argument $path is missing from the Docblock of doRead()</error>
     </parse_markers>
   </file>
-  <file path="Io/Reader/ReaderFactory.php" hash="4acd80399e5d02cf4993b1527e03c354" package="Default">
+  <file path="Io/Reader/ReaderFactory.php" hash="6245631058e81770df0e32340df1dbc2" package="Default">
     <docblock line="2">
       <description>Defines ReaderFactory class.</description>
       <long-description/>
@@ -721,13 +721,13 @@ based on a file extension.&lt;/p&gt;</long-description>
         <name>factory</name>
         <full_name>factory</full_name>
         <docblock line="16">
-          <description>Returns a concrete instance of a AbstractReader based on the file
+          <description>Returns a concrete instance of a Reader based on the file
 extension of `$path`.</description>
           <long-description/>
           <tag line="16" name="param" description="the path to an image file." type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="16" name="return" description="A concrete implementation of AbstractIo\" type="\GdWrapper\Io\Reader\Reader">
+          <tag line="16" name="return" description="A concrete implementation of Reader" type="\GdWrapper\Io\Reader\Reader">
             <type by_reference="false">\GdWrapper\Io\Reader\Reader</type>
           </tag>
           <tag line="16" name="throws" description="If the file type is not currently supported." type="\DomainException">
@@ -742,10 +742,10 @@ extension of `$path`.</description>
       </method>
     </class>
   </file>
-  <file path="Io/Reader/AbstractReader.php" hash="43dc82f8c9411d8584838e9624e071c1" package="Default">
+  <file path="Io/Reader/AbstractReader.php" hash="954f344f9bbd56e2e29dabb96d537956" package="Default">
     <docblock line="2">
       <description>Defines AbstractReader class.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="true" namespace="GdWrapper\Io\Reader" line="16" package="Default">
@@ -755,45 +755,42 @@ extension of `$path`.</description>
       <full_name>\GdWrapper\Io\Reader\AbstractReader</full_name>
       <docblock line="13">
         <description>Defines an abstract implementation of a I/O device for resources.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Reader" line="25" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Reader" line="23" package="Default">
         <name>read</name>
         <full_name>read</full_name>
         <docblock line="18">
           <description>{@inheritdoc}</description>
-          <long-description/>
-          <tag line="18" name="throws" description="If `$path` is not a readable file." type="\GdWrapper\Io\Exception">
-            <type by_reference="false">\GdWrapper\Io\Exception</type>
-          </tag>
+          <long-description></long-description>
           <tag line="18" name="see" description="\GdWrapper\Io\Reader\Reader::read()" refers="\GdWrapper\Io\Reader\Reader::read()"/>
         </docblock>
-        <argument line="25">
+        <argument line="23">
           <name>$path</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Io\Reader" line="43" package="Default">
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Io\Reader" line="49" package="Default">
         <name>doRead</name>
         <full_name>doRead</full_name>
-        <docblock line="34">
+        <docblock line="40">
           <description>Concrete implementors should implement this operation.</description>
           <long-description>&lt;p&gt;This is method is executed at the end of
 {@link \GdWrapper\Io\Reader\Reader::write()}&lt;/p&gt;</long-description>
-          <tag line="34" name="param" description="The path to a valid image." type="string" variable="$path">
+          <tag line="40" name="param" description="The path to a valid image." type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="34" name="return" description="A new Resource object." type="Resource">
+          <tag line="40" name="return" description="A new Resource object." type="Resource">
             <type by_reference="false">Resource</type>
           </tag>
-          <tag line="34" name="throws" description="If cannot read from file system" type="\GdWrapper\Io\Exception">
+          <tag line="40" name="throws" description="If cannot read from file system" type="\GdWrapper\Io\Exception">
             <type by_reference="false">\GdWrapper\Io\Exception</type>
           </tag>
         </docblock>
-        <argument line="43">
+        <argument line="49">
           <name>$path</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>

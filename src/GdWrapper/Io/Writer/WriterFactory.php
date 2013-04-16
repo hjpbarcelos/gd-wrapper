@@ -15,14 +15,14 @@ use GdWrapper\Resource\Resource;
 class WriterFactory
 {
 	/**
-	 * Returns a concrete instance of a AbstractWriter based on the file
-	 * extension of `$path`.
+	 * Returns a concrete instance of a Writer based on the file
+	 * extension `$type`.
 	 * 
 	 * @param string $type The type of the image that will be written.
 	 * @param \GdWrapper\Resource\Resource $resource The image resource that 
 	 * 		will be written.
 	 * 
-	 * @return \GdWrapper\Io\Writer\Writer A concrete implementation of Writer.
+	 * @return Writer A concrete implementation of Writer.
 	 * 
 	 * @throws \DomainException
 	 */
@@ -31,7 +31,8 @@ class WriterFactory
 		$className = __NAMESPACE__ . '\\' . ucfirst(strtolower($type)) 
 					. 'Writer';
 		try {
-			return (new \ReflectionClass($className))->newInstance($resource);
+			$reflection = new \ReflectionClass($className);
+			return $reflection->newInstance($resource);
 		} catch(\ReflectionException $e) {
 			throw new \DomainException("Extension '{$type}' not supported!");
 		}
