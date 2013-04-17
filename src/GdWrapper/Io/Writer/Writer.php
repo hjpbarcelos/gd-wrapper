@@ -13,11 +13,12 @@ use \GdWrapper\Io\Preset;
 /**
  * Represents an output "device" for resources.
  */
-interface Writer {
+interface Writer
+{
 	/**
 	 * Provides an output to an image resource.
 	 *
-	 * @param string $path (optional) A path where to save the resource.
+	 * @param string $pathName (optional) A path where to save the resource.
 	 * @param int $quality (optional) The quality of generated image.
 	 * 		Its value MUST be in a range from 0 to 100.
 	 * @param mixed $_ (optional) Additional parameters passed to
@@ -30,7 +31,7 @@ interface Writer {
 	 * @see \GdWrapper\Io\Preset
 	 */
 	public function write(
-		$path = null,
+		$pathName = null,
 		$quality = Preset::IMAGE_QUALITY_MAX,
 		$_ = null
 	);

@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">11</span></a></li>
+                <span class="label label-info">16</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -157,7 +157,7 @@
 </div>
 <a id="method_write"></a><div class="element clickable method public method_write" data-toggle="collapse" data-target=".method_write .collapse">
 <h2>Provides an output to an image resource.</h2>
-<pre>write($path, int $quality, $_) : void</pre>
+<pre>write($pathName, int $quality, $_) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -172,7 +172,7 @@
 </tr>
 </table>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$pathName</h4></div>
 <div class="subelement argument">
 <h4>$quality</h4>
 <code>int</code><p>(optional) The quality of generated image.
@@ -189,7 +189,7 @@
 </div>
 <a id="method_doWrite"></a><div class="element clickable method protected method_doWrite" data-toggle="collapse" data-target=".method_doWrite .collapse">
 <h2>Outputs an image resource with `imagepng` function.</h2>
-<pre>doWrite(string | null $path, $quality, int $filters) : void</pre>
+<pre>doWrite(string | null $pathName, $quality, int $filters) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p><p>This is method is executed at the end of <a href="\GdWrapper\Io\Writer\AbstractWriter::write()">\GdWrapper\Io\Writer\AbstractWriter::write()</a></p></p></div>
@@ -206,7 +206,7 @@
 </table>
 <h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$path</h4>
+<h4>$pathName</h4>
 <code>string</code><code>null</code><p>(optional) A <code>string</code> containing a path to a
         writable file on file system or <code>null</code> if you want send the
         output to the browser.</p>
@@ -244,7 +244,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-04-16T12:23:05+02:00.<br></footer></div>
+            generated on 2013-04-18T01:45:30+02:00.<br></footer></div>
 </div>
 </body>
 </html>

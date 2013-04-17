@@ -14,7 +14,7 @@ use \GdWrapper\Resource\Resource;
 class ReaderFactory
 {
 	/**
-	 * Returns a concrete instance of a Reader based on the file extension of `$path`.
+	 * Returns a concrete instance of a Reader based on the file extension of `$pathName`.
 	 *
 	 * Note:
 	 *
@@ -25,15 +25,15 @@ class ReaderFactory
 	 *
 	 * Notice that `<TYPE>` MUST be in `StudlyCaps`.
 	 *
-	 * @param string $path the path to an image file.
+	 * @param string $pathName the path to an image file.
 	 *
 	 * @return \GdWrapper\Io\Reader\Reader A concrete implementation of Reader
 	 *
 	 * @throws \DomainException If the file type is not currently supported.
 	 */
-	public static function factory($path)
+	public static function factory($pathName)
 	{
-		$type = pathinfo($path, PATHINFO_EXTENSION);
+		$type = pathinfo($pathName, PATHINFO_EXTENSION);
 		$className = __NAMESPACE__ . '\\' . ucfirst(strtolower($type)) . 'Reader';
 		try {
 			$reflection = new \ReflectionClass($className);

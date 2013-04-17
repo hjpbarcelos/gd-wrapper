@@ -20,26 +20,44 @@ abstract class AbstractReader implements Reader
 	 *
 	 * @see \GdWrapper\Io\Reader\Reader::read()
 	 */
-	public function read($path)
+	public function read($pathName)
 	{
-		if (!is_file($path)) {
-			throw new \InvalidArgumentException("Path '{$path}' does not point to a file");
+		if (!is_file($pathName)) {
+			throw new \InvalidArgumentException("Path '{$pathName}' does not point to a file");
 		}
 		
-		if (!is_readable($path)) {
-			throw new Exception("You do not have permissions to read the file '{$path}'");
+		if (!is_readable($pathName)) {
+			throw new Exception("You do not have permissions to read the file '{$pathName}'");
 		}
 		
-		return $this->doRead($path);
+		$info = getimagesize($pathName);
+		
+		
+		
+		$this->validateMimeType($info['mime'], $pathName);
+		
+		return $this->doRead($pathName);
 	}
 	
 	/**
 	 * Concrete implementors should implement this operation.
 	 * This is method is executed at the end of {@link \GdWrapper\Io\Reader\Reader::write()}
 	 *
-	 * @param string $path The path to a valid image.
+	 * @param string $pathName The path to a valid image.
 	 * @return Resource A new Resource object.
 	 * @throws \GdWrapper\Io\Exception If cannot read from file system
 	 */
-	abstract protected function doRead($path);
+	abstract protected function doRead($pathName);
+	
+	/**
+	 * Validate expected image mime-type againt a parameter.
+	 *
+	 * @param string $mimeType The mime-type of the image.
+	 * @param string $pathName The path to the image.
+	 *
+	 * @return void
+	 *
+	 * @throws \InvalidParameterException If `$mimeType` is not valid for the concrete implementation.
+	 */
+	abstract protected function validateMimeType($mimeType, $pathName);
 }

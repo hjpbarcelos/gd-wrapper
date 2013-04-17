@@ -28,4 +28,18 @@ class JpegReader extends AbstractReader {
 			throw new Exception("Could not create a JPEG resource from path '{$path}'");
 		}
 	}
+	
+	/**
+	 * {@inheritdoc}
+	 *
+	 * @throws \InvalidArgumentException If image is not a valid JPEG file.
+	 *
+	 * @see GdWrapper\Io\Reader\AbstractReader::validateMimeType()
+	 */
+	protected function validateMimeType($mimeType, $pathName)
+	{
+	    if(!preg_match('#^image/p?jpe?g$#i', $mimeType)) {
+	        throw new \InvalidArgumentException("Image '{$pathName}' is not a valid JPEG file");
+	    }
+	}
 }

@@ -10,6 +10,7 @@ namespace GdWrapper\Io;
 /**
  * Exception that indicates an I/O Exception.
  */
-class Exception extends \LogicException {
-	
+class Exception extends \LogicException
+{
+    
 }
