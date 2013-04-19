@@ -25,7 +25,7 @@ class ReaderFactory
 	 *
 	 * Notice that `<TYPE>` MUST be in `StudlyCaps`.
 	 *
-	 * @param string $pathName the path to an image file.
+	 * @param string $pathName the path to an image file or just the desired file extension.
 	 *
 	 * @return \GdWrapper\Io\Reader\Reader A concrete implementation of Reader
 	 *
@@ -33,8 +33,13 @@ class ReaderFactory
 	 */
 	public static function factory($pathName)
 	{
-		$type = pathinfo($pathName, PATHINFO_EXTENSION);
+	    $type = $pathName;
+	    if(strpos($pathName, '.') !== false) {
+		    $type = pathinfo($pathName, PATHINFO_EXTENSION);
+	    }
+	    
 		$className = __NAMESPACE__ . '\\' . ucfirst(strtolower($type)) . 'Reader';
+		
 		try {
 			$reflection = new \ReflectionClass($className);
 			return $reflection->newInstance();

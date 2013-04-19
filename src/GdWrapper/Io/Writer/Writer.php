@@ -15,10 +15,21 @@ use \GdWrapper\Io\Preset;
  */
 interface Writer
 {
+   /**
+    * This parameter should be used with `write` method to
+    * indicate that the destination of output is the standard output.
+    *
+    * @var null
+    */
+    const STDOUT = null;
+    
 	/**
 	 * Provides an output to an image resource.
 	 *
-	 * @param string $pathName (optional) A path where to save the resource.
+	 * If you want to output to standar output, `$pathName` parameter
+	 * should be `STDOUT` class constant of this interface.
+	 *
+	 * @param string $pathName A path where to save the resource.
 	 * @param int $quality (optional) The quality of generated image.
 	 * 		Its value MUST be in a range from 0 to 100.
 	 * @param mixed $_ (optional) Additional parameters passed to
@@ -31,7 +42,7 @@ interface Writer
 	 * @see \GdWrapper\Io\Preset
 	 */
 	public function write(
-		$pathName = null,
+		$pathName,
 		$quality = Preset::IMAGE_QUALITY_MAX,
 		$_ = null
 	);

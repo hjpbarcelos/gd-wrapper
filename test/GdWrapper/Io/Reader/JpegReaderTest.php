@@ -40,7 +40,7 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
      * @test
      */
     public function invalidFilePath() {
-        $this->reader->read(ROOT. '/assets/images/fileXXXXX.jpg');
+        $this->reader->read(ROOT. '/test/assets/images/fileXXXXX.jpg');
     }
     
     /**
@@ -48,7 +48,7 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
      * @test
      */
     public function invalidExistentFile() {
-        $this->reader->read(ROOT. '/assets/images/file2.png');
+        $this->reader->read(ROOT. '/test/assets/images/file2.png');
     }
     
     /**
@@ -58,7 +58,7 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
      * @test
      */
     public function unreadableFile() {
-        $this->reader->read(ROOT. '/assets/images/file3.jpg');
+        $this->reader->read(ROOT. '/test/assets/images/file3.jpg');
     }
     
     /**
@@ -66,7 +66,7 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
      * @test
      */
     public function fakeJpegFile() {
-        $this->reader->read(ROOT. '/assets/images/file4.jpg');
+        $this->reader->read(ROOT. '/test/assets/images/file4.jpg');
     }
     
     /**
@@ -75,6 +75,8 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
      */
     public function corruptedJpegFile() {
         try {
+            $this->reader->read(ROOT. '/test/assets/images/file5.jpg');
+        } catch (\GdWrapper\Io\Exception $e) {
             $this->reader->read(ROOT. '/assets/images/file5.jpg');
         } catch (\GdWrapper\Io\Exception $e) {
             $this->assertError("imagecreatefromjpeg(): '" . ROOT
@@ -87,7 +89,7 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
      * @test
      */
     public function readFileOk() {
-        $file = ROOT. '/assets/images/file1.jpg';
+        $file = ROOT. '/test/assets/images/file1.jpg';
         $resource = $this->reader->read($file);
         
         ob_start();

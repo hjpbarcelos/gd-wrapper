@@ -52,6 +52,7 @@ abstract class AbstractWriter implements Writer
 
     /**
      * {@inheritdoc}
+     *
      * @param int $quality (optional) The quality of generated image.
      * 		Its value MUST be in a range from 0 to 100.
      *      Otherwise, it will be converted using `$quality % 101`
@@ -59,7 +60,7 @@ abstract class AbstractWriter implements Writer
      * @see \GdWrapper\Io\Writer\Writer::write()
      */
     public function write(
-        $pathName = null,
+        $pathName,
         $quality = Preset::IMAGE_QUALITY_MAX,
         $_ = null
     ) {

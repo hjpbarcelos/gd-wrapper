@@ -34,7 +34,7 @@ class PngReaderTest extends \PHPUnit_Framework_TestCase {
      * @test
      */
     public function invalidExistentFile() {
-        $this->reader->read(ROOT. '/assets/images/file1.jpg');
+        $this->reader->read(ROOT. '/test/assets/images/file1.jpg');
     }
     
     /**
@@ -42,7 +42,7 @@ class PngReaderTest extends \PHPUnit_Framework_TestCase {
      * @test
      */
     public function fakePngFile() {
-        $this->reader->read(ROOT. '/assets/images/file6.png');
+        $this->reader->read(ROOT. '/test/assets/images/file6.png');
     }
     
     /**
@@ -50,14 +50,14 @@ class PngReaderTest extends \PHPUnit_Framework_TestCase {
      * @test
      */
     public function corruptedPngFile() {
-        $this->reader->read(ROOT. '/assets/images/file7.png');
+        $this->reader->read(ROOT. '/test/assets/images/file7.png');
     }
     
     /**
      * @test
      */
     public function readFileOk() {
-        $file = ROOT. '/assets/images/file2.png';
+        $file = ROOT. '/test/assets/images/file2.png';
         $resource = $this->reader->read($file);
         
         ob_start();

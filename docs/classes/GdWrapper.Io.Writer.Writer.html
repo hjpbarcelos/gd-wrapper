@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">16</span></a></li>
+                <span class="label label-info">18</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -52,14 +52,22 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list"><li class="nav-header">
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
 <li class="method public "><a href="#method_getResource" title="getResource :: Obtains the Resource instance in which this object is working on."><span class="description">Obtains the Resource instance in which this object is working on.</span><pre>getResource()</pre></a></li>
 <li class="method public "><a href="#method_setResource" title="setResource :: Obtains the Resource instance in which this object is working on."><span class="description">Obtains the Resource instance in which this object is working on.</span><pre>setResource()</pre></a></li>
 <li class="method public "><a href="#method_write" title="write :: Provides an output to an image resource."><span class="description">Provides an output to an image resource.</span><pre>write()</pre></a></li>
 </ul>
-</li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul><li class="constant  "><a href="#constant_STDOUT" title="STDOUT :: This parameter should be used with `write` method to
+indicate that the destination of output is the standard output."><span class="description">This parameter should be used with `write` method to
+indicate that the destination of output is the standard output.</span><pre>STDOUT</pre></a></li></ul>
+</li>
+</ul>
 </div>
 <div class="span8">
 <a id="\GdWrapper\Io\Writer\Writer"></a><ul class="breadcrumb">
@@ -111,7 +119,8 @@
 <pre>write(string $pathName, int $quality, mixed $_) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>If you want to output to standar output, <code>$pathName</code> parameter
+should be <code>STDOUT</code> class constant of this interface.</p></div>
 <table class="table table-bordered"><tr>
 <th>see</th>
 <td><a href="Io.Preset.html#%5CGdWrapper%5CIo%5CPreset">\GdWrapper\Io\Preset</a></td>
@@ -119,8 +128,7 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$pathName</h4>
-<code>string</code><p>(optional) A path where to save the resource.</p>
-</div>
+<code>string</code><p>A path where to save the resource.</p></div>
 <div class="subelement argument">
 <h4>$quality</h4>
 <code>int</code><p>(optional) The quality of generated image.
@@ -138,6 +146,15 @@
 </tr></table>
 </div></div>
 </div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_STDOUT"> </a><div class="element clickable constant  constant_STDOUT" data-toggle="collapse" data-target=".constant_STDOUT .collapse">
+<h2>This parameter should be used with `write` method to
+indicate that the destination of output is the standard output.</h2>
+<pre>STDOUT : null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -145,7 +162,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-04-19T01:10:41+02:00.<br></footer></div>
+            generated on 2013-04-19T15:46:32+02:00.<br></footer></div>
 </div>
 </body>
 </html>

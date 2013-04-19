@@ -19,14 +19,10 @@ class JpegWriter extends AbstractWriter
      *
      * {@inheritdoc}
      *
-     * @param string|null $pathName (optional) A `string` containing a path to a
-     * 		writable file on file system or `null` if you want send the
-     * 		output to the browser.
-     *
      * @see \GdWrapper\Io\Writer\AbstractWriter::doWrite()
      */
     protected function doWrite(
-        $pathName = null,
+        $pathName,
         $quality = Preset::IMAGE_QUALITY_MAX,
         $_ = null
     ) {

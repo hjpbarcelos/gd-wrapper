@@ -19,9 +19,6 @@ class PngWriter extends AbstractWriter
      *
      * {@inheritdoc}
      *
-     * @param string|null $pathName (optional) A `string` containing a path to a
-     * 		writable file on file system or `null` if you want send the
-     * 		output to the browser.
      * @param int $filters (optional) Allows reducing the PNG file size.
      *
      * @see \GdWrapper\Io\Writer\AbstractWriter::doWrite()
@@ -29,7 +26,7 @@ class PngWriter extends AbstractWriter
      * 		function on PHP Manual
      */
     protected function doWrite(
-        $pathName = null,
+        $pathName,
         $quality = Preset::IMAGE_QUALITY_MAX,
         $filters = null
     ) {
