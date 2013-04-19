@@ -2,18 +2,12 @@
 
 namespace GdWrapper\Io\Reader;
 
-/**
- * Note:
- * Tests for \GdWrapper\Io\Reader\AbstractReader are in this test case.
- *
- * @author Henrique Barcelos
- */
-class JpegReaderTest extends \PHPUnit_Framework_TestCase {
+class PngReaderTest extends \PHPUnit_Framework_TestCase {
     private $errors;
     private $reader;
     
     protected function setUp() {
-        $this->reader = new JpegReader();
+        $this->reader = new PngReader();
         $this->errors = array();
         set_error_handler(array($this, "errorHandler"));
     }
@@ -39,55 +33,31 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
      * @expectedException \InvalidArgumentException
      * @test
      */
-    public function invalidFilePath() {
-        $this->reader->read(ROOT. '/assets/images/fileXXXXX.jpg');
-    }
-    
-    /**
-     * @expectedException \InvalidArgumentException
-     * @test
-     */
     public function invalidExistentFile() {
-        $this->reader->read(ROOT. '/assets/images/file2.png');
-    }
-    
-    /**
-     * File `assets/images/file3.jpg` must hava no read permissions.
-     *
-     * @expectedException \GdWrapper\Io\Exception
-     * @test
-     */
-    public function unreadableFile() {
-        $this->reader->read(ROOT. '/assets/images/file3.jpg');
+        $this->reader->read(ROOT. '/assets/images/file1.jpg');
     }
     
     /**
      * @expectedException \InvalidArgumentException
      * @test
      */
-    public function fakeJpegFile() {
-        $this->reader->read(ROOT. '/assets/images/file4.jpg');
+    public function fakePngFile() {
+        $this->reader->read(ROOT. '/assets/images/file6.png');
     }
     
     /**
      * @expectedException \GdWrapper\Io\Exception
      * @test
      */
-    public function corruptedJpegFile() {
-        try {
-            $this->reader->read(ROOT. '/assets/images/file5.jpg');
-        } catch (\GdWrapper\Io\Exception $e) {
-            $this->assertError("imagecreatefromjpeg(): '" . ROOT
-                . "/assets/images/file5.jpg' is not a valid JPEG file", 2);
-            throw $e;
-        }
+    public function corruptedPngFile() {
+        $this->reader->read(ROOT. '/assets/images/file7.png');
     }
     
     /**
      * @test
      */
     public function readFileOk() {
-        $file = ROOT. '/assets/images/file1.jpg';
+        $file = ROOT. '/assets/images/file2.png';
         $resource = $this->reader->read($file);
         
         ob_start();
@@ -95,7 +65,7 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
         $contents = md5(ob_get_clean());
         
         ob_start();
-        $fromGd = imagecreatefromjpeg($file);
+        $fromGd = imagecreatefrompng($file);
         imagegd2($fromGd);
         $expected = md5(ob_get_clean());
         

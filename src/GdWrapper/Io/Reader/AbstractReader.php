@@ -31,9 +31,6 @@ abstract class AbstractReader implements Reader
 		}
 		
 		$info = getimagesize($pathName);
-		
-		
-		
 		$this->validateMimeType($info['mime'], $pathName);
 		
 		return $this->doRead($pathName);

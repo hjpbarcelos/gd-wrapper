@@ -38,7 +38,7 @@ class PngReader extends AbstractReader {
 	 */
 	protected function validateMimeType($mimeType, $pathName)
 	{
-	    if(strtolower($mimeType) == 'image/png') {
+	    if(strtolower($mimeType) != 'image/png') {
 	        throw new \InvalidArgumentException("Image '{$pathName}' is not a valid JPEG file");
 	    }
 	}
