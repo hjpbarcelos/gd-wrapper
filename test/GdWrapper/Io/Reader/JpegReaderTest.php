@@ -77,10 +77,8 @@ class JpegReaderTest extends \PHPUnit_Framework_TestCase {
         try {
             $this->reader->read(ROOT. '/test/assets/images/file5.jpg');
         } catch (\GdWrapper\Io\Exception $e) {
-            $this->reader->read(ROOT. '/assets/images/file5.jpg');
-        } catch (\GdWrapper\Io\Exception $e) {
             $this->assertError("imagecreatefromjpeg(): '" . ROOT
-                . "/assets/images/file5.jpg' is not a valid JPEG file", 2);
+                . "/test/assets/images/file5.jpg' is not a valid JPEG file", 2);
             throw $e;
         }
     }

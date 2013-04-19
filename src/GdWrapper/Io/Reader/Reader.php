@@ -16,7 +16,7 @@ interface Reader
 	 *
 	 * @param string $pathName The path to a valid image.
 	 *
-	 * @return \GdWrapper\Resource\Resource A new Resource object.
+	 * @return \GdWrapper\Resource\ImageResource A new ImageResource object.
 	 *
 	 * @throws \GdWrapper\Io\Exception If cannot read from file system
 	 * @throws \InvalidArgumentException If `$pathName` does not point to a valid file.

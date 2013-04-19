@@ -7,7 +7,7 @@
 namespace GdWrapper\Io\Writer;
 
 use \GdWrapper\Io\Exception;
-use \GdWrapper\Resource\Resource;
+use \GdWrapper\Resource\ImageResource;
 use \GdWrapper\Io\Preset;
 
 /**
@@ -48,17 +48,17 @@ interface Writer
     );
 
     /**
-     * Obtains the Resource instance in which this object is working on.
+     * Obtains the ImageResource instance in which this object is working on.
      *
-     * @return \GdWrapper\Resource\Resource
+     * @return \GdWrapper\Resource\ImageResource
      */
     public function getResource();
 
     /**
-     * Obtains the Resource instance in which this object is working on.
+     * Obtains the ImageResource instance in which this object is working on.
      *
-     * @param \GdWrapper\Resource\Resource $resource
+     * @param \GdWrapper\Resource\ImageResource $resource
      * @return void
      */
-    public function setResource(Resource $resource);
+    public function setResource(ImageResource $resource);
 }

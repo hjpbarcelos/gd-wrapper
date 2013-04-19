@@ -7,7 +7,7 @@
 namespace GdWrapper\Io\Reader;
 
 use \GdWrapper\Io\Exception;
-use \GdWrapper\Resource\Resource;
+use \GdWrapper\Resource\ImageResource;
 
 /**
  * Defines an implementation of a I/O device for JPEG files.
@@ -23,7 +23,7 @@ class JpegReader extends AbstractReader {
 	protected function doRead($path)
 	{
 		try {
-			return new Resource(imagecreatefromjpeg($path));
+			return new ImageResource(imagecreatefromjpeg($path));
 		} catch(\InvalidArgumentException $e) {
 			throw new Exception("Could not create a JPEG resource from path '{$path}'");
 		}

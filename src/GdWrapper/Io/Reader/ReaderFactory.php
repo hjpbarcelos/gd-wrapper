@@ -6,7 +6,7 @@
  */
 namespace GdWrapper\Io\Reader;
 
-use \GdWrapper\Resource\Resource;
+use \GdWrapper\Resource\ImageResource;
 
 /**
  * Defines an abstract implementation of a input "device" for resources.
