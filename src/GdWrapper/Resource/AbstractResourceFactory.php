@@ -1,6 +1,6 @@
 <?php
 /**
- * Creates class \GdWrapper\Resource\AbstractFactory.
+ * Creates class \GdWrapper\Resource\AbstractResourceFactory.
  *
  * @author Henrique Barcelos
  */
@@ -9,7 +9,8 @@ namespace GdWrapper\Resource;
 /**
  * Abstract factory for `\GdWrapper\Resource\Resource` types.
  */
-abstract class AbstractFactory {
+abstract class AbstractResourceFactory
+{
     /**
      * @var string Fully qualified name for the Resource interface
      */
@@ -35,7 +36,8 @@ abstract class AbstractFactory {
      * @throws \DomainException If `$className` is not subclass of
      *     \GdWrapper\Resource\Resource.
      */
-    protected function __construct($className) {
+    protected function __construct($className)
+    {
         $this->setClassName($className);
     }
     
@@ -50,7 +52,8 @@ abstract class AbstractFactory {
      * @throws \DomainException If `$className` is not subclass of
      *     `\GdWrapper\Resource\Resource`.
      */
-    final protected function setSuperClass($superClass) {
+    final protected function setSuperClass($superClass)
+    {
         try {
             $refl = new \ReflectionClass($className);
             if ($refl->isSubclassOf(self::TOP_CLASS)) {
@@ -70,7 +73,8 @@ abstract class AbstractFactory {
      *
      * @return string
      */
-    final protected function getSuperClass() {
+    final protected function getSuperClass()
+    {
         return $this->superClass;
     }
     
@@ -86,7 +90,8 @@ abstract class AbstractFactory {
      * @throws \DomainException If `$className` is not subclass of
      *     \GdWrapper\Resource\Resource.
      */
-    final protected function setClassName($className) {
+    final protected function setClassName($className)
+    {
         try {
             $refl = new \ReflectionClass($className);
             if (!$refl->isInstantiable()) {
@@ -111,7 +116,8 @@ abstract class AbstractFactory {
      *
      * @return
      */
-    final public function getClassName() {
+    final public function getClassName()
+    {
         return $this->className;
     }
     

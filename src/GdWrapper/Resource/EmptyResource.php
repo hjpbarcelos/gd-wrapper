@@ -1,6 +1,6 @@
 <?php
 /**
- * Defines TrueColorResource class.
+ * Defines EmptyResource class.
  *
  * @author Henrique Barcelos
  */
@@ -10,7 +10,7 @@ namespace GdWrapper\Resource;
 /**
  * Defines a true color image resource.
  */
-class TrueColorResource extends AbstractResource {
+class EmptyResource extends AbstractResource {
     /**
      * @var int The image width
      */
@@ -28,7 +28,8 @@ class TrueColorResource extends AbstractResource {
      * @param int $height The height of the new image.
      * @throws \InvalidArgumentException If `$width` or `$height` are less than zero.
      */
-    public function __construct($width, $height) {
+    public function __construct($width, $height)
+    {
         if ((int) $width <= 0 || (int) $height <= 0) {
             throw new \InvalidArgumentException(
                 "Imposible to create an image with dimensions [{$width}, {$height}]"
