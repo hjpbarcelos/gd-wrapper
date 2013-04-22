@@ -9,11 +9,16 @@ namespace GdWrapper\Resource;
 /**
  * Abstract factory for `\GdWrapper\Resource\Resource` types.
  */
-class AbstractFactory {
+abstract class AbstractFactory {
     /**
-     * @var string Fully qualified name for the Resource interface.
+     * @var string Fully qualified name for the Resource interface
      */
-    private $superClass = '\GdWrapper\Resource\Resource';
+    const TOP_CLASS = '\\GdWrapper\\Resource\\Resource';
+    
+    /**
+     * @var string Fully qualified name for the Resource subtype restriction.
+     */
+    private $superClass = self::TOP_CLASS;
     
     /**
      * @var string The fully qualified name of the class created by the factory.
@@ -43,14 +48,14 @@ class AbstractFactory {
      *
      * @throws \InvalidArgumentException If `$className` is not a valid class name.
      * @throws \DomainException If `$className` is not subclass of
-     *     \GdWrapper\Resource\Resource.
+     *     `\GdWrapper\Resource\Resource`.
      */
     final protected function setSuperClass($superClass) {
         try {
             $refl = new \ReflectionClass($className);
-            if ($refl->isSubclassOf($this->superClass)) {
+            if ($refl->isSubclassOf(self::TOP_CLASS)) {
                 throw new \DomainException(
-                    "Class '{$className}' is not a " . $this->superClass . ' subclass'
+                    "Class '{$className}' is not a " . self::TOP_CLASS . ' subclass'
                 );
             }
         } catch (\ReflectionException $e) {
@@ -84,12 +89,12 @@ class AbstractFactory {
     final protected function setClassName($className) {
         try {
             $refl = new \ReflectionClass($className);
-            if ($refl->isInstantiable()) {
+            if (!$refl->isInstantiable()) {
                 throw new \InvalidArgumentException(
                     "Class '{$className}' is not instantiable"
                 );
             }
-            if ($refl->isSubclassOf($this->superClass)) {
+            if (!$refl->isSubclassOf($this->superClass)) {
                 throw new \DomainException(
                     "Class '{$className}' is not a " . $this->superClass . ' subclass'
                 );

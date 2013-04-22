@@ -1,11 +1,14 @@
 <?php
 /**
- * Creates class \GdWrapper\Resource
+ * Creates class \GdWrapper\Resource\ImageResourceFactory
  *
  * @author Henrique Barcelos
  */
 namespace GdWrapper\Resource;
 
+/**
+ * Factory for ImageResource objects
+ */
 class ImageResourceFactory extends AbstractFactory {
     /**
      * @var resource GD2 resource for instantiate objects.

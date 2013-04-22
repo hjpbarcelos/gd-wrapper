@@ -6,7 +6,7 @@
  */
 namespace GdWrapper\Io\Writer;
 
-use \GdWrapper\Resource\ImageResource;
+use \GdWrapper\Resource\Resource;
 use \GdWrapper\Io\Preset;
 use \GdWrapper\Io\Exception;
 
@@ -16,16 +16,16 @@ use \GdWrapper\Io\Exception;
 abstract class AbstractWriter implements Writer
 {
     /**
-     * @var ImageResource The ImageResource object this object will work on.
+     * @var Resource The Resource object this object will work on.
      */
     private $resource;
 
     /**
      * Creates a new output "device".
      *
-     * @param \GdWrapper\Resource\ImageResource $resource An image resource.
+     * @param \GdWrapper\Resource\Resource $resource An image resource.
      */
-    public function __construct(ImageResource $resource)
+    public function __construct(Resource $resource)
     {
         $this->setResource($resource);
     }
@@ -45,7 +45,7 @@ abstract class AbstractWriter implements Writer
      *
      * @see \GdWrapper\Io\Writer::setResource()
      */
-    public function setResource(ImageResource $resource)
+    public function setResource(Resource $resource)
     {
         $this->resource = $resource;
     }

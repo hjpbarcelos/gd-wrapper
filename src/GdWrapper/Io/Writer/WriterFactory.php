@@ -7,7 +7,7 @@
 namespace GdWrapper\Io\Writer;
 
 use \GdWrapper\Io\Reader\ReaderFactory;
-use \GdWrapper\Resource\ImageResource;
+use \GdWrapper\Resource\Resource;
 
 /**
  * Defines an abstract implementation of a input "device" for resources.
@@ -34,7 +34,7 @@ class WriterFactory
      *
      * @throws \DomainException
      */
-    public static function factory($type, ImageResource $resource)
+    public static function factory($type, Resource $resource)
     {
         $className = __NAMESPACE__ . '\\' . ucfirst(strtolower($type)) . 'Writer';
         try {
