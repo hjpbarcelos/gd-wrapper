@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">19</span></a></li>
+                <span class="label label-info">30</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -54,14 +54,17 @@
 <button class="btn critical">Critical</button><button class="btn error">Error</button><button class="btn notice">Notice</button>
 </div></li>
 <li class="nav-header">Navigation</li>
-<li><a href="#Resource/ImageResource.php"><i class="icon-file"></i>Resource/ImageResource.php</a></li>
+<li><a href="#Action/ResizeStrategy/KeepRatio.php"><i class="icon-file"></i>Action/ResizeStrategy/KeepRatio.php</a></li>
+<li><a href="#Action/ResizeStrategy/Proportional.php"><i class="icon-file"></i>Action/ResizeStrategy/Proportional.php</a></li>
+<li><a href="#Action/ResizeStrategy/Exact.php"><i class="icon-file"></i>Action/ResizeStrategy/Exact.php</a></li>
+<li><a href="#Action/Resize.php"><i class="icon-file"></i>Action/Resize.php</a></li>
 <li><a href="#Io/Writer/PngWriter.php"><i class="icon-file"></i>Io/Writer/PngWriter.php</a></li>
+<li><a href="#Io/Writer/WriterFactory.php"><i class="icon-file"></i>Io/Writer/WriterFactory.php</a></li>
 <li><a href="#Io/Writer/JpegWriter.php"><i class="icon-file"></i>Io/Writer/JpegWriter.php</a></li>
 <li><a href="#Io/Writer/AbstractWriter.php"><i class="icon-file"></i>Io/Writer/AbstractWriter.php</a></li>
 <li><a href="#Io/Reader/JpegReader.php"><i class="icon-file"></i>Io/Reader/JpegReader.php</a></li>
 <li><a href="#Io/Reader/AbstractReader.php"><i class="icon-file"></i>Io/Reader/AbstractReader.php</a></li>
 <li><a href="#Io/Reader/PngReader.php"><i class="icon-file"></i>Io/Reader/PngReader.php</a></li>
-<li><a href="#Image/Info.php"><i class="icon-file"></i>Image/Info.php</a></li>
 </ul></div>
 <div class="span8">
 <ul class="breadcrumb">
@@ -70,9 +73,16 @@
 </li>
 <li>Compilation Errors</li>
 </ul>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
 <div class="package-contents">
-<a name="Resource/ImageResource.php" id="Resource/ImageResource.php"></a><h3>
-<i class="icon-file"></i>Resource/ImageResource.php<small style="float: right;padding-right: 10px;">1</small>
+<a name="Action/ResizeStrategy/KeepRatio.php" id="Action/ResizeStrategy/KeepRatio.php"></a><h3>
+<i class="icon-file"></i>Action/ResizeStrategy/KeepRatio.php<small style="float: right;padding-right: 10px;">4</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -80,11 +90,111 @@
 <th>Line</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="error">
+<tbody>
+<tr class="error">
 <td>error</td>
-<td>85</td>
-<td>Argument $resource is missing from the Docblock of setRaw()</td>
-</tr></tbody>
+<td>84</td>
+<td>Name of argument $maxHeight does not match with the DocBlock's name $height in setMaxHeight()</td>
+</tr>
+<tr class="notice">
+<td>notice</td>
+<td>84</td>
+<td>Parameter $height could not be found in setMaxHeight()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>103</td>
+<td>Argument $width is missing from the Docblock of getNewDimensions()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>103</td>
+<td>Argument $height is missing from the Docblock of getNewDimensions()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Action/ResizeStrategy/Proportional.php" id="Action/ResizeStrategy/Proportional.php"></a><h3>
+<i class="icon-file"></i>Action/ResizeStrategy/Proportional.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>68</td>
+<td>Argument $width is missing from the Docblock of getNewDimensions()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>68</td>
+<td>Argument $height is missing from the Docblock of getNewDimensions()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Action/ResizeStrategy/Exact.php" id="Action/ResizeStrategy/Exact.php"></a><h3>
+<i class="icon-file"></i>Action/ResizeStrategy/Exact.php<small style="float: right;padding-right: 10px;">4</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>15</td>
+<td>No DocBlock was found for property $width</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>16</td>
+<td>No DocBlock was found for property $height</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>72</td>
+<td>Argument $width is missing from the Docblock of getNewDimensions()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>72</td>
+<td>Argument $height is missing from the Docblock of getNewDimensions()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Action/Resize.php" id="Action/Resize.php"></a><h3>
+<i class="icon-file"></i>Action/Resize.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>18</td>
+<td>No DocBlock was found for property $resource</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>19</td>
+<td>No DocBlock was found for property $strategy</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="package-contents"></div>
@@ -120,7 +230,23 @@
 </table></div>
 </div>
 <div class="package-contents"></div>
-<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Io/Writer/WriterFactory.php" id="Io/Writer/WriterFactory.php"></a><h3>
+<i class="icon-file"></i>Io/Writer/WriterFactory.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>17</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $resource in factory()</td>
+</tr></tbody>
+</table></div>
+</div>
 <div class="package-contents"></div>
 <div class="package-contents">
 <a name="Io/Writer/JpegWriter.php" id="Io/Writer/JpegWriter.php"></a><h3>
@@ -228,7 +354,7 @@
 </tr></thead>
 <tbody><tr class="error">
 <td>error</td>
-<td>18</td>
+<td>16</td>
 <td>Argument $pathName is missing from the Docblock of read()</td>
 </tr></tbody>
 </table></div>
@@ -263,29 +389,13 @@
 </table></div>
 </div>
 <div class="package-contents"></div>
-<div class="package-contents">
-<a name="Image/Info.php" id="Image/Info.php"></a><h3>
-<i class="icon-file"></i>Image/Info.php<small style="float: right;padding-right: 10px;">1</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody><tr class="error">
-<td>error</td>
-<td>51</td>
-<td>No DocBlock was found for method loadInfo()</td>
-</tr></tbody>
-</table></div>
-</div>
+<div class="package-contents"></div>
 </div>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-04-19T18:09:33+02:00.<br></footer></div>
+            generated on 2013-04-24T00:45:42+02:00.<br></footer></div>
 </div>
 </body>
 </html>

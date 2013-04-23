@@ -125,6 +125,10 @@ abstract class AbstractResourceFactory
      * Creates a concrete instance of `\GdWrapper\Resource\Resource`
      *
      * @return \GdWrapper\Resource\Resource
+     *
+     * @throws \DomainException If factory cannot determine which product create.
+     * @throws \LogicException If there is an error in creatign the product, like
+     *     wrong or missing parameters.
      */
     abstract public function create();
 }

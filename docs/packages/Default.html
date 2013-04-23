@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">19</span></a></li>
+                <span class="label label-info">30</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -61,20 +61,31 @@
 <li class="nav-header">
 <i class="icon-custom icon-interface"></i> Interfaces</li>
 <li><a href="#Resource" title="Wrapper for GD2 image resource type.">Resource</a></li>
+<li><a href="#Strategy" title="Represents a resizing strategy.">Strategy</a></li>
+<li><a href="#Action" title="Interface representing an action over an image.">Action</a></li>
 <li><a href="#Preset" title="Contains some preset definitions for image output quality.">Preset</a></li>
 <li><a href="#Writer" title='Represents an output "device" for resources.'>Writer</a></li>
 <li><a href="#Reader" title='Represents an input "device" to resources.'>Reader</a></li>
 <li class="nav-header">
 <i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#EmptyResourceFactory" title="Factory for creating new empty (blank) image resources.">EmptyResourceFactory</a></li>
+<li><a href="#ImageResourceFactory" title="Factory for `\GdWrapper\Resource\ImageResource` type.">ImageResourceFactory</a></li>
+<li><a href="#EmptyResource" title="Defines a true color image resource.">EmptyResource</a></li>
+<li><a href="#AbstractResourceFactory" title="Abstract factory for `\GdWrapper\Resource\Resource` types.">AbstractResourceFactory</a></li>
 <li><a href="#ImageResource" title="Concrete implementation of a wrapper for GD2 image resource type.">ImageResource</a></li>
+<li><a href="#AbstractResource" title="Abstract representation of a resource.">AbstractResource</a></li>
+<li><a href="#KeepRatio" title="Represents a resizing that respects image aspect ratio.">KeepRatio</a></li>
+<li><a href="#Proportional" title="Represents a proportional resizing.">Proportional</a></li>
+<li><a href="#Exact" title="Represents an exact resizing.">Exact</a></li>
+<li><a href="#Resize" title="Resizes an image.">Resize</a></li>
 <li><a href="#Exception" title="Exception that indicates an I/O Exception.">Exception</a></li>
 <li><a href="#PngWriter" title="Defines an implementation of a I/O device for PNG files.">PngWriter</a></li>
-<li><a href="#WriterFactory" title='Defines an abstract implementation of a input "device" for resources.'>WriterFactory</a></li>
+<li><a href="#WriterFactory" title='Defines an abstract implementation of an output "device" for resources.'>WriterFactory</a></li>
 <li><a href="#JpgWriter" title="Defines an implementation of a I/O device for JPEG files.">JpgWriter</a></li>
 <li><a href="#JpegWriter" title="Defines an implementation of a I/O device for JPEG files.">JpegWriter</a></li>
 <li><a href="#AbstractWriter" title="Defines an abstract implementation of a I/O device for resources.">AbstractWriter</a></li>
 <li><a href="#JpegReader" title="Defines an implementation of a I/O device for JPEG files.">JpegReader</a></li>
-<li><a href="#ReaderFactory" title='Defines an abstract implementation of a input "device" for resources.'>ReaderFactory</a></li>
+<li><a href="#ReaderFactory" title='Defines an abstract implementation of an input "device" for resources.'>ReaderFactory</a></li>
 <li><a href="#AbstractReader" title="Defines an abstract implementation of a I/O device for resources.">AbstractReader</a></li>
 <li><a href="#PngReader" title="Defines an implementation of a I/O device for PNG files.">PngReader</a></li>
 <li><a href="#JpgReader" title="Defines an implementation of a I/O device for JPEG files.">JpgReader</a></li>
@@ -88,6 +99,20 @@
 <div class="package-indent">
 <h3>
 <i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="Action" class="element ajax clickable interface">
+<h1>Action<a href="../classes/GdWrapper.Action.Action.html">¶</a>
+</h1>
+<p class="short_description">Interface representing an action over an image.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.Action.html" class="more">« More »</a>
+</div>
+<div id="Strategy" class="element ajax clickable interface">
+<h1>Strategy<a href="../classes/GdWrapper.Action.ResizeStrategy.Strategy.html">¶</a>
+</h1>
+<p class="short_description">Represents a resizing strategy.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.ResizeStrategy.Strategy.html" class="more">« More »</a>
+</div>
 <div id="Preset" class="element ajax clickable interface">
 <h1>Preset<a href="../classes/GdWrapper.Io.Preset.html">¶</a>
 </h1>
@@ -115,6 +140,34 @@
 <p class="short_description">Wrapper for GD2 image resource type.</p>
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Resource.Resource.html" class="more">« More »</a>
+</div>
+<div id="Resize" class="element ajax clickable class">
+<h1>Resize<a href="../classes/GdWrapper.Action.Resize.html">¶</a>
+</h1>
+<p class="short_description">Resizes an image.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.Resize.html" class="more">« More »</a>
+</div>
+<div id="Exact" class="element ajax clickable class">
+<h1>Exact<a href="../classes/GdWrapper.Action.ResizeStrategy.Exact.html">¶</a>
+</h1>
+<p class="short_description">Represents an exact resizing.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.ResizeStrategy.Exact.html" class="more">« More »</a>
+</div>
+<div id="KeepRatio" class="element ajax clickable class">
+<h1>KeepRatio<a href="../classes/GdWrapper.Action.ResizeStrategy.KeepRatio.html">¶</a>
+</h1>
+<p class="short_description">Represents a resizing that respects image aspect ratio.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.ResizeStrategy.KeepRatio.html" class="more">« More »</a>
+</div>
+<div id="Proportional" class="element ajax clickable class">
+<h1>Proportional<a href="../classes/GdWrapper.Action.ResizeStrategy.Proportional.html">¶</a>
+</h1>
+<p class="short_description">Represents a proportional resizing.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.ResizeStrategy.Proportional.html" class="more">« More »</a>
 </div>
 <div id="Info" class="element ajax clickable class">
 <h1>Info<a href="../classes/GdWrapper.Image.Info.html">¶</a>
@@ -161,7 +214,7 @@
 <div id="ReaderFactory" class="element ajax clickable class">
 <h1>ReaderFactory<a href="../classes/GdWrapper.Io.Reader.ReaderFactory.html">¶</a>
 </h1>
-<p class="short_description">Defines an abstract implementation of a input "device" for resources.</p>
+<p class="short_description">Defines an abstract implementation of an input "device" for resources.</p>
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Io.Reader.ReaderFactory.html" class="more">« More »</a>
 </div>
@@ -196,9 +249,37 @@
 <div id="WriterFactory" class="element ajax clickable class">
 <h1>WriterFactory<a href="../classes/GdWrapper.Io.Writer.WriterFactory.html">¶</a>
 </h1>
-<p class="short_description">Defines an abstract implementation of a input "device" for resources.</p>
+<p class="short_description">Defines an abstract implementation of an output "device" for resources.</p>
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Io.Writer.WriterFactory.html" class="more">« More »</a>
+</div>
+<div id="AbstractResource" class="element ajax clickable class">
+<h1>AbstractResource<a href="../classes/GdWrapper.Resource.AbstractResource.html">¶</a>
+</h1>
+<p class="short_description">Abstract representation of a resource.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Resource.AbstractResource.html" class="more">« More »</a>
+</div>
+<div id="AbstractResourceFactory" class="element ajax clickable class">
+<h1>AbstractResourceFactory<a href="../classes/GdWrapper.Resource.AbstractResourceFactory.html">¶</a>
+</h1>
+<p class="short_description">Abstract factory for `\GdWrapper\Resource\Resource` types.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Resource.AbstractResourceFactory.html" class="more">« More »</a>
+</div>
+<div id="EmptyResource" class="element ajax clickable class">
+<h1>EmptyResource<a href="../classes/GdWrapper.Resource.EmptyResource.html">¶</a>
+</h1>
+<p class="short_description">Defines a true color image resource.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Resource.EmptyResource.html" class="more">« More »</a>
+</div>
+<div id="EmptyResourceFactory" class="element ajax clickable class">
+<h1>EmptyResourceFactory<a href="../classes/GdWrapper.Resource.EmptyResourceFactory.html">¶</a>
+</h1>
+<p class="short_description">Factory for creating new empty (blank) image resources.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Resource.EmptyResourceFactory.html" class="more">« More »</a>
 </div>
 <div id="ImageResource" class="element ajax clickable class">
 <h1>ImageResource<a href="../classes/GdWrapper.Resource.ImageResource.html">¶</a>
@@ -207,13 +288,20 @@
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Resource.ImageResource.html" class="more">« More »</a>
 </div>
+<div id="ImageResourceFactory" class="element ajax clickable class">
+<h1>ImageResourceFactory<a href="../classes/GdWrapper.Resource.ImageResourceFactory.html">¶</a>
+</h1>
+<p class="short_description">Factory for `\GdWrapper\Resource\ImageResource` type.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Resource.ImageResourceFactory.html" class="more">« More »</a>
+</div>
 </div>
 </div>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-04-19T18:09:33+02:00.<br></footer></div>
+            generated on 2013-04-24T00:45:41+02:00.<br></footer></div>
 </div>
 </body>
 </html>

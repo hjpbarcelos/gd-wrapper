@@ -6,8 +6,8 @@
  */
 namespace GdWrapper\Io\Writer;
 
-use \GdWrapper\Io\Exception;
-use \GdWrapper\Io\Preset;
+use GdWrapper\Io\Exception;
+use GdWrapper\Io\Preset;
 
 /**
  * Defines an implementation of a I/O device for JPEG files.

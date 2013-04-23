@@ -6,9 +6,9 @@
  */
 namespace GdWrapper\Io\Writer;
 
-use \GdWrapper\Io\Exception;
-use \GdWrapper\Resource\Resource;
-use \GdWrapper\Io\Preset;
+use GdWrapper\Io\Exception;
+use GdWrapper\Resource\Resource;
+use GdWrapper\Io\Preset;
 
 /**
  * Represents an output "device" for resources.

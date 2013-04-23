@@ -32,7 +32,7 @@ abstract class AbstractResource implements Resource
      * @throws \InvalidArgumentException If <code>$resource</code> is not a
      * 		valid resource.
      */
-    public function __construct($resource)
+    protected function __construct($resource)
     {
         $this->setRaw($resource);
     }
@@ -50,7 +50,7 @@ abstract class AbstractResource implements Resource
     /**
      * Clones the current object.
      *
-     * @return ImageResource
+     * @return \GdWrapper\Resource\Resource
      */
     final public function __clone()
     {
@@ -102,5 +102,23 @@ abstract class AbstractResource implements Resource
         return $this->raw;
     }
     
+    /**
+     * {@inheritdoc}
+     *
+     * @see GdWrapper\Resource\Resource::getWidth()
+     */
+    public function getWidth()
+    {
+        return imagesx($this->raw);
+    }
     
+    /**
+     * {@inheritdoc}
+     *
+     * @see \GdWrapper\Resource\Resource::setHeight()
+     */
+    public function getHeight()
+    {
+        return imagesy($this->raw);
+    }
 }

@@ -14,6 +14,9 @@ interface Action {
      * Excecutes an action over images.
      *
      * @return void
+     *
+     * @throws \UnexpectedValueException If something goes wrong while calculating
+     * new image dimensions.
      */
     public function execute();
 }

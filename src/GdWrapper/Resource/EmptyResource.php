@@ -12,16 +12,6 @@ namespace GdWrapper\Resource;
  */
 class EmptyResource extends AbstractResource {
     /**
-     * @var int The image width
-     */
-    private $width = null;
-    
-    /**
-     * @var int The image height
-     */
-    private $height = null;
-    
-    /**
      * Creates a new blank image resource.
      *
      * @param int $width The width of the new image.
@@ -36,31 +26,11 @@ class EmptyResource extends AbstractResource {
             );
         }
         
-        $this->width = (int) $width;
-        $this->height = (int) $height;
+        $width = (int) $width;
+        $height = (int) $height;
         
-        $raw = imagecreatetruecolor($this->width, $this->height);
+        $raw = imagecreatetruecolor($width, $height);
         $this->setRaw($raw);
         imagedestroy($raw);
-    }
-    
-    /**
-     * {@inheritdoc}
-     *
-     * @see \GdWrapper\Resource\Resource::setWidth()
-     */
-    public function getWidth()
-    {
-        return $this->width;
-    }
-    
-    /**
-     * {@inheritdoc}
-     *
-     * @see \GdWrapper\Resource\Resource::setHeight()
-     */
-    public function getHeight()
-    {
-        return $this->height;
     }
 }

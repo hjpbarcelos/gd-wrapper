@@ -6,9 +6,7 @@
  */
 namespace GdWrapper\Io\Reader;
 
-use \GdWrapper\Resource\ImageResource;
-use \GdWrapper\Io\Preset;
-use \GdWrapper\Io\Exception;
+use GdWrapper\Io\Exception;
 
 /**
  * Defines an abstract implementation of a I/O device for resources.
@@ -41,7 +39,9 @@ abstract class AbstractReader implements Reader
 	 * This is method is executed at the end of {@link \GdWrapper\Io\Reader\Reader::write()}
 	 *
 	 * @param string $pathName The path to a valid image.
-	 * @return ImageResource A new ImageResource object.
+	 *
+	 * @return resource A GD2 image resource;
+	 *
 	 * @throws \GdWrapper\Io\Exception If cannot read from file system
 	 */
 	abstract protected function doRead($pathName);

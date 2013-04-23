@@ -1,48 +1,89 @@
 <?php
+/**
+ * Defines the Proportional resizing strategy.
+ * @author Henrique Barcelos
+ */
 namespace GdWrapper\Action\ResizeStrategy;
 
-use GdWrapper\Resource\EmptyResourceFactory;
-
+/**
+ * Represents a proportional resizing.
+ */
 class Proportional implements Strategy
 {
-    private $maxWidth;
-    private $maxHeight;
-
-    public function __construct($maxWidth, $maxHeight)
+    /**
+     * @var int The proportion of the resizing action.
+     */
+    private $proportion;
+    
+    /**
+     * Creates an proportional resizing strategy.
+     *
+     * Considering `$proportion` parameter:
+     *
+     * * when it is `1`, means that the image will not be resized.
+     * * when it is `1.2`, means that the resulting image will be 20% larger.
+     * * when it is `0.5`, means that the resulting image will be half the size.
+     * * and so on...
+     *
+     * @param int $proportion
+     *
+     * @throws \InvalidArgumentException If `$proportion <= 0`.
+     */
+    public function __construct($proportion)
     {
-        $this->setMaxWidth($maxWidth);
-        $this->setMaxHeight($maxHeight);
+        $this->setProportion($proportion);
     }
-
-    public function setMaxWidth($maxWidth)
+    
+    /**
+     * Sets the proportion of the resizing action.
+     *
+     * @param int $proportion The proportion of the resizing action
+     *
+     * @return void
+     *
+     * @throws \InvalidArgumentException If `$proportion <= 0`.
+     */
+    public function setProportion($proportion)
     {
-        $this->maxWidth = $maxWidth;
+        $proportion = (float) $proportion;
+        if ($proportion <= 0) {
+            throw new \InvalidArgumentException(
+                "Resizing proportion should be greater than zero, {$proportion} given"
+            );
+        }
+        
+        $this->proportion = $proportion;
     }
-
-    public function setMaxHeight($maxHeight)
+    
+    /**
+     * Gets the proportion of the resizing operation.
+     *
+     * @return int
+     */
+    public function getProportion()
     {
-        $this->maxHeight = $maxHeight;
+        return $this->proportion;
     }
-
+    
+    /**
+     * {@inheritdoc}
+     *
+     * @see GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()
+     */
     public function getNewDimensions($width, $height)
     {
         $width = (int) $width;
         $height = (int) $height;
         
         if ($width == 0 || $height == 0) {
-            throw new InvalidArgumentException(
+            throw new \InvalidArgumentException(
                 "Invalid initial dimensions: [{$width}, {$height}]"
             );
         }
         
-        $minRatio = min(
-            ($this->maxWidth / $width),
-            ($this->maxHeight / $height)
-        );
-        
         return array(
-            'width' => $width * $minRatio,
-            'height' => $height * $minRatio
+            'width' => round($width * $this->proportion),
+            'height' => round($height * $this->proportion)
         );
     }
 }

@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>phpDocumentor » \GdWrapper\Resource\ImageResource</title>
+<title>phpDocumentor » \GdWrapper\Resource\EmptyResource</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -57,7 +57,7 @@
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
 <li class="method public inherited"><a href="#method___clone" title="__clone :: Clones the current object."><span class="description">Clones the current object.</span><pre>__clone()</pre></a></li>
-<li class="method public "><a href="#method___construct" title="__construct :: Creates a new image resource."><span class="description">Creates a new image resource.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: Creates a new blank image resource."><span class="description">Creates a new blank image resource.</span><pre>__construct()</pre></a></li>
 <li class="method public inherited"><a href="#method___destruct" title="__destruct :: Destroys the image resource if it still exists."><span class="description">Destroys the image resource if it still exists.</span><pre>__destruct()</pre></a></li>
 <li class="method public inherited"><a href="#method_getHeight" title="getHeight :: Get image height."><span class="description">Get image height.</span><pre>getHeight()</pre></a></li>
 <li class="method public inherited"><a href="#method_getRaw" title="getRaw :: Obtains the raw GD2 image resource of this wrapper object."><span class="description">Obtains the raw GD2 image resource of this wrapper object.</span><pre>getRaw()</pre></a></li>
@@ -80,7 +80,7 @@
 </ul>
 </div>
 <div class="span8">
-<a id="\GdWrapper\Resource\ImageResource"></a><ul class="breadcrumb">
+<a id="\GdWrapper\Resource\EmptyResource"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
@@ -89,11 +89,11 @@
 <span class="divider">\</span><a href="../namespaces/GdWrapper.Resource.html">Resource</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/GdWrapper.Resource.ImageResource.html">ImageResource</a>
+<span class="divider">\</span><a href="../classes/GdWrapper.Resource.EmptyResource.html">EmptyResource</a>
 </li>
 </ul>
 <div class="element class">
-<p class="short_description">Concrete implementation of a wrapper for GD2 image resource type.</p>
+<p class="short_description">Defines a true color image resource.</p>
 <div class="details">
 <div class="long_description"></div>
 <h3>
@@ -113,8 +113,8 @@
 </div></div>
 </div>
 <a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-<h2>Creates a new image resource.</h2>
-<pre>__construct(resource $resource) </pre>
+<h2>Creates a new blank image resource.</h2>
+<pre>__construct(int $width, int $height) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>IMPORTANT: to guarantee that two <code>Resource</code> objects do not have the
@@ -125,13 +125,15 @@ parameter and only then assigns the copy to <code>$raw</code> attribute.</p>
 destroy it right after instanciate an object to prevent memory leaks.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$resource</h4>
-<code>resource</code><p>A GD2 resource for an image.</p></div>
+<h4>$width</h4>
+<code>int</code><p>The width of the new image.</p></div>
+<div class="subelement argument">
+<h4>$height</h4>
+<code>int</code><p>The height of the new image.</p></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
-<td>If <code>$resource</code> is not a
-		valid resource.</td>
+<td>If `$width` or `$height` are less than zero.</td>
 </tr></table>
 </div></div>
 </div>

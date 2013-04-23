@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>phpDocumentor » \GdWrapper\Resource\ImageResource</title>
+<title>phpDocumentor » \GdWrapper\Resource\AbstractResource</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -56,31 +56,33 @@
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public inherited"><a href="#method___clone" title="__clone :: Clones the current object."><span class="description">Clones the current object.</span><pre>__clone()</pre></a></li>
-<li class="method public "><a href="#method___construct" title="__construct :: Creates a new image resource."><span class="description">Creates a new image resource.</span><pre>__construct()</pre></a></li>
-<li class="method public inherited"><a href="#method___destruct" title="__destruct :: Destroys the image resource if it still exists."><span class="description">Destroys the image resource if it still exists.</span><pre>__destruct()</pre></a></li>
-<li class="method public inherited"><a href="#method_getHeight" title="getHeight :: Get image height."><span class="description">Get image height.</span><pre>getHeight()</pre></a></li>
-<li class="method public inherited"><a href="#method_getRaw" title="getRaw :: Obtains the raw GD2 image resource of this wrapper object."><span class="description">Obtains the raw GD2 image resource of this wrapper object.</span><pre>getRaw()</pre></a></li>
-<li class="method public inherited"><a href="#method_getWidth" title="getWidth :: Get image width."><span class="description">Get image width.</span><pre>getWidth()</pre></a></li>
+<li class="method public "><a href="#method___clone" title="__clone :: Clones the current object."><span class="description">Clones the current object.</span><pre>__clone()</pre></a></li>
+<li class="method public "><a href="#method___destruct" title="__destruct :: Destroys the image resource if it still exists."><span class="description">Destroys the image resource if it still exists.</span><pre>__destruct()</pre></a></li>
+<li class="method public "><a href="#method_getHeight" title="getHeight :: Get image height."><span class="description">Get image height.</span><pre>getHeight()</pre></a></li>
+<li class="method public "><a href="#method_getRaw" title="getRaw :: Obtains the raw GD2 image resource of this wrapper object."><span class="description">Obtains the raw GD2 image resource of this wrapper object.</span><pre>getRaw()</pre></a></li>
+<li class="method public "><a href="#method_getWidth" title="getWidth :: Get image width."><span class="description">Get image width.</span><pre>getWidth()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header protected">» Protected
-                    <ul><li class="method protected inherited"><a href="#method_setRaw" title="setRaw :: Sets a GD2 image resource to this wrapper object."><span class="description">Sets a GD2 image resource to this wrapper object.</span><pre>setRaw()</pre></a></li></ul>
+                    <ul>
+<li class="method protected "><a href="#method___construct" title="__construct :: Creates a new wrapper to a raw GD2 image resource."><span class="description">Creates a new wrapper to a raw GD2 image resource.</span><pre>__construct()</pre></a></li>
+<li class="method protected "><a href="#method_setRaw" title="setRaw :: Sets a GD2 image resource to this wrapper object."><span class="description">Sets a GD2 image resource to this wrapper object.</span><pre>setRaw()</pre></a></li>
+</ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul><li class="method private inherited"><a href="#method_cloneGdResource" title="cloneGdResource :: Workarround method for cloning a GD2 image resource."><span class="description">Workarround method for cloning a GD2 image resource.</span><pre>cloneGdResource()</pre></a></li></ul>
+                    <ul><li class="method private "><a href="#method_cloneGdResource" title="cloneGdResource :: Workarround method for cloning a GD2 image resource."><span class="description">Workarround method for cloning a GD2 image resource.</span><pre>cloneGdResource()</pre></a></li></ul>
 </li>
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties
                     <ul></ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul><li class="property private inherited"><a href="#property_raw" title="$raw :: "><span class="description">A raw GD2 image resource.</span><pre>$raw</pre></a></li></ul>
+                    <ul><li class="property private "><a href="#property_raw" title="$raw :: "><span class="description">A raw GD2 image resource.</span><pre>$raw</pre></a></li></ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a id="\GdWrapper\Resource\ImageResource"></a><ul class="breadcrumb">
+<a id="\GdWrapper\Resource\AbstractResource"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
@@ -89,11 +91,11 @@
 <span class="divider">\</span><a href="../namespaces/GdWrapper.Resource.html">Resource</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/GdWrapper.Resource.ImageResource.html">ImageResource</a>
+<span class="divider">\</span><a href="../classes/GdWrapper.Resource.AbstractResource.html">AbstractResource</a>
 </li>
 </ul>
 <div class="element class">
-<p class="short_description">Concrete implementation of a wrapper for GD2 image resource type.</p>
+<p class="short_description">Abstract representation of a resource.</p>
 <div class="details">
 <div class="long_description"></div>
 <h3>
@@ -101,19 +103,66 @@
 <a id="method___clone"></a><div class="element clickable method public method___clone" data-toggle="collapse" data-target=".method___clone .collapse">
 <h2>Clones the current object.</h2>
 <pre>__clone() : <a href="../classes/GdWrapper.Resource.Resource.html">\GdWrapper\Resource\Resource</a></pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResource::__clone()</td>
-</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/GdWrapper.Resource.Resource.html">\GdWrapper\Resource\Resource</a></code></div>
 </div></div>
 </div>
-<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-<h2>Creates a new image resource.</h2>
+<a id="method___destruct"></a><div class="element clickable method public method___destruct" data-toggle="collapse" data-target=".method___destruct .collapse">
+<h2>Destroys the image resource if it still exists.</h2>
+<pre>__destruct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getHeight"></a><div class="element clickable method public method_getHeight" data-toggle="collapse" data-target=".method_getHeight .collapse">
+<h2>Get image height.</h2>
+<pre>getHeight() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="Resource.Resource.html#%5CGdWrapper%5CResource%5CResource::setHeight()">\GdWrapper\Resource\Resource::setHeight()</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The image height</div>
+</div></div>
+</div>
+<a id="method_getRaw"></a><div class="element clickable method public method_getRaw" data-toggle="collapse" data-target=".method_getRaw .collapse">
+<h2>Obtains the raw GD2 image resource of this wrapper object.</h2>
+<pre>getRaw() : resource</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="Resource.Resource.html#%5CGdWrapper%5CResource%5CResource::getRaw()">\GdWrapper\Resource\Resource::getRaw()</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>resource</code>A valid GD2 image resource.</div>
+</div></div>
+</div>
+<a id="method_getWidth"></a><div class="element clickable method public method_getWidth" data-toggle="collapse" data-target=".method_getWidth .collapse">
+<h2>Get image width.</h2>
+<pre>getWidth() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="Resource.Resource.html#%5CGdWrapper%5CResource%5CResource::getWidth()">\GdWrapper\Resource\Resource::getWidth()</a></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The image width</div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method protected method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Creates a new wrapper to a raw GD2 image resource.</h2>
 <pre>__construct(resource $resource) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -126,7 +175,7 @@ destroy it right after instanciate an object to prevent memory leaks.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$resource</h4>
-<code>resource</code><p>A GD2 resource for an image.</p></div>
+<code>resource</code><p>A valid GD2 image resource.</p></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
@@ -135,93 +184,14 @@ destroy it right after instanciate an object to prevent memory leaks.</p></div>
 </tr></table>
 </div></div>
 </div>
-<a id="method___destruct"></a><div class="element clickable method public method___destruct" data-toggle="collapse" data-target=".method___destruct .collapse">
-<h2>Destroys the image resource if it still exists.</h2>
-<pre>__destruct() </pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResource::__destruct()</td>
-</tr></table>
-</div></div>
-</div>
-<a id="method_getHeight"></a><div class="element clickable method public method_getHeight" data-toggle="collapse" data-target=".method_getHeight .collapse">
-<h2>Get image height.</h2>
-<pre>getHeight() : int</pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>see</th>
-<td><a href="Resource.Resource.html#%5CGdWrapper%5CResource%5CResource::setHeight()">\GdWrapper\Resource\Resource::setHeight()</a></td>
-</tr>
-<tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResource::getHeight()</td>
-</tr>
-</table>
-<h3>Returns</h3>
-<div class="subelement response">
-<code>int</code>The image height</div>
-</div></div>
-</div>
-<a id="method_getRaw"></a><div class="element clickable method public method_getRaw" data-toggle="collapse" data-target=".method_getRaw .collapse">
-<h2>Obtains the raw GD2 image resource of this wrapper object.</h2>
-<pre>getRaw() : resource</pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>see</th>
-<td><a href="Resource.Resource.html#%5CGdWrapper%5CResource%5CResource::getRaw()">\GdWrapper\Resource\Resource::getRaw()</a></td>
-</tr>
-<tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResource::getRaw()</td>
-</tr>
-</table>
-<h3>Returns</h3>
-<div class="subelement response">
-<code>resource</code>A valid GD2 image resource.</div>
-</div></div>
-</div>
-<a id="method_getWidth"></a><div class="element clickable method public method_getWidth" data-toggle="collapse" data-target=".method_getWidth .collapse">
-<h2>Get image width.</h2>
-<pre>getWidth() : int</pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>see</th>
-<td><a href="Resource.Resource.html#%5CGdWrapper%5CResource%5CResource::getWidth()">\GdWrapper\Resource\Resource::getWidth()</a></td>
-</tr>
-<tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResource::getWidth()</td>
-</tr>
-</table>
-<h3>Returns</h3>
-<div class="subelement response">
-<code>int</code>The image width</div>
-</div></div>
-</div>
 <a id="method_setRaw"></a><div class="element clickable method protected method_setRaw" data-toggle="collapse" data-target=".method_setRaw .collapse">
 <h2>Sets a GD2 image resource to this wrapper object.</h2>
 <pre>setRaw(resource $resource) : void</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>IMPORTANT: to guarantee that two <code>Resource</code> objects do not have the
 same image resource, this method creates a copy of <code>$resource</code>
 parameter and only then assigns the copy to <code>$raw</code> attribute.</p></div>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResource::setRaw()</td>
-</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$resource</h4>
@@ -237,13 +207,9 @@ parameter and only then assigns the copy to <code>$raw</code> attribute.</p></di
 <a id="method_cloneGdResource"></a><div class="element clickable method private method_cloneGdResource" data-toggle="collapse" data-target=".method_cloneGdResource .collapse">
 <h2>Workarround method for cloning a GD2 image resource.</h2>
 <pre>cloneGdResource(resource $resource) : resource</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResource::cloneGdResource()</td>
-</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$resource</h4>
@@ -258,14 +224,8 @@ parameter and only then assigns the copy to <code>$raw</code> attribute.</p></di
 <a id="property_raw"> </a><div class="element clickable property private property_raw" data-toggle="collapse" data-target=".property_raw .collapse">
 <h2>A raw GD2 image resource.</h2>
 <pre>$raw : resource</pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResource::$$raw</td>
-</tr></table>
-</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>

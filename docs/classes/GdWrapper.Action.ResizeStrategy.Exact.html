@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>phpDocumentor » \GdWrapper\Image\Info</title>
+<title>phpDocumentor » \GdWrapper\Action\ResizeStrategy\Exact</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -56,12 +56,13 @@
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method_getHeight" title="getHeight :: Get image height."><span class="description">Get image height.</span><pre>getHeight()</pre></a></li>
-<li class="method public "><a href="#method_getWidth" title="getWidth :: Get image width."><span class="description">Get image width.</span><pre>getWidth()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: Creates an exact resizing strategy."><span class="description">Creates an exact resizing strategy.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_getHeight" title="getHeight :: Gets the desired height of the image."><span class="description">Gets the desired height of the image.</span><pre>getHeight()</pre></a></li>
+<li class="method public "><a href="#method_getNewDimensions" title="getNewDimensions :: Return the new dimensions of an image with `$width` and `$height` dimensions."><span class="description">Return the new dimensions of an image with `$width` and `$height` dimensions.</span><pre>getNewDimensions()</pre></a></li>
+<li class="method public "><a href="#method_getWidth" title="getWidth :: Gets the desired width of the image."><span class="description">Gets the desired width of the image.</span><pre>getWidth()</pre></a></li>
+<li class="method public "><a href="#method_setHeight" title="setHeight :: Sets the desired width of the image."><span class="description">Sets the desired width of the image.</span><pre>setHeight()</pre></a></li>
+<li class="method public "><a href="#method_setWidth" title="setWidth :: Sets the desired width of the image."><span class="description">Sets the desired width of the image.</span><pre>setWidth()</pre></a></li>
 </ul>
-</li>
-<li class="nav-header private">» Private
-                    <ul><li class="method private "><a href="#method_loadInfo" title="loadInfo :: Loads info of a file."><span class="description">Loads info of a file.</span><pre>loadInfo()</pre></a></li></ul>
 </li>
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties
@@ -69,96 +70,135 @@
 </li>
 <li class="nav-header private">» Private
                     <ul>
-<li class="property private "><a href="#property_height" title="$height :: "><span class="description">The image height</span><pre>$height</pre></a></li>
-<li class="property private "><a href="#property_width" title="$width :: "><span class="description">The image width</span><pre>$width</pre></a></li>
+<li class="property private "><a href="#property_height" title="$height :: "><span class="description"></span><pre>$height</pre></a></li>
+<li class="property private "><a href="#property_width" title="$width :: "><span class="description"></span><pre>$width</pre></a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a id="\GdWrapper\Image\Info"></a><ul class="breadcrumb">
+<a id="\GdWrapper\Action\ResizeStrategy\Exact"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/GdWrapper.html">GdWrapper</a></li>
 <li>
-<span class="divider">\</span><a href="../namespaces/GdWrapper.Image.html">Image</a>
+<span class="divider">\</span><a href="../namespaces/GdWrapper.Action.html">Action</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/GdWrapper.Action.ResizeStrategy.html">ResizeStrategy</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/GdWrapper.Image.Info.html">Info</a>
+<span class="divider">\</span><a href="../classes/GdWrapper.Action.ResizeStrategy.Exact.html">Exact</a>
 </li>
 </ul>
 <div class="element class">
-<p class="short_description">Holds information about an image on file system.</p>
+<p class="short_description">Represents an exact resizing.</p>
 <div class="details">
-<div class="long_description"></div>
+<div class="long_description"><p>That is, no matter which are the original
+dimensions of an image file, the new dimensions should be exaclty as
+they are told to be.</p></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Creates an exact resizing strategy.</h2>
+<pre>__construct(int $width, int $height) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$width</h4>
+<code>int</code><p>The desired width of the image.</p></div>
+<div class="subelement argument">
+<h4>$height</h4>
+<code>int</code><p>The desired height of the image.</p></div>
+</div></div>
+</div>
 <a id="method_getHeight"></a><div class="element clickable method public method_getHeight" data-toggle="collapse" data-target=".method_getHeight .collapse">
-<h2>Get image height.</h2>
+<h2>Gets the desired height of the image.</h2>
 <pre>getHeight() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getNewDimensions"></a><div class="element clickable method public method_getNewDimensions" data-toggle="collapse" data-target=".method_getNewDimensions .collapse">
+<h2>Return the new dimensions of an image with `$width` and `$height` dimensions.</h2>
+<pre>getNewDimensions(int $width, int $height) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="">\GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$width</h4>
+<code>int</code><p>The width of the original image.</p></div>
+<div class="subelement argument">
+<h4>$height</h4>
+<code>int</code><p>The height of the original image.</p></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
-<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>If somehow this method fails in obtaining
-    the width and the height of the image. This may happen because
-    this object does not point to a valid file, the file pointed by
-    this object is unreadable or `getimagesize` function call fails.</td>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>On error calculating new image dimensions.</td>
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>int</code>The image height.</div>
+<code>array</code>An array like: `['width' => value, 'height' => value]`</div>
 </div></div>
 </div>
 <a id="method_getWidth"></a><div class="element clickable method public method_getWidth" data-toggle="collapse" data-target=".method_getWidth .collapse">
-<h2>Get image width.</h2>
+<h2>Gets the desired width of the image.</h2>
 <pre>getWidth() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<h3>Exceptions</h3>
-<table class="table table-bordered"><tr>
-<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>If somehow this method fails in obtaining
-    the width and the height of the image. This may happen because
-    this object does not point to a valid file, the file pointed by
-    this object is unreadable or `getimagesize` function call fails.</td>
-</tr></table>
 <h3>Returns</h3>
-<div class="subelement response">
-<code>int</code>The image width.</div>
+<div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a id="method_loadInfo"></a><div class="element clickable method private method_loadInfo" data-toggle="collapse" data-target=".method_loadInfo .collapse">
-<h2>Loads info of a file.</h2>
-<pre>loadInfo() </pre>
+<a id="method_setHeight"></a><div class="element clickable method public method_setHeight" data-toggle="collapse" data-target=".method_setHeight .collapse">
+<h2>Sets the desired width of the image.</h2>
+<pre>setHeight(int $height) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<h3>Exceptions</h3>
-<table class="table table-bordered"><tr>
-<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>If somehow this method fails in obtaining
-    the width and the height of the image. This may happen because
-    this object does not point to a valid file, the file pointed by
-    this object is unreadable or `getimagesize` function call fails.</td>
-</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$height</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a id="method_setWidth"></a><div class="element clickable method public method_setWidth" data-toggle="collapse" data-target=".method_setWidth .collapse">
+<h2>Sets the desired width of the image.</h2>
+<pre>setWidth(int $width) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$width</h4>
+<code>int</code>
+</div>
 </div></div>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_height"> </a><div class="element clickable property private property_height" data-toggle="collapse" data-target=".property_height .collapse">
-<h2>The image height</h2>
-<pre>$height : int</pre>
+<h2></h2>
+<pre>$height </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_width"> </a><div class="element clickable property private property_width" data-toggle="collapse" data-target=".property_width .collapse">
-<h2>The image width</h2>
-<pre>$width : int</pre>
+<h2></h2>
+<pre>$width </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -169,7 +209,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-04-24T00:45:42+02:00.<br></footer></div>
+            generated on 2013-04-24T00:45:41+02:00.<br></footer></div>
 </div>
 </body>
 </html>

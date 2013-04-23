@@ -47,11 +47,7 @@ class EmptyResourceFactory extends AbstractResourceFactory
      * @throws \InvalidArgumentException If `$width` is less than 0.
      */
     public function setWidth($width) {
-        $width = (int) $width;
-        if($width < 0) {
-            throw new InvalidArgumentException("Image width should be greater than 0, {$width} given");
-        }
-        $this->width = $width;
+        $this->width = (int) $width;
     }
     
     /**
@@ -64,11 +60,7 @@ class EmptyResourceFactory extends AbstractResourceFactory
      * @throws \InvalidArgumentException If `$height` is less than 0.
      */
     public function setHeight($height) {
-        $height = (int) $height;
-        if($height < 0) {
-            throw new InvalidArgumentException("Image width should be greater than 0, {$height} given");
-        }
-        $this->height = $height;
+        $this->height = (int) $height;
     }
     
     /**
@@ -101,6 +93,8 @@ class EmptyResourceFactory extends AbstractResourceFactory
             return $refl->newInstance($this->width, $this->height);
         } catch (\ReflectionException $e) {
             throw new \DomainException($e->getMessage(), $e->getCode(), $e);
+        } catch (\Exception $e) {
+            throw new \LogicException($e->getMessage(), $e->getCode(), $e);
         }
     }
 }

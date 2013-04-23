@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">19</span></a></li>
+                <span class="label label-info">30</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -89,7 +89,7 @@
 <i class="icon-custom icon-method"></i> Methods</h3>
 <a id="method_read"></a><div class="element clickable method public method_read" data-toggle="collapse" data-target=".method_read .collapse">
 <h2>Creates an image resource based on a filepath.</h2>
-<pre>read(string $pathName) : <a href="../classes/GdWrapper.Resource.ImageResource.html">\GdWrapper\Resource\ImageResource</a></pre>
+<pre>read(string $pathName) : resource</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -120,12 +120,12 @@
 </table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code><a href="../classes/GdWrapper.Resource.ImageResource.html">\GdWrapper\Resource\ImageResource</a></code>A new ImageResource object.</div>
+<code>resource</code>A GD2 image resource.</div>
 </div></div>
 </div>
 <a id="method_doRead"></a><div class="element clickable method protected method_doRead" data-toggle="collapse" data-target=".method_doRead .collapse">
 <h2>Creates an image resource with `imagecreatefrompng` function.</h2>
-<pre>doRead(string $pathName) : <a href="../classes/GdWrapper.Resource.ImageResource.html">\GdWrapper\Resource\ImageResource</a></pre>
+<pre>doRead(string $pathName) : resource</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p><p>This is method is executed at the end of <a href="\GdWrapper\Io\Reader\Reader::write()">\GdWrapper\Io\Reader\Reader::write()</a></p></p></div>
@@ -144,7 +144,7 @@
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code><a href="../classes/GdWrapper.Resource.ImageResource.html">\GdWrapper\Resource\ImageResource</a></code>A new ImageResource object.</div>
+<code>resource</code>A GD2 image resource;</div>
 </div></div>
 </div>
 <a id="method_validateMimeType"></a><div class="element clickable method protected method_validateMimeType" data-toggle="collapse" data-target=".method_validateMimeType .collapse">
@@ -179,7 +179,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-04-19T18:09:33+02:00.<br></footer></div>
+            generated on 2013-04-24T00:45:41+02:00.<br></footer></div>
 </div>
 </body>
 </html>

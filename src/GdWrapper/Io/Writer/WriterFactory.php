@@ -6,11 +6,11 @@
  */
 namespace GdWrapper\Io\Writer;
 
-use \GdWrapper\Io\Reader\ReaderFactory;
-use \GdWrapper\Resource\Resource;
+use GdWrapper\Io\Reader\ReaderFactory;
+use GdWrapper\Resource\Resource;
 
 /**
- * Defines an abstract implementation of a input "device" for resources.
+ * Defines an abstract implementation of an output "device" for resources.
  */
 class WriterFactory
 {
@@ -19,7 +19,7 @@ class WriterFactory
      *
      * Note:
      *
-     * For custom implementations of Writer interface, it must follow the convention:
+     * For custom implementations of `Writer` interface, it must follow the convention:
      * <code>
      * \GdWrapper\Io\Writer\&lt;TYPE&gt;Writer
      * </code>
@@ -30,11 +30,11 @@ class WriterFactory
      * @param \GdWrapper\Resource\ImageResource $resource The image resource that
      * 		will be written.
      *
-     * @return Writer A concrete implementation of Writer.
+     * @return \GdWrapper\Io\Writer\Writer A concrete implementation of Writer.
      *
-     * @throws \DomainException
+     * @throws \DomainException If `$type` is not a supported file extension.
      */
-    public static function factory($type, Resource $resource)
+    public function factory($type, Resource $resource)
     {
         $className = __NAMESPACE__ . '\\' . ucfirst(strtolower($type)) . 'Writer';
         try {

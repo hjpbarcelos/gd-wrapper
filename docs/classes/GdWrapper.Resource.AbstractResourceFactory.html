@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \GdWrapper\Resource\AbstractResourceFactory</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/GdWrapper.html"><i class="icon-th"></i> GdWrapper</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">30</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_create" title="create :: Creates a concrete instance of `\GdWrapper\Resource\Resource`"><span class="description">Creates a concrete instance of `\GdWrapper\Resource\Resource`</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#method_getClassName" title="getClassName :: Obtains class name of this factory object."><span class="description">Obtains class name of this factory object.</span><pre>getClassName()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method___construct" title="__construct :: Allows subclasses to initialize default values for `$className`."><span class="description">Allows subclasses to initialize default values for `$className`.</span><pre>__construct()</pre></a></li>
+<li class="method protected "><a href="#method_getSuperClass" title="getSuperClass :: Obtains supertype restriction of the products of this factory."><span class="description">Obtains supertype restriction of the products of this factory.</span><pre>getSuperClass()</pre></a></li>
+<li class="method protected "><a href="#method_setClassName" title="setClassName :: Sets class name for this factory object."><span class="description">Sets class name for this factory object.</span><pre>setClassName()</pre></a></li>
+<li class="method protected "><a href="#method_setSuperClass" title="setSuperClass :: Allows restrict the supertype of the products of this factory."><span class="description">Allows restrict the supertype of the products of this factory.</span><pre>setSuperClass()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_className" title="$className :: "><span class="description">The fully qualified name of the class created by the factory.</span><pre>$className</pre></a></li>
+<li class="property private "><a href="#property_superClass" title="$superClass :: "><span class="description">Fully qualified name for the Resource subtype restriction.</span><pre>$superClass</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul><li class="constant  "><a href="#constant_TOP_CLASS" title="TOP_CLASS :: "><span class="description">&lt;p&gt;Fully qualified name for the Resource interface&lt;/p&gt;</span><pre>TOP_CLASS</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\GdWrapper\Resource\AbstractResourceFactory"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/GdWrapper.html">GdWrapper</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/GdWrapper.Resource.html">Resource</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/GdWrapper.Resource.AbstractResourceFactory.html">AbstractResourceFactory</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Abstract factory for `\GdWrapper\Resource\Resource` types.</p>
+<div class="details">
+<div class="long_description"></div>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_create"></a><div class="element clickable method public method_create" data-toggle="collapse" data-target=".method_create .collapse">
+<h2>Creates a concrete instance of `\GdWrapper\Resource\Resource`</h2>
+<pre>create() : <a href="../classes/GdWrapper.Resource.Resource.html">\GdWrapper\Resource\Resource</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.domainexception.php">\DomainException</a></code></th>
+<td>If factory cannot determine which product create.</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.logicexception.php">\LogicException</a></code></th>
+<td>If there is an error in creatign the product, like
+    wrong or missing parameters.</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/GdWrapper.Resource.Resource.html">\GdWrapper\Resource\Resource</a></code></div>
+</div></div>
+</div>
+<a id="method_getClassName"></a><div class="element clickable method public method_getClassName" data-toggle="collapse" data-target=".method_getClassName .collapse">
+<h2>Obtains class name of this factory object.</h2>
+<pre>getClassName() : </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method protected method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Allows subclasses to initialize default values for `$className`.</h2>
+<pre>__construct(string $className) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$className</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If `$className` is not a valid class name.</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If `$className` is not instantiable.</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.domainexception.php">\DomainException</a></code></th>
+<td>If `$className` is not subclass of
+    \GdWrapper\Resource\Resource.</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_getSuperClass"></a><div class="element clickable method protected method_getSuperClass" data-toggle="collapse" data-target=".method_getSuperClass .collapse">
+<h2>Obtains supertype restriction of the products of this factory.</h2>
+<pre>getSuperClass() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_setClassName"></a><div class="element clickable method protected method_setClassName" data-toggle="collapse" data-target=".method_setClassName .collapse">
+<h2>Sets class name for this factory object.</h2>
+<pre>setClassName(string $className) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$className</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If `$className` is not a valid class name.</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If `$className` is not instantiable.</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.domainexception.php">\DomainException</a></code></th>
+<td>If `$className` is not subclass of
+    \GdWrapper\Resource\Resource.</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_setSuperClass"></a><div class="element clickable method protected method_setSuperClass" data-toggle="collapse" data-target=".method_setSuperClass .collapse">
+<h2>Allows restrict the supertype of the products of this factory.</h2>
+<pre>setSuperClass(string $superClass) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$superClass</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If `$className` is not a valid class name.</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.domainexception.php">\DomainException</a></code></th>
+<td>If `$className` is not subclass of
+    `\GdWrapper\Resource\Resource`.</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_className"> </a><div class="element clickable property private property_className" data-toggle="collapse" data-target=".property_className .collapse">
+<h2>The fully qualified name of the class created by the factory.</h2>
+<pre>$className : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_superClass"> </a><div class="element clickable property private property_superClass" data-toggle="collapse" data-target=".property_superClass .collapse">
+<h2>Fully qualified name for the Resource subtype restriction.</h2>
+<pre>$superClass : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_TOP_CLASS"> </a><div class="element clickable constant  constant_TOP_CLASS" data-toggle="collapse" data-target=".constant_TOP_CLASS .collapse">
+<h2>&lt;p&gt;Fully qualified name for the Resource interface&lt;/p&gt;</h2>
+<pre>TOP_CLASS : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-24T00:45:41+02:00.<br></footer></div>
+</div>
+</body>
+</html>

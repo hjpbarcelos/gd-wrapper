@@ -6,9 +6,9 @@
  */
 namespace GdWrapper\Io\Writer;
 
-use \GdWrapper\Resource\Resource;
-use \GdWrapper\Io\Preset;
-use \GdWrapper\Io\Exception;
+use GdWrapper\Resource\Resource;
+use GdWrapper\Io\Preset;
+use GdWrapper\Io\Exception;
 
 /**
  * Defines an abstract implementation of a I/O device for resources.
@@ -68,7 +68,7 @@ abstract class AbstractWriter implements Writer
          
         if ($pathName !== null) {
             $dirname = dirname(realpath($pathName));
-            if(!is_writable($dirname)) {
+            if (!is_writable($dirname)) {
                 throw new Exception(
                     "You do not have writing permissions in directory '"
                     . $dirname . "'"
