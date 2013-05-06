@@ -23,9 +23,9 @@ abstract class AbstractWriter implements Writer
     /**
      * Creates a new output "device".
      *
-     * @param \GdWrapper\Resource\Resource $resource An image resource.
+     * @param resource $resource An image resource.
      */
-    public function __construct(Resource $resource)
+    public function __construct($resource)
     {
         $this->setResource($resource);
     }
@@ -45,8 +45,11 @@ abstract class AbstractWriter implements Writer
      *
      * @see \GdWrapper\Io\Writer::setResource()
      */
-    public function setResource(Resource $resource)
+    public function setResource($resource)
     {
+        if (!is_resource($resource)) {
+            throw new \InvalidArgumentException('Argument should be a resource, ' . gettype($resource) . ' given');
+        }
         $this->resource = $resource;
     }
 

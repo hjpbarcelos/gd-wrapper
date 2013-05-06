@@ -22,7 +22,7 @@ $resize = new Resize(new ResizeProportional(.5));
 $dst = $resize->execute($src);
 
 $wFactory = new WriterFactory();
-$writer = $wFactory->factory('jpg', $dst);
+$writer = $wFactory->factory('jpg', $dst->getRaw());
 $writer->write(Writer::STDOUT);
 
 // $resource = new EmptyResource(400, 300);

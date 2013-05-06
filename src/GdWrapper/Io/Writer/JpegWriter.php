@@ -27,7 +27,7 @@ class JpegWriter extends AbstractWriter
         $_ = null
     ) {
         if (!call_user_func_array('imagejpeg', array(
-            $this->getResource()->getRaw(),
+            $this->getResource(),
             $pathName,
             $quality
         ))) {

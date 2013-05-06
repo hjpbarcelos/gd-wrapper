@@ -48,17 +48,20 @@ interface Writer
     );
 
     /**
-     * Obtains the Resource instance in which this object is working on.
+     * Obtains the GD2 image resource instance in which this object is working on.
      *
-     * @return \GdWrapper\Resource\Resource
+     * @return resource
      */
     public function getResource();
 
     /**
-     * Obtains the Resource instance in which this object is working on.
+     * Sets GD2 image resource for this object.
      *
-     * @param \GdWrapper\Resource\Resource $resource
+     * @param resource $resource A valid GD2 image resource
+     * 
      * @return void
+     * 
+     * @throws \InvalidArgumentException If `$resource` is not a valid resource.
      */
-    public function setResource(Resource $resource);
+    public function setResource($resource);
 }

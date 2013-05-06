@@ -33,7 +33,7 @@ class PngWriter extends AbstractWriter
         $quality = round((100 - $quality) / (111 / 9));
 
         if (!call_user_func_array('imagepng', array(
-            $this->getResource()->getRaw(),
+            $this->getResource(),
             $pathName,
             $quality,
             $filters

@@ -7,7 +7,6 @@
 namespace GdWrapper\Io\Writer;
 
 use GdWrapper\Io\Reader\ReaderFactory;
-use GdWrapper\Resource\Resource;
 
 /**
  * Defines an abstract implementation of an output "device" for resources.
@@ -27,14 +26,14 @@ class WriterFactory
      * Notice that `&lt;TYPE&gt;` MUST be in `StudlyCaps`.
      *
      * @param string $type The type of the image that will be written.
-     * @param \GdWrapper\Resource\ImageResource $resource The image resource that
-     * 		will be written.
+     * @param resource $resource The GD2 image resource that will be written.
      *
      * @return \GdWrapper\Io\Writer\Writer A concrete implementation of Writer.
      *
      * @throws \DomainException If `$type` is not a supported file extension.
+     * @throws \InvalidArgumentException If `$resource` is not a valid GD2 resource.
      */
-    public function factory($type, Resource $resource)
+    public function factory($type, $resource)
     {
         $className = __NAMESPACE__ . '\\' . ucfirst(strtolower($type)) . 'Writer';
         try {

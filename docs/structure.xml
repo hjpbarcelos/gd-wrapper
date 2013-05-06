@@ -1168,7 +1168,7 @@ they are told to be.&lt;/p&gt;</long-description>
   <file path="Action/Resize.php" hash="389c841c2c3284d43efbd9d527fb05a5" package="Default">
     <docblock line="2">
       <description>Defines Resize operation class.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="false" namespace="GdWrapper\Action" line="16" package="Default">
@@ -1178,25 +1178,25 @@ they are told to be.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Action\Resize</full_name>
       <docblock line="13">
         <description>Resizes an image.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <property final="false" static="false" visibility="private" line="18" namespace="GdWrapper\Action" package="Default">
         <name>$strategy</name>
-        <default></default>
+        <default/>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="25" package="Default">
         <name>__construct</name>
         <full_name>__construct</full_name>
         <docblock line="20">
           <description>Creates a resize operation object.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="20" name="param" description="The strategy of resizing." type="\GdWrapper\Action\ResizeStrategy\Strategy" variable="$strategy">
             <type by_reference="false">\GdWrapper\Action\ResizeStrategy\Strategy</type>
           </tag>
         </docblock>
         <argument line="26">
           <name>$strategy</name>
-          <default></default>
+          <default/>
           <type>\GdWrapper\Action\ResizeStrategy\Strategy</type>
         </argument>
       </method>
@@ -1210,7 +1210,7 @@ they are told to be.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="38">
           <name>$resource</name>
-          <default></default>
+          <default/>
           <type>\GdWrapper\Resource\Resource</type>
         </argument>
       </method>
@@ -1223,7 +1223,7 @@ they are told to be.&lt;/p&gt;</long-description>
   <file path="Action/Action.php" hash="cec9ce8493a28d44b9352433f06d94d5" package="Default">
     <docblock line="2">
       <description>Defines Action interface.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <interface namespace="GdWrapper\Action" line="14" package="Default">
@@ -1231,14 +1231,14 @@ they are told to be.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Action\Action</full_name>
       <docblock line="11">
         <description>Interface representing an action over an image.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="25" package="Default">
         <name>execute</name>
         <full_name>execute</full_name>
         <docblock line="15">
           <description>Excecutes an action over images.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="15" name="param" description="The source resource for resizing." type="\GdWrapper\Resource\Resource" variable="$src">
             <type by_reference="false">\GdWrapper\Resource\Resource</type>
           </tag>
@@ -1251,7 +1251,7 @@ they are told to be.&lt;/p&gt;</long-description>
         </docblock>
         <argument line="25">
           <name>$src</name>
-          <default></default>
+          <default/>
           <type>\GdWrapper\Resource\Resource</type>
         </argument>
       </method>
@@ -1348,7 +1348,7 @@ they are told to be.&lt;/p&gt;</long-description>
       </docblock>
     </class>
   </file>
-  <file path="Io/Writer/PngWriter.php" hash="e2fd004a517c2b896ccea4e91a4adecb" package="Default">
+  <file path="Io/Writer/PngWriter.php" hash="a41f239e94d5e0dfe5218b591e4c1310" package="Default">
     <docblock line="2">
       <description>Defines PngWritter class.</description>
       <long-description/>
@@ -1397,10 +1397,10 @@ they are told to be.&lt;/p&gt;</long-description>
       <error line="17" code="50015">Argument $filters is missing from the Docblock of doWrite()</error>
     </parse_markers>
   </file>
-  <file path="Io/Writer/Writer.php" hash="7e5ce67493653d408d3c5e15ea7d695b" package="Default">
+  <file path="Io/Writer/Writer.php" hash="e7b6dfa6cc622b9350437f716d82b081" package="Default">
     <docblock line="2">
       <description>Defines Writer interface.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <interface namespace="GdWrapper\Io\Writer" line="16" package="Default">
@@ -1408,7 +1408,7 @@ they are told to be.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Io\Writer\Writer</full_name>
       <docblock line="13">
         <description>Represents an output "device" for resources.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
       <constant namespace="GdWrapper\Io\Writer" line="24" package="Default">
         <name>STDOUT</name>
@@ -1417,7 +1417,7 @@ they are told to be.&lt;/p&gt;</long-description>
         <docblock line="18">
           <description>This parameter should be used with `write` method to
 indicate that the destination of output is the standard output.</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="18" name="var" description="" type="null">
             <type by_reference="false">null</type>
           </tag>
@@ -1449,7 +1449,7 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
         </docblock>
         <argument line="45">
           <name>$pathName</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
         <argument line="46">
@@ -1467,52 +1467,55 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
         <name>getResource</name>
         <full_name>getResource</full_name>
         <docblock line="50">
-          <description>Obtains the Resource instance in which this object is working on.</description>
-          <long-description/>
-          <tag line="50" name="return" description="" type="\GdWrapper\Resource\Resource">
-            <type by_reference="false">\GdWrapper\Resource\Resource</type>
+          <description>Obtains the GD2 image resource instance in which this object is working on.</description>
+          <long-description></long-description>
+          <tag line="50" name="return" description="" type="resource">
+            <type by_reference="false">resource</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="63" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="66" package="Default">
         <name>setResource</name>
         <full_name>setResource</full_name>
         <docblock line="57">
-          <description>Obtains the Resource instance in which this object is working on.</description>
-          <long-description/>
-          <tag line="57" name="param" description="" type="\GdWrapper\Resource\Resource" variable="$resource">
-            <type by_reference="false">\GdWrapper\Resource\Resource</type>
+          <description>Sets GD2 image resource for this object.</description>
+          <long-description></long-description>
+          <tag line="57" name="param" description="A valid GD2 image resource" type="resource" variable="$resource">
+            <type by_reference="false">resource</type>
           </tag>
           <tag line="57" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
+          <tag line="57" name="throws" description="If `$resource` is not a valid resource." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
         </docblock>
-        <argument line="63">
+        <argument line="66">
           <name>$resource</name>
-          <default/>
-          <type>\GdWrapper\Resource\Resource</type>
+          <default></default>
+          <type/>
         </argument>
       </method>
     </interface>
   </file>
-  <file path="Io/Writer/WriterFactory.php" hash="bfa0e5c73a176c1c97e93837ac3d895c" package="Default">
+  <file path="Io/Writer/WriterFactory.php" hash="1bf7951bb7876acd282b3017726fa4a7" package="Default">
     <docblock line="2">
       <description>Defines WriterFactory class.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
-    <class final="false" abstract="false" namespace="GdWrapper\Io\Writer" line="15" package="Default">
+    <class final="false" abstract="false" namespace="GdWrapper\Io\Writer" line="14" package="Default">
       <extends/>
       <name>WriterFactory</name>
       <full_name>\GdWrapper\Io\Writer\WriterFactory</full_name>
-      <docblock line="12">
+      <docblock line="11">
         <description>Defines an abstract implementation of an output "device" for resources.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="37" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="36" package="Default">
         <name>factory</name>
         <full_name>factory</full_name>
-        <docblock line="17">
+        <docblock line="16">
           <description>Returns a concrete instance of a Writer based on the file extension `$type`.</description>
           <long-description>&lt;p&gt;Note:&lt;/p&gt;
 
@@ -1522,34 +1525,34 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Notice that &lt;code&gt;&amp;amp;lt;TYPE&amp;amp;gt;&lt;/code&gt; MUST be in &lt;code&gt;StudlyCaps&lt;/code&gt;.&lt;/p&gt;</long-description>
-          <tag line="17" name="param" description="The type of the image that will be written." type="string" variable="$type">
+          <tag line="16" name="param" description="The type of the image that will be written." type="string" variable="$type">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="17" name="param" description="The image resource that&#10;&#9;&#9;will be written." type="\GdWrapper\Resource\ImageResource" variable="$resource">
-            <type by_reference="false">\GdWrapper\Resource\ImageResource</type>
+          <tag line="16" name="param" description="The GD2 image resource that will be written." type="resource" variable="$resource">
+            <type by_reference="false">resource</type>
           </tag>
-          <tag line="17" name="return" description="A concrete implementation of Writer." type="\GdWrapper\Io\Writer\Writer">
+          <tag line="16" name="return" description="A concrete implementation of Writer." type="\GdWrapper\Io\Writer\Writer">
             <type by_reference="false">\GdWrapper\Io\Writer\Writer</type>
           </tag>
-          <tag line="17" name="throws" description="If `$type` is not a supported file extension." type="\DomainException">
+          <tag line="16" name="throws" description="If `$type` is not a supported file extension." type="\DomainException">
             <type by_reference="false">\DomainException</type>
           </tag>
+          <tag line="16" name="throws" description="If `$resource` is not a valid GD2 resource." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
         </docblock>
-        <argument line="37">
+        <argument line="36">
           <name>$type</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="37">
+        <argument line="36">
           <name>$resource</name>
-          <default/>
-          <type>\GdWrapper\Resource\Resource</type>
+          <default></default>
+          <type/>
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="17" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $resource in factory()</error>
-    </parse_markers>
   </file>
   <file path="Io/Writer/JpgWriter.php" hash="2bd26d203749444109eb7c6ac69bb605" package="Default">
     <docblock line="2">
@@ -1569,7 +1572,7 @@ based on a file extension.&lt;/p&gt;</long-description>
       </docblock>
     </class>
   </file>
-  <file path="Io/Writer/JpegWriter.php" hash="a06b20fcd9ae71fad26955625760edf7" package="Default">
+  <file path="Io/Writer/JpegWriter.php" hash="33f388ceeddd1bd19db0fa496e6242e2" package="Default">
     <docblock line="2">
       <description>Defines JpegWritter class.</description>
       <long-description/>
@@ -1614,7 +1617,7 @@ based on a file extension.&lt;/p&gt;</long-description>
       <error line="17" code="50015">Argument $_ is missing from the Docblock of doWrite()</error>
     </parse_markers>
   </file>
-  <file path="Io/Writer/AbstractWriter.php" hash="4ecf40eeb47c00fe5fe91ea1e2cb7cef" package="Default">
+  <file path="Io/Writer/AbstractWriter.php" hash="06649ceb9d42b4b862c2ec480c53da41" package="Default">
     <docblock line="2">
       <description>Defines AbstractWriter class.</description>
       <long-description/>
@@ -1646,14 +1649,14 @@ based on a file extension.&lt;/p&gt;</long-description>
         <docblock line="23">
           <description>Creates a new output "device".</description>
           <long-description/>
-          <tag line="23" name="param" description="An image resource." type="\GdWrapper\Resource\Resource" variable="$resource">
-            <type by_reference="false">\GdWrapper\Resource\Resource</type>
+          <tag line="23" name="param" description="An image resource." type="resource" variable="$resource">
+            <type by_reference="false">resource</type>
           </tag>
         </docblock>
         <argument line="28">
           <name>$resource</name>
           <default/>
-          <type>\GdWrapper\Resource\Resource</type>
+          <type/>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="38" package="Default">
@@ -1676,70 +1679,70 @@ based on a file extension.&lt;/p&gt;</long-description>
         <argument line="48">
           <name>$resource</name>
           <default/>
-          <type>\GdWrapper\Resource\Resource</type>
+          <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="62" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="65" package="Default">
         <name>write</name>
         <full_name>write</full_name>
-        <docblock line="53">
+        <docblock line="56">
           <description>{@inheritdoc}</description>
           <long-description/>
-          <tag line="53" name="param" description="(optional) The quality of generated image.&#10;&#9;&#9;Its value MUST be in a range from 0 to 100.&#10;     Otherwise, it will be converted using `$quality % 101`" type="int" variable="$quality">
+          <tag line="56" name="param" description="(optional) The quality of generated image.&#10;&#9;&#9;Its value MUST be in a range from 0 to 100.&#10;     Otherwise, it will be converted using `$quality % 101`" type="int" variable="$quality">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="53" name="see" description="\GdWrapper\Io\Writer\Writer::write()" refers="\GdWrapper\Io\Writer\Writer::write()"/>
+          <tag line="56" name="see" description="\GdWrapper\Io\Writer\Writer::write()" refers="\GdWrapper\Io\Writer\Writer::write()"/>
         </docblock>
-        <argument line="63">
+        <argument line="66">
           <name>$pathName</name>
           <default/>
           <type/>
         </argument>
-        <argument line="64">
+        <argument line="67">
           <name>$quality</name>
           <default>\GdWrapper\Io\Preset::IMAGE_QUALITY_MAX</default>
           <type/>
         </argument>
-        <argument line="65">
+        <argument line="68">
           <name>$_</name>
           <default>null</default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Io\Writer" line="97" package="Default">
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="GdWrapper\Io\Writer" line="100" package="Default">
         <name>doWrite</name>
         <full_name>doWrite</full_name>
-        <docblock line="82">
+        <docblock line="85">
           <description>Concrete implementors should implement this operation.</description>
           <long-description>&lt;p&gt;This is method is executed at the end of {@link \GdWrapper\Io\Writer\AbstractWriter::write()}&lt;/p&gt;</long-description>
-          <tag line="82" name="param" description="(optiojnal) A path where to save the resource." type="string" variable="$pathName">
+          <tag line="85" name="param" description="(optiojnal) A path where to save the resource." type="string" variable="$pathName">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="82" name="param" description="(optional) The quality of generated image.&#10;&#9;&#9;Its value MUST be in a range from 0 to 100." type="int" variable="$quality">
+          <tag line="85" name="param" description="(optional) The quality of generated image.&#10;&#9;&#9;Its value MUST be in a range from 0 to 100." type="int" variable="$quality">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="82" name="param" description="(optional) Additional parameters passed to the concrete implementation method." type="mixed" variable="$_">
+          <tag line="85" name="param" description="(optional) Additional parameters passed to the concrete implementation method." type="mixed" variable="$_">
             <type by_reference="false">mixed</type>
           </tag>
-          <tag line="82" name="return" description="" type="void">
+          <tag line="85" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
-          <tag line="82" name="throws" description="If can't write the contents on file system." type="\GdWrapper\Io\Exception">
+          <tag line="85" name="throws" description="If can't write the contents on file system." type="\GdWrapper\Io\Exception">
             <type by_reference="false">\GdWrapper\Io\Exception</type>
           </tag>
-          <tag line="82" name="see" description="\GdWrapper\Io\Preset" refers="\GdWrapper\Io\Preset"/>
+          <tag line="85" name="see" description="\GdWrapper\Io\Preset" refers="\GdWrapper\Io\Preset"/>
         </docblock>
-        <argument line="98">
+        <argument line="101">
           <name>$pathName</name>
           <default/>
           <type/>
         </argument>
-        <argument line="99">
+        <argument line="102">
           <name>$quality</name>
           <default>\GdWrapper\Io\Preset::IMAGE_QUALITY_MAX</default>
           <type/>
         </argument>
-        <argument line="100">
+        <argument line="103">
           <name>$_</name>
           <default>null</default>
           <type/>
@@ -1748,9 +1751,9 @@ based on a file extension.&lt;/p&gt;</long-description>
     </class>
     <parse_markers>
       <error line="43" code="50015">Argument $resource is missing from the Docblock of setResource()</error>
-      <error line="53" code="50014">Name of argument $pathName does not match with the DocBlock's name $quality in write()</error>
-      <error line="53" code="50015">Argument $quality is missing from the Docblock of write()</error>
-      <error line="53" code="50015">Argument $_ is missing from the Docblock of write()</error>
+      <error line="56" code="50014">Name of argument $pathName does not match with the DocBlock's name $quality in write()</error>
+      <error line="56" code="50015">Argument $quality is missing from the Docblock of write()</error>
+      <error line="56" code="50015">Argument $_ is missing from the Docblock of write()</error>
     </parse_markers>
   </file>
   <file path="Io/Reader/Reader.php" hash="d24c0836c84ee64bb86149f2c841febc" package="Default">
