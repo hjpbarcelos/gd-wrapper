@@ -17,11 +17,6 @@ abstract class AbstractResourceFactory
     const TOP_CLASS = '\\GdWrapper\\Resource\\Resource';
     
     /**
-     * @var string Fully qualified name for the Resource subtype restriction.
-     */
-    private $superClass = self::TOP_CLASS;
-    
-    /**
      * @var string The fully qualified name of the class created by the factory.
      */
     private $className;
@@ -42,44 +37,7 @@ abstract class AbstractResourceFactory
     }
     
     /**
-     * Allows restrict the supertype of the products of this factory.
-     *
-     * @param string $superClass
-     *
-     * @return void
-     *
-     * @throws \InvalidArgumentException If `$className` is not a valid class name.
-     * @throws \DomainException If `$className` is not subclass of
-     *     `\GdWrapper\Resource\Resource`.
-     */
-    final protected function setSuperClass($superClass)
-    {
-        try {
-            $refl = new \ReflectionClass($className);
-            if ($refl->isSubclassOf(self::TOP_CLASS)) {
-                throw new \DomainException(
-                    "Class '{$className}' is not a " . self::TOP_CLASS . ' subclass'
-                );
-            }
-        } catch (\ReflectionException $e) {
-            throw new \InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
-        }
-        
-        $this->superClass = $superClass;
-    }
-    
-    /**
-     * Obtains supertype restriction of the products of this factory.
-     *
-     * @return string
-     */
-    final protected function getSuperClass()
-    {
-        return $this->superClass;
-    }
-    
-    /**
-     * Sets class name for this factory object.
+     * Sets class name of products of this factory object.
      *
      * @param string $className
      *
@@ -99,9 +57,10 @@ abstract class AbstractResourceFactory
                     "Class '{$className}' is not instantiable"
                 );
             }
-            if (!$refl->isSubclassOf($this->superClass)) {
+            if ($className != self::TOP_CLASS || 
+                !$refl->isSubclassOf(self::TOP_CLASS)) {
                 throw new \DomainException(
-                    "Class '{$className}' is not a " . $this->superClass . ' subclass'
+                    "Class '{$className}' is not a " . self::TOP_CLASS . ' subclass'
                 );
             }
         } catch (\ReflectionException $e) {
@@ -122,7 +81,7 @@ abstract class AbstractResourceFactory
     }
     
     /**
-     * Creates a concrete instance of `\GdWrapper\Resource\Resource`
+     * Creates a concrete instance of `\GdWrapper\Resource\Resource`.
      *
      * @return \GdWrapper\Resource\Resource
      *

@@ -322,10 +322,10 @@ from `$resource`.</description>
       </method>
     </class>
   </file>
-  <file path="Resource/AbstractResourceFactory.php" hash="c74e9ed06188ec25ca798a410307f765" package="Default">
+  <file path="Resource/AbstractResourceFactory.php" hash="24c04c75afdedafd11405751509c5592" package="Default">
     <docblock line="2">
       <description>Creates class \GdWrapper\Resource\AbstractResourceFactory.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="true" namespace="GdWrapper\Resource" line="12" package="Default">
@@ -334,153 +334,106 @@ from `$resource`.</description>
       <full_name>\GdWrapper\Resource\AbstractResourceFactory</full_name>
       <docblock line="9">
         <description>Abstract factory for `\GdWrapper\Resource\Resource` types.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
       <constant namespace="GdWrapper\Resource" line="17" package="Default">
         <name>TOP_CLASS</name>
         <full_name>TOP_CLASS</full_name>
         <value>'\\GdWrapper\\Resource\\Resource'</value>
         <docblock line="14">
-          <description/>
-          <long-description/>
+          <description></description>
+          <long-description></long-description>
           <tag line="14" name="var" description="Fully qualified name for the Resource interface" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </constant>
       <property final="false" static="false" visibility="private" line="22" namespace="GdWrapper\Resource" package="Default">
-        <name>$superClass</name>
-        <default>self::TOP_CLASS</default>
-        <docblock line="19">
-          <description/>
-          <long-description/>
-          <tag line="19" name="var" description="Fully qualified name for the Resource subtype restriction." type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property final="false" static="false" visibility="private" line="27" namespace="GdWrapper\Resource" package="Default">
         <name>$className</name>
-        <default/>
-        <docblock line="24">
-          <description/>
-          <long-description/>
-          <tag line="24" name="var" description="The fully qualified name of the class created by the factory." type="string">
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag line="19" name="var" description="The fully qualified name of the class created by the factory." type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="39" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="34" package="Default">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="29">
+        <docblock line="24">
           <description>Allows subclasses to initialize default values for `$className`.</description>
-          <long-description/>
-          <tag line="29" name="param" description="" type="string" variable="$className">
+          <long-description></long-description>
+          <tag line="24" name="param" description="" type="string" variable="$className">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="29" name="throws" description="If `$className` is not a valid class name." type="\InvalidArgumentException">
+          <tag line="24" name="throws" description="If `$className` is not a valid class name." type="\InvalidArgumentException">
             <type by_reference="false">\InvalidArgumentException</type>
           </tag>
-          <tag line="29" name="throws" description="If `$className` is not instantiable." type="\InvalidArgumentException">
+          <tag line="24" name="throws" description="If `$className` is not instantiable." type="\InvalidArgumentException">
             <type by_reference="false">\InvalidArgumentException</type>
           </tag>
-          <tag line="29" name="throws" description="If `$className` is not subclass of&#10;    \GdWrapper\Resource\Resource." type="\DomainException">
+          <tag line="24" name="throws" description="If `$className` is not subclass of&#10;    \GdWrapper\Resource\Resource." type="\DomainException">
             <type by_reference="false">\DomainException</type>
           </tag>
         </docblock>
-        <argument line="39">
+        <argument line="34">
           <name>$className</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="55" package="Default">
-        <name>setSuperClass</name>
-        <full_name>setSuperClass</full_name>
-        <docblock line="44">
-          <description>Allows restrict the supertype of the products of this factory.</description>
-          <long-description/>
-          <tag line="44" name="param" description="" type="string" variable="$superClass">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="44" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-          <tag line="44" name="throws" description="If `$className` is not a valid class name." type="\InvalidArgumentException">
-            <type by_reference="false">\InvalidArgumentException</type>
-          </tag>
-          <tag line="44" name="throws" description="If `$className` is not subclass of&#10;    `\GdWrapper\Resource\Resource`." type="\DomainException">
-            <type by_reference="false">\DomainException</type>
-          </tag>
-        </docblock>
-        <argument line="55">
-          <name>$superClass</name>
-          <default/>
-          <type/>
-        </argument>
-      </method>
-      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="76" package="Default">
-        <name>getSuperClass</name>
-        <full_name>getSuperClass</full_name>
-        <docblock line="71">
-          <description>Obtains supertype restriction of the products of this factory.</description>
-          <long-description/>
-          <tag line="71" name="return" description="" type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="93" package="Default">
+      <method final="true" abstract="false" static="false" visibility="protected" namespace="GdWrapper\Resource" line="51" package="Default">
         <name>setClassName</name>
         <full_name>setClassName</full_name>
-        <docblock line="81">
-          <description>Sets class name for this factory object.</description>
-          <long-description/>
-          <tag line="81" name="param" description="" type="string" variable="$className">
+        <docblock line="39">
+          <description>Sets class name of products of this factory object.</description>
+          <long-description></long-description>
+          <tag line="39" name="param" description="" type="string" variable="$className">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="81" name="return" description="" type="void">
+          <tag line="39" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
-          <tag line="81" name="throws" description="If `$className` is not a valid class name." type="\InvalidArgumentException">
+          <tag line="39" name="throws" description="If `$className` is not a valid class name." type="\InvalidArgumentException">
             <type by_reference="false">\InvalidArgumentException</type>
           </tag>
-          <tag line="81" name="throws" description="If `$className` is not instantiable." type="\InvalidArgumentException">
+          <tag line="39" name="throws" description="If `$className` is not instantiable." type="\InvalidArgumentException">
             <type by_reference="false">\InvalidArgumentException</type>
           </tag>
-          <tag line="81" name="throws" description="If `$className` is not subclass of&#10;    \GdWrapper\Resource\Resource." type="\DomainException">
+          <tag line="39" name="throws" description="If `$className` is not subclass of&#10;    \GdWrapper\Resource\Resource." type="\DomainException">
             <type by_reference="false">\DomainException</type>
           </tag>
         </docblock>
-        <argument line="93">
+        <argument line="51">
           <name>$className</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
-      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="119" package="Default">
+      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="78" package="Default">
         <name>getClassName</name>
         <full_name>getClassName</full_name>
-        <docblock line="114">
+        <docblock line="73">
           <description>Obtains class name of this factory object.</description>
-          <long-description/>
-          <tag line="114" name="return" description="" type="\GdWrapper\Resource\"/>
+          <long-description></long-description>
+          <tag line="73" name="return" description="" type="\GdWrapper\Resource\"/>
         </docblock>
       </method>
-      <method final="false" abstract="true" static="false" visibility="public" namespace="GdWrapper\Resource" line="133" package="Default">
+      <method final="false" abstract="true" static="false" visibility="public" namespace="GdWrapper\Resource" line="92" package="Default">
         <name>create</name>
         <full_name>create</full_name>
-        <docblock line="124">
-          <description>Creates a concrete instance of `\GdWrapper\Resource\Resource`</description>
-          <long-description/>
-          <tag line="124" name="return" description="" type="\GdWrapper\Resource\Resource">
+        <docblock line="83">
+          <description>Creates a concrete instance of `\GdWrapper\Resource\Resource`.</description>
+          <long-description></long-description>
+          <tag line="83" name="return" description="" type="\GdWrapper\Resource\Resource">
             <type by_reference="false">\GdWrapper\Resource\Resource</type>
           </tag>
-          <tag line="124" name="throws" description="If factory cannot determine which product create." type="\DomainException">
+          <tag line="83" name="throws" description="If factory cannot determine which product create." type="\DomainException">
             <type by_reference="false">\DomainException</type>
           </tag>
-          <tag line="124" name="throws" description="If there is an error in creatign the product, like&#10;    wrong or missing parameters." type="\LogicException">
+          <tag line="83" name="throws" description="If there is an error in creatign the product, like&#10;    wrong or missing parameters." type="\LogicException">
             <type by_reference="false">\LogicException</type>
           </tag>
         </docblock>
@@ -1400,7 +1353,7 @@ they are told to be.&lt;/p&gt;</long-description>
   <file path="Io/Writer/Writer.php" hash="e7b6dfa6cc622b9350437f716d82b081" package="Default">
     <docblock line="2">
       <description>Defines Writer interface.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <interface namespace="GdWrapper\Io\Writer" line="16" package="Default">
@@ -1408,7 +1361,7 @@ they are told to be.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Io\Writer\Writer</full_name>
       <docblock line="13">
         <description>Represents an output "device" for resources.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <constant namespace="GdWrapper\Io\Writer" line="24" package="Default">
         <name>STDOUT</name>
@@ -1417,7 +1370,7 @@ they are told to be.&lt;/p&gt;</long-description>
         <docblock line="18">
           <description>This parameter should be used with `write` method to
 indicate that the destination of output is the standard output.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="18" name="var" description="" type="null">
             <type by_reference="false">null</type>
           </tag>
@@ -1449,7 +1402,7 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
         </docblock>
         <argument line="45">
           <name>$pathName</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="46">
@@ -1468,7 +1421,7 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
         <full_name>getResource</full_name>
         <docblock line="50">
           <description>Obtains the GD2 image resource instance in which this object is working on.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="50" name="return" description="" type="resource">
             <type by_reference="false">resource</type>
           </tag>
@@ -1479,7 +1432,7 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
         <full_name>setResource</full_name>
         <docblock line="57">
           <description>Sets GD2 image resource for this object.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="57" name="param" description="A valid GD2 image resource" type="resource" variable="$resource">
             <type by_reference="false">resource</type>
           </tag>
@@ -1492,7 +1445,7 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
         </docblock>
         <argument line="66">
           <name>$resource</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1501,7 +1454,7 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
   <file path="Io/Writer/WriterFactory.php" hash="1bf7951bb7876acd282b3017726fa4a7" package="Default">
     <docblock line="2">
       <description>Defines WriterFactory class.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="false" namespace="GdWrapper\Io\Writer" line="14" package="Default">
@@ -1510,7 +1463,7 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
       <full_name>\GdWrapper\Io\Writer\WriterFactory</full_name>
       <docblock line="11">
         <description>Defines an abstract implementation of an output "device" for resources.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Io\Writer" line="36" package="Default">
         <name>factory</name>
@@ -1543,12 +1496,12 @@ should be &lt;code&gt;STDOUT&lt;/code&gt; class constant of this interface.&lt;/
         </docblock>
         <argument line="36">
           <name>$type</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="36">
           <name>$resource</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>

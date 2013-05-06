@@ -57,7 +57,7 @@
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct :: Creates a factory for image file based resources."><span class="description">Creates a factory for image file based resources.</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_create" title="create :: Creates a concrete instance of `\GdWrapper\Resource\Resource`"><span class="description">Creates a concrete instance of `\GdWrapper\Resource\Resource`</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#method_create" title="create :: Creates a concrete instance of `\GdWrapper\Resource\Resource`."><span class="description">Creates a concrete instance of `\GdWrapper\Resource\Resource`.</span><pre>create()</pre></a></li>
 <li class="method public inherited"><a href="#method_getClassName" title="getClassName :: Obtains class name of this factory object."><span class="description">Obtains class name of this factory object.</span><pre>getClassName()</pre></a></li>
 <li class="method public "><a href="#method_getReaderFactory" title="getReaderFactory :: Sets the factory for objects that will read an image and create a GD2 resource form it."><span class="description">Sets the factory for objects that will read an image and create a GD2 resource form it.</span><pre>getReaderFactory()</pre></a></li>
 <li class="method public "><a href="#method_setPathName" title="setPathName :: Sets the path name of the file from which resources will be created."><span class="description">Sets the path name of the file from which resources will be created.</span><pre>setPathName()</pre></a></li>
@@ -65,11 +65,7 @@
 </ul>
 </li>
 <li class="nav-header protected">» Protected
-                    <ul>
-<li class="method protected inherited"><a href="#method_getSuperClass" title="getSuperClass :: Obtains supertype restriction of the products of this factory."><span class="description">Obtains supertype restriction of the products of this factory.</span><pre>getSuperClass()</pre></a></li>
-<li class="method protected inherited"><a href="#method_setClassName" title="setClassName :: Sets class name for this factory object."><span class="description">Sets class name for this factory object.</span><pre>setClassName()</pre></a></li>
-<li class="method protected inherited"><a href="#method_setSuperClass" title="setSuperClass :: Allows restrict the supertype of the products of this factory."><span class="description">Allows restrict the supertype of the products of this factory.</span><pre>setSuperClass()</pre></a></li>
-</ul>
+                    <ul><li class="method protected inherited"><a href="#method_setClassName" title="setClassName :: Sets class name of products of this factory object."><span class="description">Sets class name of products of this factory object.</span><pre>setClassName()</pre></a></li></ul>
 </li>
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties
@@ -81,7 +77,6 @@
 <li class="property private "><a href="#property_pathName" title="$pathName :: "><span class="description">The path to the file from which resources will be created.</span><pre>$pathName</pre></a></li>
 <li class="property private "><a href="#property_reader" title="$reader :: "><span class="description">The reader object that will create the resource.</span><pre>$reader</pre></a></li>
 <li class="property private "><a href="#property_readerFactory" title="$readerFactory :: "><span class="description">The factory for reader objects.</span><pre>$readerFactory</pre></a></li>
-<li class="property private inherited"><a href="#property_superClass" title="$superClass :: "><span class="description">Fully qualified name for the Resource subtype restriction.</span><pre>$superClass</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -131,7 +126,7 @@
 </div></div>
 </div>
 <a id="method_create"></a><div class="element clickable method public method_create" data-toggle="collapse" data-target=".method_create .collapse">
-<h2>Creates a concrete instance of `\GdWrapper\Resource\Resource`</h2>
+<h2>Creates a concrete instance of `\GdWrapper\Resource\Resource`.</h2>
 <pre>create() : <a href="../classes/GdWrapper.Resource.Resource.html">\GdWrapper\Resource\Resource</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -217,22 +212,8 @@
 </div>
 </div></div>
 </div>
-<a id="method_getSuperClass"></a><div class="element clickable method protected method_getSuperClass" data-toggle="collapse" data-target=".method_getSuperClass .collapse">
-<h2>Obtains supertype restriction of the products of this factory.</h2>
-<pre>getSuperClass() : string</pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResourceFactory::getSuperClass()</td>
-</tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
-</div></div>
-</div>
 <a id="method_setClassName"></a><div class="element clickable method protected method_setClassName" data-toggle="collapse" data-target=".method_setClassName .collapse">
-<h2>Sets class name for this factory object.</h2>
+<h2>Sets class name of products of this factory object.</h2>
 <pre>setClassName(string $className) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
@@ -260,35 +241,6 @@
 <th><code><a href="http://php.net/manual/en/class.domainexception.php">\DomainException</a></code></th>
 <td>If `$className` is not subclass of
     \GdWrapper\Resource\Resource.</td>
-</tr>
-</table>
-</div></div>
-</div>
-<a id="method_setSuperClass"></a><div class="element clickable method protected method_setSuperClass" data-toggle="collapse" data-target=".method_setSuperClass .collapse">
-<h2>Allows restrict the supertype of the products of this factory.</h2>
-<pre>setSuperClass(string $superClass) : void</pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResourceFactory::setSuperClass()</td>
-</tr></table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$superClass</h4>
-<code>string</code>
-</div>
-<h3>Exceptions</h3>
-<table class="table table-bordered">
-<tr>
-<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
-<td>If `$className` is not a valid class name.</td>
-</tr>
-<tr>
-<th><code><a href="http://php.net/manual/en/class.domainexception.php">\DomainException</a></code></th>
-<td>If `$className` is not subclass of
-    `\GdWrapper\Resource\Resource`.</td>
 </tr>
 </table>
 </div></div>
@@ -325,18 +277,6 @@
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="property_superClass"> </a><div class="element clickable property private property_superClass" data-toggle="collapse" data-target=".property_superClass .collapse">
-<h2>Fully qualified name for the Resource subtype restriction.</h2>
-<pre>$superClass : string</pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\GdWrapper\Resource\AbstractResourceFactory::$$superClass</td>
-</tr></table>
-</div></div>
-</div>
 <h3>
 <i class="icon-custom icon-constant"></i> Constants</h3>
 <a id="constant_TOP_CLASS"> </a><div class="element clickable constant  constant_TOP_CLASS" data-toggle="collapse" data-target=".constant_TOP_CLASS .collapse">
@@ -358,7 +298,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-05-06T17:21:08+02:00.<br></footer></div>
+            generated on 2013-05-06T18:56:52+02:00.<br></footer></div>
 </div>
 </body>
 </html>
