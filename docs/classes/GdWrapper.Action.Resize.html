@@ -65,10 +65,7 @@
                     <ul></ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul>
-<li class="property private "><a href="#property_resource" title="$resource :: "><span class="description"></span><pre>$resource</pre></a></li>
-<li class="property private "><a href="#property_strategy" title="$strategy :: "><span class="description"></span><pre>$strategy</pre></a></li>
-</ul>
+                    <ul><li class="property private "><a href="#property_strategy" title="$strategy :: "><span class="description"></span><pre>$strategy</pre></a></li></ul>
 </li>
 </ul>
 </div>
@@ -93,14 +90,11 @@
 <i class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Creates a resize operation object.</h2>
-<pre>__construct(\GdWrapper\Resource\Resource $src, \GdWrapper\Action\ResizeStrategy\Strategy $strategy) </pre>
+<pre>__construct(\GdWrapper\Action\ResizeStrategy\Strategy $strategy) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$src</h4>
-<code><a href="../classes/GdWrapper.Resource.Resource.html">\GdWrapper\Resource\Resource</a></code><p>The source resource for resizing.</p></div>
 <div class="subelement argument">
 <h4>$strategy</h4>
 <code><a href="../classes/GdWrapper.Action.ResizeStrategy.Strategy.html">\GdWrapper\Action\ResizeStrategy\Strategy</a></code><p>The strategy of resizing.</p></div>
@@ -108,7 +102,7 @@
 </div>
 <a id="method_execute"></a><div class="element clickable method public method_execute" data-toggle="collapse" data-target=".method_execute .collapse">
 <h2>Resizes an image based on the strategy passed in the constructor.</h2>
-<pre>execute() : void</pre>
+<pre>execute(\GdWrapper\Resource\Resource $resource) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p></p></div>
@@ -116,6 +110,8 @@
 <th>see</th>
 <td><a href="">\GdWrapper\Action.Action::execute()</a></td>
 </tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$resource</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.unexpectedvalueexception.php">\UnexpectedValueException</a></code></th>
@@ -126,12 +122,6 @@ new image dimensions.</td>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_resource"> </a><div class="element clickable property private property_resource" data-toggle="collapse" data-target=".property_resource .collapse">
-<h2></h2>
-<pre>$resource </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
 <a id="property_strategy"> </a><div class="element clickable property private property_strategy" data-toggle="collapse" data-target=".property_strategy .collapse">
 <h2></h2>
 <pre>$strategy </pre>
@@ -145,7 +135,7 @@ new image dimensions.</td>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-04-24T00:45:41+02:00.<br></footer></div>
+            generated on 2013-05-06T16:59:00+02:00.<br></footer></div>
 </div>
 </body>
 </html>

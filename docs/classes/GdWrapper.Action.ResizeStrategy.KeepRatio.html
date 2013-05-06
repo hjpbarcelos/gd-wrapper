@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>phpDocumentor » \GdWrapper\Action\ResizeStrategy\Exact</title>
+<title>phpDocumentor » \GdWrapper\Action\ResizeStrategy\KeepRatio</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -56,12 +56,12 @@
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___construct" title="__construct :: Creates an exact resizing strategy."><span class="description">Creates an exact resizing strategy.</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_getHeight" title="getHeight :: Gets the desired height of the image."><span class="description">Gets the desired height of the image.</span><pre>getHeight()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: Creates a proportional resizing strategy object."><span class="description">Creates a proportional resizing strategy object.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_getMaxHeight" title="getMaxHeight :: Gets the desired max height of the image."><span class="description">Gets the desired max height of the image.</span><pre>getMaxHeight()</pre></a></li>
+<li class="method public "><a href="#method_getMaxWidth" title="getMaxWidth :: Gets the desired max width of the image."><span class="description">Gets the desired max width of the image.</span><pre>getMaxWidth()</pre></a></li>
 <li class="method public "><a href="#method_getNewDimensions" title="getNewDimensions :: Return the new dimensions of an image with `$width` and `$height` dimensions."><span class="description">Return the new dimensions of an image with `$width` and `$height` dimensions.</span><pre>getNewDimensions()</pre></a></li>
-<li class="method public "><a href="#method_getWidth" title="getWidth :: Gets the desired width of the image."><span class="description">Gets the desired width of the image.</span><pre>getWidth()</pre></a></li>
-<li class="method public "><a href="#method_setHeight" title="setHeight :: Sets the desired width of the image."><span class="description">Sets the desired width of the image.</span><pre>setHeight()</pre></a></li>
-<li class="method public "><a href="#method_setWidth" title="setWidth :: Sets the desired width of the image."><span class="description">Sets the desired width of the image.</span><pre>setWidth()</pre></a></li>
+<li class="method public "><a href="#method_setMaxHeight" title="setMaxHeight :: Sets the desired max width of the image."><span class="description">Sets the desired max width of the image.</span><pre>setMaxHeight()</pre></a></li>
+<li class="method public "><a href="#method_setMaxWidth" title="setMaxWidth :: Sets the desired max width of the image."><span class="description">Sets the desired max width of the image.</span><pre>setMaxWidth()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -70,14 +70,14 @@
 </li>
 <li class="nav-header private">» Private
                     <ul>
-<li class="property private "><a href="#property_height" title="$height :: "><span class="description"></span><pre>$height</pre></a></li>
-<li class="property private "><a href="#property_width" title="$width :: "><span class="description"></span><pre>$width</pre></a></li>
+<li class="property private "><a href="#property_maxHeight" title="$maxHeight :: "><span class="description">The image max height.</span><pre>$maxHeight</pre></a></li>
+<li class="property private "><a href="#property_maxWidth" title="$maxWidth :: "><span class="description">The image max width.</span><pre>$maxWidth</pre></a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a id="\GdWrapper\Action\ResizeStrategy\Exact"></a><ul class="breadcrumb">
+<a id="\GdWrapper\Action\ResizeStrategy\KeepRatio"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
@@ -89,35 +89,54 @@
 <span class="divider">\</span><a href="../namespaces/GdWrapper.Action.ResizeStrategy.html">ResizeStrategy</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/GdWrapper.Action.ResizeStrategy.Exact.html">Exact</a>
+<span class="divider">\</span><a href="../classes/GdWrapper.Action.ResizeStrategy.KeepRatio.html">KeepRatio</a>
 </li>
 </ul>
 <div class="element class">
-<p class="short_description">Represents an exact resizing.</p>
+<p class="short_description">Represents a resizing that respects image aspect ratio.</p>
 <div class="details">
-<div class="long_description"><p>That is, no matter which are the original
-dimensions of an image file, the new dimensions should be exaclty as
-they are told to be.</p></div>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-<h2>Creates an exact resizing strategy.</h2>
-<pre>__construct(int $width, int $height) </pre>
+<h2>Creates a proportional resizing strategy object.</h2>
+<pre>__construct(int $maxWidth, int $maxHeight) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>IMPORTANT:
+Resulting image dimensions will NOT surpass <code>$maxWidth</code> and <code>$maxHeight</code> parameters.
+If the proportion of an image is different from the proportion between those two
+parameters, will be returned the dimensions that fit in  <code>$maxWidth</code> and <code>$maxHeight</code>.</p>
+
+<p>For example, if you try to resize an image with <code>1920 x 1080 px</code> (16:9) to
+<code>400 x 300 px</code> (4:3), the new dimensions will be <code>400 x 225 px</code>.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$maxWidth</h4>
+<code>int</code><p>The maximum width of the image.</p></div>
+<div class="subelement argument">
+<h4>$maxHeight</h4>
+<code>int</code><p>The maximum height of the image.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If `$maxWidth <= 0` or `$maxHeight <= 0` .</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_getMaxHeight"></a><div class="element clickable method public method_getMaxHeight" data-toggle="collapse" data-target=".method_getMaxHeight .collapse">
+<h2>Gets the desired max height of the image.</h2>
+<pre>getMaxHeight() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$width</h4>
-<code>int</code><p>The desired width of the image.</p></div>
-<div class="subelement argument">
-<h4>$height</h4>
-<code>int</code><p>The desired height of the image.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a id="method_getHeight"></a><div class="element clickable method public method_getHeight" data-toggle="collapse" data-target=".method_getHeight .collapse">
-<h2>Gets the desired height of the image.</h2>
-<pre>getHeight() : int</pre>
+<a id="method_getMaxWidth"></a><div class="element clickable method public method_getMaxWidth" data-toggle="collapse" data-target=".method_getMaxWidth .collapse">
+<h2>Gets the desired max width of the image.</h2>
+<pre>getMaxWidth() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -145,60 +164,57 @@ they are told to be.</p></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
-<td>On error calculating new image dimensions.</td>
+<td>If `$width <= 0` or `$height <= 0` .</td>
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>An array like: `['width' => value, 'height' => value]`</div>
 </div></div>
 </div>
-<a id="method_getWidth"></a><div class="element clickable method public method_getWidth" data-toggle="collapse" data-target=".method_getWidth .collapse">
-<h2>Gets the desired width of the image.</h2>
-<pre>getWidth() : int</pre>
+<a id="method_setMaxHeight"></a><div class="element clickable method public method_setMaxHeight" data-toggle="collapse" data-target=".method_setMaxHeight .collapse">
+<h2>Sets the desired max width of the image.</h2>
+<pre>setMaxHeight($maxHeight) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>int</code></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$maxHeight</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If `$height <= 0` .</td>
+</tr></table>
 </div></div>
 </div>
-<a id="method_setHeight"></a><div class="element clickable method public method_setHeight" data-toggle="collapse" data-target=".method_setHeight .collapse">
-<h2>Sets the desired width of the image.</h2>
-<pre>setHeight(int $height) : void</pre>
+<a id="method_setMaxWidth"></a><div class="element clickable method public method_setMaxWidth" data-toggle="collapse" data-target=".method_setMaxWidth .collapse">
+<h2>Sets the desired max width of the image.</h2>
+<pre>setMaxWidth(int $maxWidth) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$height</h4>
+<h4>$maxWidth</h4>
 <code>int</code>
 </div>
-</div></div>
-</div>
-<a id="method_setWidth"></a><div class="element clickable method public method_setWidth" data-toggle="collapse" data-target=".method_setWidth .collapse">
-<h2>Sets the desired width of the image.</h2>
-<pre>setWidth(int $width) : void</pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$width</h4>
-<code>int</code>
-</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If `$width <= 0` .</td>
+</tr></table>
 </div></div>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_height"> </a><div class="element clickable property private property_height" data-toggle="collapse" data-target=".property_height .collapse">
-<h2></h2>
-<pre>$height </pre>
+<a id="property_maxHeight"> </a><div class="element clickable property private property_maxHeight" data-toggle="collapse" data-target=".property_maxHeight .collapse">
+<h2>The image max height.</h2>
+<pre>$maxHeight : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="property_width"> </a><div class="element clickable property private property_width" data-toggle="collapse" data-target=".property_width .collapse">
-<h2></h2>
-<pre>$width </pre>
+<a id="property_maxWidth"> </a><div class="element clickable property private property_maxWidth" data-toggle="collapse" data-target=".property_maxWidth .collapse">
+<h2>The image max width.</h2>
+<pre>$maxWidth : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>

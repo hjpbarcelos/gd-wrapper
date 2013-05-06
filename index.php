@@ -18,8 +18,8 @@ header('content-type: image/jpeg');
 $iFactory = new ImageResourceFactory('test/assets/images/file1.jpg');
 $src = $iFactory->create();
 
-$resize = new Resize($src, new ResizeProportional(.5));
-$dst = $resize->execute();
+$resize = new Resize(new ResizeProportional(.5));
+$dst = $resize->execute($src);
 
 $wFactory = new WriterFactory();
 $writer = $wFactory->factory('jpg', $dst);

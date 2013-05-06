@@ -711,7 +711,7 @@ parameter and only then assigns the copy to &lt;code&gt;$raw&lt;/code&gt; attrib
   <file path="Action/ResizeStrategy/KeepRatio.php" hash="3c05ba903c59d3cd84d1925103a7e509" package="Default">
     <docblock line="2">
       <description>Defines the KeepRatio resizing strategy.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="false" namespace="GdWrapper\Action\ResizeStrategy" line="11" package="Default">
@@ -721,14 +721,14 @@ parameter and only then assigns the copy to &lt;code&gt;$raw&lt;/code&gt; attrib
       <full_name>\GdWrapper\Action\ResizeStrategy\KeepRatio</full_name>
       <docblock line="8">
         <description>Represents a resizing that respects image aspect ratio.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <property final="false" static="false" visibility="private" line="16" namespace="GdWrapper\Action\ResizeStrategy" package="Default">
         <name>$maxWidth</name>
-        <default></default>
+        <default/>
         <docblock line="13">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="13" name="var" description="The image max width." type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -736,10 +736,10 @@ parameter and only then assigns the copy to &lt;code&gt;$raw&lt;/code&gt; attrib
       </property>
       <property final="false" static="false" visibility="private" line="21" namespace="GdWrapper\Action\ResizeStrategy" package="Default">
         <name>$maxHeight</name>
-        <default></default>
+        <default/>
         <docblock line="18">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="18" name="var" description="The image max height." type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -769,12 +769,12 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         </docblock>
         <argument line="39">
           <name>$maxWidth</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="39">
           <name>$maxHeight</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -783,7 +783,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         <full_name>getMaxWidth</full_name>
         <docblock line="45">
           <description>Gets the desired max width of the image.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="45" name="return" description="" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -794,7 +794,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         <full_name>setMaxWidth</full_name>
         <docblock line="55">
           <description>Sets the desired max width of the image.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="55" name="param" description="" type="int" variable="$maxWidth">
             <type by_reference="false">int</type>
           </tag>
@@ -807,7 +807,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         </docblock>
         <argument line="64">
           <name>$maxWidth</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -816,7 +816,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         <full_name>getMaxHeight</full_name>
         <docblock line="74">
           <description>Gets the desired max height of the image.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="74" name="return" description="" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -827,7 +827,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         <full_name>setMaxHeight</full_name>
         <docblock line="84">
           <description>Sets the desired max width of the image.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="84" name="param" description="" type="int" variable="$height">
             <type by_reference="false">int</type>
           </tag>
@@ -840,7 +840,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         </docblock>
         <argument line="93">
           <name>$maxHeight</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -849,7 +849,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         <full_name>getNewDimensions</full_name>
         <docblock line="103">
           <description>{@inheritdoc}</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="103" name="see" description="\GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()" refers="\GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()"/>
           <tag line="103" name="throws" description="If `$width &lt;= 0` or `$height &lt;= 0` ." type="\InvalidArgumentException">
             <type by_reference="false">\InvalidArgumentException</type>
@@ -857,12 +857,12 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         </docblock>
         <argument line="110">
           <name>$width</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="110">
           <name>$height</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -922,7 +922,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
   <file path="Action/ResizeStrategy/Proportional.php" hash="5442dba4e34105a2335253aed93eb66e" package="Default">
     <docblock line="2">
       <description>Defines the Proportional resizing strategy.</description>
-      <long-description></long-description>
+      <long-description/>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="false" namespace="GdWrapper\Action\ResizeStrategy" line="11" package="Default">
@@ -932,14 +932,14 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
       <full_name>\GdWrapper\Action\ResizeStrategy\Proportional</full_name>
       <docblock line="8">
         <description>Represents a proportional resizing.</description>
-        <long-description></long-description>
+        <long-description/>
       </docblock>
       <property final="false" static="false" visibility="private" line="16" namespace="GdWrapper\Action\ResizeStrategy" package="Default">
         <name>$proportion</name>
-        <default></default>
+        <default/>
         <docblock line="13">
-          <description></description>
-          <long-description></long-description>
+          <description/>
+          <long-description/>
           <tag line="13" name="var" description="The proportion of the resizing action." type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -967,7 +967,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         </docblock>
         <argument line="32">
           <name>$proportion</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -976,7 +976,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         <full_name>setProportion</full_name>
         <docblock line="37">
           <description>Sets the proportion of the resizing action.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="37" name="param" description="The proportion of the resizing action" type="int" variable="$proportion">
             <type by_reference="false">int</type>
           </tag>
@@ -989,7 +989,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         </docblock>
         <argument line="46">
           <name>$proportion</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -998,7 +998,7 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         <full_name>getProportion</full_name>
         <docblock line="58">
           <description>Gets the proportion of the resizing operation.</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="58" name="return" description="" type="int">
             <type by_reference="false">int</type>
           </tag>
@@ -1009,17 +1009,17 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
         <full_name>getNewDimensions</full_name>
         <docblock line="68">
           <description>{@inheritdoc}</description>
-          <long-description></long-description>
+          <long-description/>
           <tag line="68" name="see" description="\GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()" refers="\GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()"/>
         </docblock>
         <argument line="73">
           <name>$width</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
         <argument line="73">
           <name>$height</name>
-          <default></default>
+          <default/>
           <type/>
         </argument>
       </method>
@@ -1165,10 +1165,10 @@ they are told to be.&lt;/p&gt;</long-description>
       <error line="72" code="50015">Argument $height is missing from the Docblock of getNewDimensions()</error>
     </parse_markers>
   </file>
-  <file path="Action/Resize.php" hash="2b63df00f035e43a919f9f3dbcec14dd" package="Default">
+  <file path="Action/Resize.php" hash="389c841c2c3284d43efbd9d527fb05a5" package="Default">
     <docblock line="2">
       <description>Defines Resize operation class.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="false" namespace="GdWrapper\Action" line="16" package="Default">
@@ -1178,81 +1178,82 @@ they are told to be.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Action\Resize</full_name>
       <docblock line="13">
         <description>Resizes an image.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
       <property final="false" static="false" visibility="private" line="18" namespace="GdWrapper\Action" package="Default">
-        <name>$resource</name>
-        <default/>
-      </property>
-      <property final="false" static="false" visibility="private" line="19" namespace="GdWrapper\Action" package="Default">
         <name>$strategy</name>
-        <default/>
+        <default></default>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="27" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="25" package="Default">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="21">
+        <docblock line="20">
           <description>Creates a resize operation object.</description>
-          <long-description/>
-          <tag line="21" name="param" description="The source resource for resizing." type="\GdWrapper\Resource\Resource" variable="$src">
-            <type by_reference="false">\GdWrapper\Resource\Resource</type>
-          </tag>
-          <tag line="21" name="param" description="The strategy of resizing." type="\GdWrapper\Action\ResizeStrategy\Strategy" variable="$strategy">
+          <long-description></long-description>
+          <tag line="20" name="param" description="The strategy of resizing." type="\GdWrapper\Action\ResizeStrategy\Strategy" variable="$strategy">
             <type by_reference="false">\GdWrapper\Action\ResizeStrategy\Strategy</type>
           </tag>
         </docblock>
-        <argument line="28">
-          <name>$src</name>
-          <default/>
-          <type>\GdWrapper\Resource\Resource</type>
-        </argument>
-        <argument line="29">
+        <argument line="26">
           <name>$strategy</name>
-          <default/>
+          <default></default>
           <type>\GdWrapper\Action\ResizeStrategy\Strategy</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="42" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="38" package="Default">
         <name>execute</name>
         <full_name>execute</full_name>
-        <docblock line="35">
+        <docblock line="31">
           <description>Resizes an image based on the strategy passed in the constructor.</description>
           <long-description>&lt;p&gt;{@inheritdoc}&lt;/p&gt;</long-description>
-          <tag line="35" name="see" description="\GdWrapper\Action.Action::execute()" refers="\GdWrapper\Action.Action::execute()"/>
+          <tag line="31" name="see" description="\GdWrapper\Action.Action::execute()" refers="\GdWrapper\Action.Action::execute()"/>
         </docblock>
+        <argument line="38">
+          <name>$resource</name>
+          <default></default>
+          <type>\GdWrapper\Resource\Resource</type>
+        </argument>
       </method>
     </class>
     <parse_markers>
-      <error line="18" code="50018">No DocBlock was found for property $resource</error>
-      <error line="19" code="50018">No DocBlock was found for property $strategy</error>
+      <error line="18" code="50018">No DocBlock was found for property $strategy</error>
+      <error line="31" code="50015">Argument $resource is missing from the Docblock of execute()</error>
     </parse_markers>
   </file>
-  <file path="Action/Action.php" hash="441055d6265afa37d723566426753b9b" package="Default">
+  <file path="Action/Action.php" hash="cec9ce8493a28d44b9352433f06d94d5" package="Default">
     <docblock line="2">
       <description>Defines Action interface.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
-    <interface namespace="GdWrapper\Action" line="12" package="Default">
+    <interface namespace="GdWrapper\Action" line="14" package="Default">
       <name>Action</name>
       <full_name>\GdWrapper\Action\Action</full_name>
-      <docblock line="9">
+      <docblock line="11">
         <description>Interface representing an action over an image.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="21" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="25" package="Default">
         <name>execute</name>
         <full_name>execute</full_name>
-        <docblock line="13">
+        <docblock line="15">
           <description>Excecutes an action over images.</description>
-          <long-description/>
-          <tag line="13" name="return" description="" type="void">
+          <long-description></long-description>
+          <tag line="15" name="param" description="The source resource for resizing." type="\GdWrapper\Resource\Resource" variable="$src">
+            <type by_reference="false">\GdWrapper\Resource\Resource</type>
+          </tag>
+          <tag line="15" name="return" description="" type="void">
             <type by_reference="false">void</type>
           </tag>
-          <tag line="13" name="throws" description="If something goes wrong while calculating&#10;new image dimensions." type="\UnexpectedValueException">
+          <tag line="15" name="throws" description="If something goes wrong while calculating&#10;new image dimensions." type="\UnexpectedValueException">
             <type by_reference="false">\UnexpectedValueException</type>
           </tag>
         </docblock>
+        <argument line="25">
+          <name>$src</name>
+          <default></default>
+          <type>\GdWrapper\Resource\Resource</type>
+        </argument>
       </method>
     </interface>
   </file>

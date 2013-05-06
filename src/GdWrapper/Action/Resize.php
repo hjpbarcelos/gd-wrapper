@@ -15,20 +15,16 @@ use GdWrapper\Resource\Resource;
  */
 class Resize implements Action
 {
-    private $resource;
     private $strategy;
     
     /**
      * Creates a resize operation object.
      *
-     * @param \GdWrapper\Resource\Resource $src The source resource for resizing.
      * @param \GdWrapper\Action\ResizeStrategy\Strategy $strategy The strategy of resizing.
      */
     public function __construct(
-        Resource $src,
         Strategy $strategy)
     {
-        $this->resource = $src;
         $this->strategy = $strategy;
     }
     
@@ -39,11 +35,11 @@ class Resize implements Action
      *
      * @see GdWrapper\Action.Action::execute()
      */
-    public function execute() {
+    public function execute(Resource $resource) {
         try {
             $dimensions = $this->strategy->getNewDimensions(
-                $this->resource->getWidth(),
-                $this->resource->getHeight()
+                $resource->getWidth(),
+                $resource->getHeight()
             );
         } catch (\InvalidArgumentException $e) {
             throw new \UnexpectedValueException(
@@ -59,10 +55,10 @@ class Resize implements Action
         $dst = $factory->create();
         
         imagecopyresampled(
-            $dst->getRaw(), $this->resource->getRaw(),
+            $dst->getRaw(), $resource->getRaw(),
             0, 0, 0, 0,
             $dst->getWidth(), $dst->getHeight(),
-            $this->resource->getWidth(), $this->resource->getHeight()
+            $resource->getWidth(), $resource->getHeight()
         );
         
         return $dst;
