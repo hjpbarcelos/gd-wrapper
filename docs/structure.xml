@@ -322,7 +322,7 @@ from `$resource`.</description>
       </method>
     </class>
   </file>
-  <file path="Resource/AbstractResourceFactory.php" hash="24c04c75afdedafd11405751509c5592" package="Default">
+  <file path="Resource/AbstractResourceFactory.php" hash="afc62ea5cfe8975f679c9e6b822fed8b" package="Default">
     <docblock line="2">
       <description>Creates class \GdWrapper\Resource\AbstractResourceFactory.</description>
       <long-description></long-description>
@@ -337,8 +337,8 @@ from `$resource`.</description>
         <long-description></long-description>
       </docblock>
       <constant namespace="GdWrapper\Resource" line="17" package="Default">
-        <name>TOP_CLASS</name>
-        <full_name>TOP_CLASS</full_name>
+        <name>RESOURCE_INTERFACE</name>
+        <full_name>RESOURCE_INTERFACE</full_name>
         <value>'\\GdWrapper\\Resource\\Resource'</value>
         <docblock line="14">
           <description></description>
@@ -412,28 +412,28 @@ from `$resource`.</description>
           <type/>
         </argument>
       </method>
-      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="78" package="Default">
+      <method final="true" abstract="false" static="false" visibility="public" namespace="GdWrapper\Resource" line="77" package="Default">
         <name>getClassName</name>
         <full_name>getClassName</full_name>
-        <docblock line="73">
+        <docblock line="72">
           <description>Obtains class name of this factory object.</description>
           <long-description></long-description>
-          <tag line="73" name="return" description="" type="\GdWrapper\Resource\"/>
+          <tag line="72" name="return" description="" type="\GdWrapper\Resource\"/>
         </docblock>
       </method>
-      <method final="false" abstract="true" static="false" visibility="public" namespace="GdWrapper\Resource" line="92" package="Default">
+      <method final="false" abstract="true" static="false" visibility="public" namespace="GdWrapper\Resource" line="91" package="Default">
         <name>create</name>
         <full_name>create</full_name>
-        <docblock line="83">
+        <docblock line="82">
           <description>Creates a concrete instance of `\GdWrapper\Resource\Resource`.</description>
           <long-description></long-description>
-          <tag line="83" name="return" description="" type="\GdWrapper\Resource\Resource">
+          <tag line="82" name="return" description="" type="\GdWrapper\Resource\Resource">
             <type by_reference="false">\GdWrapper\Resource\Resource</type>
           </tag>
-          <tag line="83" name="throws" description="If factory cannot determine which product create." type="\DomainException">
+          <tag line="82" name="throws" description="If factory cannot determine which product create." type="\DomainException">
             <type by_reference="false">\DomainException</type>
           </tag>
-          <tag line="83" name="throws" description="If there is an error in creatign the product, like&#10;    wrong or missing parameters." type="\LogicException">
+          <tag line="82" name="throws" description="If there is an error in creatign the product, like&#10;    wrong or missing parameters." type="\LogicException">
             <type by_reference="false">\LogicException</type>
           </tag>
         </docblock>
@@ -827,46 +827,46 @@ parameters, will be returned the dimensions that fit in  &lt;code&gt;$maxWidth&l
       <error line="103" code="50015">Argument $height is missing from the Docblock of getNewDimensions()</error>
     </parse_markers>
   </file>
-  <file path="Action/ResizeStrategy/Strategy.php" hash="43ffea6c037ee15a37a568f28fbbd2e1" package="Default">
+  <file path="Action/ResizeStrategy/Strategy.php" hash="598d0fdd0ee01221d766ff36bfc18069" package="Default">
     <docblock line="2">
-      <description>Defines resize Strategy interface.</description>
-      <long-description/>
+      <description>Defines resize strategy interface.</description>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
-    <interface namespace="GdWrapper\Action\ResizeStrategy" line="14" package="Default">
+    <interface namespace="GdWrapper\Action\ResizeStrategy" line="12" package="Default">
       <name>Strategy</name>
       <full_name>\GdWrapper\Action\ResizeStrategy\Strategy</full_name>
-      <docblock line="11">
+      <docblock line="9">
         <description>Represents a resizing strategy.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\ResizeStrategy" line="26" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\ResizeStrategy" line="24" package="Default">
         <name>getNewDimensions</name>
         <full_name>getNewDimensions</full_name>
-        <docblock line="16">
+        <docblock line="14">
           <description>Return the new dimensions of an image with `$width` and `$height` dimensions.</description>
-          <long-description/>
-          <tag line="16" name="param" description="The width of the original image." type="int" variable="$width">
+          <long-description></long-description>
+          <tag line="14" name="param" description="The width of the original image." type="int" variable="$width">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="16" name="param" description="The height of the original image." type="int" variable="$height">
+          <tag line="14" name="param" description="The height of the original image." type="int" variable="$height">
             <type by_reference="false">int</type>
           </tag>
-          <tag line="16" name="return" description="An array like: `['width' =&gt; value, 'height' =&gt; value]`" type="array">
+          <tag line="14" name="return" description="An array like: `['width' =&gt; value, 'height' =&gt; value]`" type="array">
             <type by_reference="false">array</type>
           </tag>
-          <tag line="16" name="throws" description="On error calculating new image dimensions." type="\InvalidArgumentException">
+          <tag line="14" name="throws" description="On error calculating new image dimensions." type="\InvalidArgumentException">
             <type by_reference="false">\InvalidArgumentException</type>
           </tag>
         </docblock>
-        <argument line="26">
+        <argument line="24">
           <name>$width</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
-        <argument line="26">
+        <argument line="24">
           <name>$height</name>
-          <default/>
+          <default></default>
           <type/>
         </argument>
       </method>
@@ -1118,10 +1118,68 @@ they are told to be.&lt;/p&gt;</long-description>
       <error line="72" code="50015">Argument $height is missing from the Docblock of getNewDimensions()</error>
     </parse_markers>
   </file>
-  <file path="Action/Resize.php" hash="389c841c2c3284d43efbd9d527fb05a5" package="Default">
+  <file path="Action/Crop.php" hash="9fe8c89f20e28d9f54622a2885a391be" package="Default">
+    <docblock line="2">
+      <description>Defines Crop operation class.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="GdWrapper\Action" line="13" package="Default">
+      <extends/>
+      <implements>\GdWrapper\Action\Action</implements>
+      <name>Crop</name>
+      <full_name>\GdWrapper\Action\Crop</full_name>
+      <property final="false" static="false" visibility="private" line="18" namespace="GdWrapper\Action" package="Default">
+        <name>$strategy</name>
+        <default></default>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+          <tag line="15" name="var" description="The cropping strategy" type="\GdWrapper\Action\CropStrategy\Strategy">
+            <type by_reference="false">\GdWrapper\Action\CropStrategy\Strategy</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="25" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="20">
+          <description>Creates a Crop action.</description>
+          <long-description></long-description>
+          <tag line="20" name="param" description="The cropping strategy." type="\GdWrapper\Action\CropStrategy\Strategy" variable="$strategy">
+            <type by_reference="false">\GdWrapper\Action\CropStrategy\Strategy</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$strategy</name>
+          <default></default>
+          <type>\GdWrapper\Action\CropStrategy\Strategy</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="34" package="Default">
+        <name>execute</name>
+        <full_name>execute</full_name>
+        <docblock line="30">
+          <description>(non-PHPdoc)</description>
+          <long-description></long-description>
+          <tag line="30" name="see" description="\GdWrapper\Action.Action::execute()" refers="\GdWrapper\Action.Action::execute()"/>
+        </docblock>
+        <argument line="34">
+          <name>$src</name>
+          <default></default>
+          <type>\GdWrapper\Resource\Resource</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="13" code="50000">No DocBlock was found for \GdWrapper\Action\Crop</error>
+      <error line="30" code="50015">Argument $src is missing from the Docblock of execute()</error>
+    </parse_markers>
+  </file>
+  <file path="Action/Resize.php" hash="9eb98c66cfee502264880ad0d5cf32f9" package="Default">
     <docblock line="2">
       <description>Defines Resize operation class.</description>
-      <long-description/>
+      <long-description></long-description>
       <tag line="2" name="author" description="Henrique Barcelos"/>
     </docblock>
     <class final="false" abstract="false" namespace="GdWrapper\Action" line="16" package="Default">
@@ -1131,25 +1189,25 @@ they are told to be.&lt;/p&gt;</long-description>
       <full_name>\GdWrapper\Action\Resize</full_name>
       <docblock line="13">
         <description>Resizes an image.</description>
-        <long-description/>
+        <long-description></long-description>
       </docblock>
       <property final="false" static="false" visibility="private" line="18" namespace="GdWrapper\Action" package="Default">
         <name>$strategy</name>
-        <default/>
+        <default></default>
       </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action" line="25" package="Default">
         <name>__construct</name>
         <full_name>__construct</full_name>
         <docblock line="20">
           <description>Creates a resize operation object.</description>
-          <long-description/>
+          <long-description></long-description>
           <tag line="20" name="param" description="The strategy of resizing." type="\GdWrapper\Action\ResizeStrategy\Strategy" variable="$strategy">
             <type by_reference="false">\GdWrapper\Action\ResizeStrategy\Strategy</type>
           </tag>
         </docblock>
         <argument line="26">
           <name>$strategy</name>
-          <default/>
+          <default></default>
           <type>\GdWrapper\Action\ResizeStrategy\Strategy</type>
         </argument>
       </method>
@@ -1162,15 +1220,15 @@ they are told to be.&lt;/p&gt;</long-description>
           <tag line="31" name="see" description="\GdWrapper\Action.Action::execute()" refers="\GdWrapper\Action.Action::execute()"/>
         </docblock>
         <argument line="38">
-          <name>$resource</name>
-          <default/>
+          <name>$src</name>
+          <default></default>
           <type>\GdWrapper\Resource\Resource</type>
         </argument>
       </method>
     </class>
     <parse_markers>
       <error line="18" code="50018">No DocBlock was found for property $strategy</error>
-      <error line="31" code="50015">Argument $resource is missing from the Docblock of execute()</error>
+      <error line="31" code="50015">Argument $src is missing from the Docblock of execute()</error>
     </parse_markers>
   </file>
   <file path="Action/Action.php" hash="cec9ce8493a28d44b9352433f06d94d5" package="Default">
@@ -1209,6 +1267,537 @@ they are told to be.&lt;/p&gt;</long-description>
         </argument>
       </method>
     </interface>
+  </file>
+  <file path="Action/CropStrategy/Strategy.php" hash="2e5b36f7b0abfeaa0538b6d9f2bfdb59" package="Default">
+    <docblock line="2">
+      <description>Defines crop strategy interface.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <interface namespace="GdWrapper\Action\CropStrategy" line="12" package="Default">
+      <name>Strategy</name>
+      <full_name>\GdWrapper\Action\CropStrategy\Strategy</full_name>
+      <docblock line="9">
+        <description>Represents a cropping strategy.</description>
+        <long-description></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="25" package="Default">
+        <name>getCropInfo</name>
+        <full_name>getCropInfo</full_name>
+        <docblock line="14">
+          <description>Return the new dimensions of an image with `$width` and `$height` dimensions.</description>
+          <long-description></long-description>
+          <tag line="14" name="param" description="The width of the original image." type="int" variable="$width">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="14" name="param" description="The height of the original image." type="int" variable="$height">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="14" name="return" description="An array like:&#10;    `['start_x' =&gt; value, 'start_y' =&gt; value, 'width' =&gt; value, 'height' =&gt; value]`" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="14" name="throws" description="On error calculating crop info." type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$width</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="25">
+          <name>$height</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </interface>
+  </file>
+  <file path="Action/CropStrategy/FixedEdges.php" hash="53900e358adbc6a0a04861efea74c988" package="Default">
+    <docblock line="2">
+      <description>Defines a crop strategy with fixed size edges.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="GdWrapper\Action\CropStrategy" line="12" package="Default">
+      <extends/>
+      <implements>\GdWrapper\Action\CropStrategy\Strategy</implements>
+      <name>FixedEdges</name>
+      <full_name>\GdWrapper\Action\CropStrategy\FixedEdges</full_name>
+      <docblock line="9">
+        <description>This crop strategy crops from the egdes of the file by a fixed number of pixels.</description>
+        <long-description></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="17" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$top</name>
+        <default></default>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+          <tag line="14" name="var" description="The distance from the top edge." type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="22" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$right</name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag line="19" name="var" description="The distance from the right edge." type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="27" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$bottom</name>
+        <default></default>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+          <tag line="24" name="var" description="The distance from the bottom edge." type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="32" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$left</name>
+        <default></default>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+          <tag line="29" name="var" description="The distance from the left edge." type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="56" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="34">
+          <description>Creates a FixedEgdes cropping strategy.</description>
+          <long-description>&lt;p&gt;The 4 parameters of the constructor represents the distance of cropping
+for each edge of the image.&lt;/p&gt;
+
+&lt;p&gt;NOTE: negative values will crop out from the original images, creating a black border
+around the image.&lt;/p&gt;
+
+&lt;p&gt;There are 4 possible signatures for this constructor:
+* &lt;code&gt;__construct($top, $right, $bottom, $left)&lt;/code&gt;: Each edge is separately provided.
+* * &lt;code&gt;__construct($top, $right, $bottom)&lt;/code&gt;: &lt;code&gt;$left&lt;/code&gt; will have the same value of &lt;code&gt;$right&lt;/code&gt;.
+* &lt;code&gt;__construct($top, $right)&lt;/code&gt;: &lt;code&gt;$bottom&lt;/code&gt; and &lt;code&gt;$left&lt;/code&gt; will have the same value of
+    &lt;code&gt;$top&lt;/code&gt; and &lt;code&gt;$right&lt;/code&gt; respectively.
+* &lt;code&gt;__construct($top)&lt;/code&gt;: All cropping edges will have the same distance from the
+    original image edges.&lt;/p&gt;</long-description>
+          <tag line="34" name="param" description="The distance from the top edge." type="int" variable="$top">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="34" name="param" description="[OPTIONAL] The distance from the right edge." type="int" variable="$right">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="34" name="param" description="[OPTIONAL] The distance from the bottom edge." type="int" variable="$bottom">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="34" name="param" description="[OPTIONAL] The distance from the left edge." type="int" variable="$left">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="56">
+          <name>$top</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="56">
+          <name>$right</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="56">
+          <name>$bottom</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="56">
+          <name>$left</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="GdWrapper\Action\CropStrategy" line="77" package="Default">
+        <name>setup</name>
+        <full_name>setup</full_name>
+        <docblock line="69">
+          <description>Setups edges.</description>
+          <long-description></long-description>
+          <tag line="69" name="param" description="The distance from the top edge." type="int" variable="$top">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="69" name="param" description="The distance from the right edge." type="int" variable="$right">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="69" name="param" description="The distance from the bottom edge." type="int" variable="$bottom">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="69" name="param" description="The distance from the left edge." type="int" variable="$left">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="77">
+          <name>$top</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="77">
+          <name>$right</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="77">
+          <name>$bottom</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="77">
+          <name>$left</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="89" package="Default">
+        <name>getCropInfo</name>
+        <full_name>getCropInfo</full_name>
+        <docblock line="85">
+          <description>(non-PHPdoc)</description>
+          <long-description></long-description>
+          <tag line="85" name="see" description="\GdWrapper\Action\CropStrategy\Strategy::getCropInfo()" refers="\GdWrapper\Action\CropStrategy\Strategy::getCropInfo()"/>
+        </docblock>
+        <argument line="89">
+          <name>$width</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="89">
+          <name>$height</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="85" code="50015">Argument $width is missing from the Docblock of getCropInfo()</error>
+      <error line="85" code="50015">Argument $height is missing from the Docblock of getCropInfo()</error>
+    </parse_markers>
+  </file>
+  <file path="Action/CropStrategy/FixedPoints.php" hash="28517027b645385a53f68d9036595b18" package="Default">
+    <docblock line="2">
+      <description>Defines a crop strategy with proportional size edges.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="GdWrapper\Action\CropStrategy" line="15" package="Default">
+      <extends/>
+      <implements>\GdWrapper\Action\CropStrategy\Strategy</implements>
+      <name>FixedPoints</name>
+      <full_name>\GdWrapper\Action\CropStrategy\FixedPoints</full_name>
+      <docblock line="11">
+        <description>This crop strategy crops from a point to another point.</description>
+        <long-description></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="20" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$start</name>
+        <default></default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+          <tag line="17" name="var" description="The start point of cropping." type="\GdWrapper\Geometry\Point">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="25" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$end</name>
+        <default></default>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+          <tag line="22" name="var" description="The end point of cropping." type="\GdWrapper\Geometry\Point">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="33" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="27">
+          <description>Creates a FixedPoints crop strategy.</description>
+          <long-description></long-description>
+          <tag line="27" name="param" description="The start point of cropping." type="\GdWrapper\Geometry\Point" variable="$start">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+          <tag line="27" name="param" description="The end point of cropping." type="\GdWrapper\Geometry\Point" variable="$end">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+        </docblock>
+        <argument line="33">
+          <name>$start</name>
+          <default></default>
+          <type>\GdWrapper\Geometry\Point</type>
+        </argument>
+        <argument line="33">
+          <name>$end</name>
+          <default></default>
+          <type>\GdWrapper\Geometry\Point</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="46" package="Default">
+        <name>setStart</name>
+        <full_name>setStart</full_name>
+        <docblock line="39">
+          <description>Sets the start point of cropping.</description>
+          <long-description></long-description>
+          <tag line="39" name="param" description="The start point of cropping." type="\GdWrapper\Geometry\Point" variable="$start">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+          <tag line="39" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="46">
+          <name>$start</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="58" package="Default">
+        <name>setEnd</name>
+        <full_name>setEnd</full_name>
+        <docblock line="51">
+          <description>Sets the end point of cropping.</description>
+          <long-description></long-description>
+          <tag line="51" name="param" description="The end point of cropping." type="\GdWrapper\Geometry\Point" variable="$end">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+          <tag line="51" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="58">
+          <name>$end</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="67" package="Default">
+        <name>getCropInfo</name>
+        <full_name>getCropInfo</full_name>
+        <docblock line="63">
+          <description>(non-PHPdoc)</description>
+          <long-description></long-description>
+          <tag line="63" name="see" description="\GdWrapper\Action\CropStrategy.Strategy::getCropInfo()" refers="\GdWrapper\Action\CropStrategy.Strategy::getCropInfo()"/>
+        </docblock>
+        <argument line="67">
+          <name>$width</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="67">
+          <name>$height</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="63" code="50015">Argument $width is missing from the Docblock of getCropInfo()</error>
+      <error line="63" code="50015">Argument $height is missing from the Docblock of getCropInfo()</error>
+    </parse_markers>
+  </file>
+  <file path="Action/CropStrategy/PercentualEdges.php" hash="58d5a3dc515077df23ea18253efb8c8c" package="Default">
+    <docblock line="2">
+      <description>Defines a crop strategy with proportional size edges.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="GdWrapper\Action\CropStrategy" line="12" package="Default">
+      <extends/>
+      <implements>\GdWrapper\Action\CropStrategy\Strategy</implements>
+      <name>PercentualEdges</name>
+      <full_name>\GdWrapper\Action\CropStrategy\PercentualEdges</full_name>
+      <docblock line="9">
+        <description>This crop strategy crops from the egdes of the file by a fixed number of pixels.</description>
+        <long-description></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="17" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$top</name>
+        <default></default>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+          <tag line="14" name="var" description="The proportional distance from the top edge." type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="22" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$right</name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag line="19" name="var" description="The proportional distance from the right edge." type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="27" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$bottom</name>
+        <default></default>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+          <tag line="24" name="var" description="The proportional distance from the bottom edge." type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="32" namespace="GdWrapper\Action\CropStrategy" package="Default">
+        <name>$left</name>
+        <default></default>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+          <tag line="29" name="var" description="The proportional distance from the left edge." type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="62" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="34">
+          <description>Creates a percentual cropping strategy.</description>
+          <long-description>&lt;p&gt;IMPORTANT: the sum of parameters that concerns to the same axis (X or Y) MUST
+be less than 1 (1 means 100%). Otherwise, it would result in an image without
+width or height.&lt;/p&gt;
+
+&lt;p&gt;NOTE: negative values will crop out from the original images, creating a black border
+around the image.&lt;/p&gt;
+
+&lt;p&gt;The 4 parameters of the constructor represents the proportional distance of cropping
+for each edge of the image.&lt;/p&gt;
+
+&lt;p&gt;There are 4 possible signatures for this constructor:
+* &lt;code&gt;__construct($top, $right, $bottom, $left)&lt;/code&gt;: Each edge is separately provided.
+* * &lt;code&gt;__construct($top, $right, $bottom)&lt;/code&gt;: &lt;code&gt;$left&lt;/code&gt; will have the same value of &lt;code&gt;$right&lt;/code&gt;.
+* &lt;code&gt;__construct($top, $right)&lt;/code&gt;: &lt;code&gt;$bottom&lt;/code&gt; and &lt;code&gt;$left&lt;/code&gt; will have the same value of
+    &lt;code&gt;$top&lt;/code&gt; and &lt;code&gt;$right&lt;/code&gt; respectively.
+* &lt;code&gt;__construct($top)&lt;/code&gt;: All cropping edges will have the same distance from the
+    original image edges.&lt;/p&gt;</long-description>
+          <tag line="34" name="param" description="The proportional distance from the top edge." type="float" variable="$top">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="34" name="param" description="[OPTIONAL] The proportional distance from the right edge." type="float" variable="$right">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="34" name="param" description="[OPTIONAL] The proportional distance from the bottom edge." type="float" variable="$bottom">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="34" name="param" description="[OPTIONAL] The proportional distance from the left edge." type="float" variable="$left">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="34" name="throws" description="If some parameter has a invalid value." type="\RangeException">
+            <type by_reference="false">\RangeException</type>
+          </tag>
+        </docblock>
+        <argument line="62">
+          <name>$top</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="62">
+          <name>$right</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="62">
+          <name>$bottom</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="62">
+          <name>$left</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="GdWrapper\Action\CropStrategy" line="85" package="Default">
+        <name>setup</name>
+        <full_name>setup</full_name>
+        <docblock line="75">
+          <description>Setups edges.</description>
+          <long-description></long-description>
+          <tag line="75" name="param" description="The proportional distance from the top edge." type="float" variable="$top">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="75" name="param" description="The proportional distance from the right edge." type="float" variable="$right">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="75" name="param" description="The proportional distance from the bottom edge." type="float" variable="$bottom">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="75" name="param" description="The proportional distance from the left edge." type="float" variable="$left">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="75" name="throws" description="If some parameter has a invalid value." type="\RangeException">
+            <type by_reference="false">\RangeException</type>
+          </tag>
+        </docblock>
+        <argument line="85">
+          <name>$top</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="85">
+          <name>$right</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="85">
+          <name>$bottom</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="85">
+          <name>$left</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Action\CropStrategy" line="109" package="Default">
+        <name>getCropInfo</name>
+        <full_name>getCropInfo</full_name>
+        <docblock line="105">
+          <description>(non-PHPdoc)</description>
+          <long-description></long-description>
+          <tag line="105" name="see" description="\GdWrapper\Action\CropStrategy\Strategy::getCropInfo()" refers="\GdWrapper\Action\CropStrategy\Strategy::getCropInfo()"/>
+        </docblock>
+        <argument line="109">
+          <name>$width</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="109">
+          <name>$height</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="105" code="50015">Argument $width is missing from the Docblock of getCropInfo()</error>
+      <error line="105" code="50015">Argument $height is missing from the Docblock of getCropInfo()</error>
+    </parse_markers>
   </file>
   <file path="Io/Preset.php" hash="c89946dda6f32d2b4b2584e56bf1b821" package="Default">
     <docblock line="2">
@@ -2009,6 +2598,185 @@ operation of &lt;code&gt;ReaderFactory&lt;/code&gt;, which tries to create a rea
       </docblock>
     </class>
   </file>
+  <file path="Geometry/Point.php" hash="194bb0f2c66cf13d90410d03099daa48" package="Default">
+    <docblock line="2">
+      <description>Defines Point class.</description>
+      <long-description></long-description>
+      <tag line="2" name="author" description="Henrique Barcelos"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="GdWrapper\Geometry" line="13" package="Default">
+      <extends/>
+      <name>Point</name>
+      <full_name>\GdWrapper\Geometry\Point</full_name>
+      <docblock line="9">
+        <description>Represents a discrete point in space Z^2.</description>
+        <long-description>&lt;p&gt;This class implements the ValueObject pattern.&lt;/p&gt;</long-description>
+      </docblock>
+      <property final="false" static="false" visibility="private" line="18" namespace="GdWrapper\Geometry" package="Default">
+        <name>$x</name>
+        <default></default>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+          <tag line="15" name="var" description="The X coordinate of the point." type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="23" namespace="GdWrapper\Geometry" package="Default">
+        <name>$y</name>
+        <default></default>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+          <tag line="20" name="var" description="The Y coordinate of the point." type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Geometry" line="31" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="25">
+          <description>Creates a discrete point object.</description>
+          <long-description></long-description>
+          <tag line="25" name="param" description="The X coordinate of the point." type="int" variable="$x">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="25" name="param" description="The Y coordinate of the point." type="int" variable="$y">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+        <argument line="31">
+          <name>$x</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="31">
+          <name>$y</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="GdWrapper\Geometry" line="47" package="Default">
+        <name>setupDimensions</name>
+        <full_name>setupDimensions</full_name>
+        <docblock line="36">
+          <description>First setup object.</description>
+          <long-description>&lt;p&gt;This method is needed because Point is a ValueObject,
+therefore &lt;code&gt;setDimensions&lt;/code&gt; method will return a new object.&lt;/p&gt;</long-description>
+          <tag line="36" name="param" description="The X coordinate of the point." type="int" variable="$x">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="36" name="param" description="The Y coordinate of the point." type="int" variable="$y">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="36" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="47">
+          <name>$x</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="47">
+          <name>$y</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Geometry" line="61" package="Default">
+        <name>setDimensions</name>
+        <full_name>setDimensions</full_name>
+        <docblock line="53">
+          <description>This method will create a new `Point` object with the following coordinates.</description>
+          <long-description></long-description>
+          <tag line="53" name="param" description="The X coordinate of the point." type="int" variable="$x">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="53" name="param" description="The Y coordinate of the point." type="int" variable="$y">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="53" name="return" description="A new point object with these coordinates." type="\GdWrapper\Geometry\Point">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+        </docblock>
+        <argument line="61">
+          <name>$x</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="61">
+          <name>$y</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Geometry" line="74" package="Default">
+        <name>setX</name>
+        <full_name>setX</full_name>
+        <docblock line="66">
+          <description>This method will create a new `Point` object with the following X coordinate
+and the Y coordinate of this object.</description>
+          <long-description></long-description>
+          <tag line="66" name="param" description="The X coordinate of the point." type="int" variable="$x">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="66" name="return" description="A new point object with this coordinate." type="\GdWrapper\Geometry\Point">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+        </docblock>
+        <argument line="74">
+          <name>$x</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Geometry" line="87" package="Default">
+        <name>setY</name>
+        <full_name>setY</full_name>
+        <docblock line="79">
+          <description>This method will create a new `Point` object with the following Y coordinate
+and the Y coordinate of this object.</description>
+          <long-description></long-description>
+          <tag line="79" name="param" description="The Y coordinate of the point." type="int" variable="$y">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="79" name="return" description="A new point object with this coordinate." type="\GdWrapper\Geometry\Point">
+            <type by_reference="false">\GdWrapper\Geometry\Point</type>
+          </tag>
+        </docblock>
+        <argument line="87">
+          <name>$y</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Geometry" line="97" package="Default">
+        <name>getX</name>
+        <full_name>getX</full_name>
+        <docblock line="92">
+          <description>Obtains the X Coordinate of the Point.</description>
+          <long-description></long-description>
+          <tag line="92" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="GdWrapper\Geometry" line="107" package="Default">
+        <name>getY</name>
+        <full_name>getY</full_name>
+        <docblock line="102">
+          <description>Obtains the Y Coordinate of the Point.</description>
+          <long-description></long-description>
+          <tag line="102" name="return" description="" type="int">
+            <type by_reference="false">int</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
   <file path="Image/Info.php" hash="d54477c2031f1f0fd7acae0fc1234dc4" package="Default">
     <docblock line="2">
       <description>Defines ImageInfo class.</description>
@@ -2089,8 +2857,10 @@ operation of &lt;code&gt;ReaderFactory&lt;/code&gt;, which tries to create a rea
   <package name="Default" full_name="Default"/>
   <namespace name="GdWrapper" full_name="GdWrapper">
     <namespace name="Action" full_name="GdWrapper\Action">
+      <namespace name="CropStrategy" full_name="GdWrapper\Action\CropStrategy"/>
       <namespace name="ResizeStrategy" full_name="GdWrapper\Action\ResizeStrategy"/>
     </namespace>
+    <namespace name="Geometry" full_name="GdWrapper\Geometry"/>
     <namespace name="Image" full_name="GdWrapper\Image"/>
     <namespace name="Io" full_name="GdWrapper\Io">
       <namespace name="Reader" full_name="GdWrapper\Io\Reader"/>

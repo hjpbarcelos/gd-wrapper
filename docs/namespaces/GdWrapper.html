@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">29</span></a></li>
+                <span class="label label-info">37</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -58,9 +58,17 @@
 <li>
 <span class="empty-namespace"><i class="icon-stop"></i>GdWrapper</span><ul class="nav nav-list nav-namespaces">
 <li>
-<a href="../namespaces/GdWrapper.Action.html" title="Action"><i class="icon-th"></i>Action</a><ul class="nav nav-list nav-namespaces"><li>
+<a href="../namespaces/GdWrapper.Action.html" title="Action"><i class="icon-th"></i>Action</a><ul class="nav nav-list nav-namespaces">
+<li>
+<a href="../namespaces/GdWrapper.Action.CropStrategy.html" title="CropStrategy"><i class="icon-th"></i>CropStrategy</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
 <a href="../namespaces/GdWrapper.Action.ResizeStrategy.html" title="ResizeStrategy"><i class="icon-th"></i>ResizeStrategy</a><ul class="nav nav-list nav-namespaces"></ul>
-</li></ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="../namespaces/GdWrapper.Geometry.html" title="Geometry"><i class="icon-th"></i>Geometry</a><ul class="nav nav-list nav-namespaces"></ul>
 </li>
 <li>
 <a href="../namespaces/GdWrapper.Image.html" title="Image"><i class="icon-th"></i>Image</a><ul class="nav nav-list nav-namespaces"></ul>
@@ -110,12 +118,63 @@
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Action.Action.html" class="more">« More »</a>
 </div>
+<div id="Crop" class="element ajax clickable class">
+<h1>Crop<a href="../classes/GdWrapper.Action.Crop.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.Crop.html" class="more">« More »</a>
+</div>
 <div id="Resize" class="element ajax clickable class">
 <h1>Resize<a href="../classes/GdWrapper.Action.Resize.html">¶</a>
 </h1>
 <p class="short_description">Resizes an image.</p>
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Action.Resize.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/GdWrapper.html">GdWrapper</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/GdWrapper.Action.html">Action</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/GdWrapper.Action.CropStrategy.html">CropStrategy</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="Strategy" class="element ajax clickable interface">
+<h1>Strategy<a href="../classes/GdWrapper.Action.CropStrategy.Strategy.html">¶</a>
+</h1>
+<p class="short_description">Represents a cropping strategy.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.CropStrategy.Strategy.html" class="more">« More »</a>
+</div>
+<div id="FixedEdges" class="element ajax clickable class">
+<h1>FixedEdges<a href="../classes/GdWrapper.Action.CropStrategy.FixedEdges.html">¶</a>
+</h1>
+<p class="short_description">This crop strategy crops from the egdes of the file by a fixed number of pixels.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.CropStrategy.FixedEdges.html" class="more">« More »</a>
+</div>
+<div id="FixedPoints" class="element ajax clickable class">
+<h1>FixedPoints<a href="../classes/GdWrapper.Action.CropStrategy.FixedPoints.html">¶</a>
+</h1>
+<p class="short_description">This crop strategy crops from a point to another point.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.CropStrategy.FixedPoints.html" class="more">« More »</a>
+</div>
+<div id="PercentualEdges" class="element ajax clickable class">
+<h1>PercentualEdges<a href="../classes/GdWrapper.Action.CropStrategy.PercentualEdges.html">¶</a>
+</h1>
+<p class="short_description">This crop strategy crops from the egdes of the file by a fixed number of pixels.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.CropStrategy.PercentualEdges.html" class="more">« More »</a>
+</div>
 </div>
 <ul class="breadcrumb">
 <li>
@@ -160,6 +219,26 @@
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Action.ResizeStrategy.Proportional.html" class="more">« More »</a>
 </div>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/GdWrapper.html">GdWrapper</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/GdWrapper.Geometry.html">Geometry</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="Point" class="element ajax clickable class">
+<h1>Point<a href="../classes/GdWrapper.Geometry.Point.html">¶</a>
+</h1>
+<p class="short_description">Represents a discrete point in space Z^2.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Geometry.Point.html" class="more">« More »</a>
 </div>
 </div>
 <ul class="breadcrumb">
@@ -393,7 +472,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-05-06T18:56:52+02:00.<br></footer></div>
+            generated on 2013-05-07T02:59:04+02:00.<br></footer></div>
 </div>
 </body>
 </html>

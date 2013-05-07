@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">29</span></a></li>
+                <span class="label label-info">37</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -63,6 +63,7 @@
 <li><a href="#Resource" title="Wrapper for GD2 image resource type.">Resource</a></li>
 <li><a href="#Strategy" title="Represents a resizing strategy.">Strategy</a></li>
 <li><a href="#Action" title="Interface representing an action over an image.">Action</a></li>
+<li><a href="#Strategy" title="Represents a cropping strategy.">Strategy</a></li>
 <li><a href="#Preset" title="Contains some preset definitions for image output quality.">Preset</a></li>
 <li><a href="#Writer" title='Represents an output "device" for resources.'>Writer</a></li>
 <li><a href="#Reader" title='Represents an input "device" to resources.'>Reader</a></li>
@@ -77,7 +78,11 @@
 <li><a href="#KeepRatio" title="Represents a resizing that respects image aspect ratio.">KeepRatio</a></li>
 <li><a href="#Proportional" title="Represents a proportional resizing.">Proportional</a></li>
 <li><a href="#Exact" title="Represents an exact resizing.">Exact</a></li>
+<li><a href="#Crop" title="">Crop</a></li>
 <li><a href="#Resize" title="Resizes an image.">Resize</a></li>
+<li><a href="#FixedEdges" title="This crop strategy crops from the egdes of the file by a fixed number of pixels.">FixedEdges</a></li>
+<li><a href="#FixedPoints" title="This crop strategy crops from a point to another point.">FixedPoints</a></li>
+<li><a href="#PercentualEdges" title="This crop strategy crops from the egdes of the file by a fixed number of pixels.">PercentualEdges</a></li>
 <li><a href="#Exception" title="Exception that indicates an I/O Exception.">Exception</a></li>
 <li><a href="#PngWriter" title="Defines an implementation of a I/O device for PNG files.">PngWriter</a></li>
 <li><a href="#WriterFactory" title='Defines an abstract implementation of an output "device" for resources.'>WriterFactory</a></li>
@@ -89,6 +94,7 @@
 <li><a href="#AbstractReader" title="Defines an abstract implementation of a I/O device for resources.">AbstractReader</a></li>
 <li><a href="#PngReader" title="Defines an implementation of a I/O device for PNG files.">PngReader</a></li>
 <li><a href="#JpgReader" title="Defines an implementation of a I/O device for JPEG files.">JpgReader</a></li>
+<li><a href="#Point" title="Represents a discrete point in space Z^2.">Point</a></li>
 <li><a href="#Info" title="Holds information about an image on file system.">Info</a></li>
 </ul>
 </div>
@@ -105,6 +111,13 @@
 <p class="short_description">Interface representing an action over an image.</p>
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Action.Action.html" class="more">« More »</a>
+</div>
+<div id="Strategy" class="element ajax clickable interface">
+<h1>Strategy<a href="../classes/GdWrapper.Action.CropStrategy.Strategy.html">¶</a>
+</h1>
+<p class="short_description">Represents a cropping strategy.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.CropStrategy.Strategy.html" class="more">« More »</a>
 </div>
 <div id="Strategy" class="element ajax clickable interface">
 <h1>Strategy<a href="../classes/GdWrapper.Action.ResizeStrategy.Strategy.html">¶</a>
@@ -141,6 +154,34 @@
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Resource.Resource.html" class="more">« More »</a>
 </div>
+<div id="Crop" class="element ajax clickable class">
+<h1>Crop<a href="../classes/GdWrapper.Action.Crop.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.Crop.html" class="more">« More »</a>
+</div>
+<div id="FixedEdges" class="element ajax clickable class">
+<h1>FixedEdges<a href="../classes/GdWrapper.Action.CropStrategy.FixedEdges.html">¶</a>
+</h1>
+<p class="short_description">This crop strategy crops from the egdes of the file by a fixed number of pixels.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.CropStrategy.FixedEdges.html" class="more">« More »</a>
+</div>
+<div id="FixedPoints" class="element ajax clickable class">
+<h1>FixedPoints<a href="../classes/GdWrapper.Action.CropStrategy.FixedPoints.html">¶</a>
+</h1>
+<p class="short_description">This crop strategy crops from a point to another point.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.CropStrategy.FixedPoints.html" class="more">« More »</a>
+</div>
+<div id="PercentualEdges" class="element ajax clickable class">
+<h1>PercentualEdges<a href="../classes/GdWrapper.Action.CropStrategy.PercentualEdges.html">¶</a>
+</h1>
+<p class="short_description">This crop strategy crops from the egdes of the file by a fixed number of pixels.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Action.CropStrategy.PercentualEdges.html" class="more">« More »</a>
+</div>
 <div id="Resize" class="element ajax clickable class">
 <h1>Resize<a href="../classes/GdWrapper.Action.Resize.html">¶</a>
 </h1>
@@ -168,6 +209,13 @@
 <p class="short_description">Represents a proportional resizing.</p>
 <div class="details collapse"></div>
 <a href="../classes/GdWrapper.Action.ResizeStrategy.Proportional.html" class="more">« More »</a>
+</div>
+<div id="Point" class="element ajax clickable class">
+<h1>Point<a href="../classes/GdWrapper.Geometry.Point.html">¶</a>
+</h1>
+<p class="short_description">Represents a discrete point in space Z^2.</p>
+<div class="details collapse"></div>
+<a href="../classes/GdWrapper.Geometry.Point.html" class="more">« More »</a>
 </div>
 <div id="Info" class="element ajax clickable class">
 <h1>Info<a href="../classes/GdWrapper.Image.Info.html">¶</a>
@@ -301,7 +349,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-05-06T18:56:52+02:00.<br></footer></div>
+            generated on 2013-05-07T02:59:04+02:00.<br></footer></div>
 </div>
 </body>
 </html>

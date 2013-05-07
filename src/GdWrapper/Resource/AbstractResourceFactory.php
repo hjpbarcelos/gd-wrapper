@@ -14,7 +14,7 @@ abstract class AbstractResourceFactory
     /**
      * @var string Fully qualified name for the Resource interface
      */
-    const TOP_CLASS = '\\GdWrapper\\Resource\\Resource';
+    const RESOURCE_INTERFACE = '\\GdWrapper\\Resource\\Resource';
     
     /**
      * @var string The fully qualified name of the class created by the factory.
@@ -57,10 +57,9 @@ abstract class AbstractResourceFactory
                     "Class '{$className}' is not instantiable"
                 );
             }
-            if ($className != self::TOP_CLASS || 
-                !$refl->isSubclassOf(self::TOP_CLASS)) {
+            if (!$refl->implementsInterface(self::RESOURCE_INTERFACE)) {
                 throw new \DomainException(
-                    "Class '{$className}' is not a " . self::TOP_CLASS . ' subclass'
+                    "Class '{$className}' is not a " . self::RESOURCE_INTERFACE . ' subclass'
                 );
             }
         } catch (\ReflectionException $e) {

@@ -1,12 +1,10 @@
 <?php
 /**
- * Defines resize Strategy interface.
+ * Defines resize strategy interface.
  *
  * @author Henrique Barcelos
  */
 namespace GdWrapper\Action\ResizeStrategy;
-
-use GdWrapper\Resource\Resource;
 
 /**
  * Represents a resizing strategy.

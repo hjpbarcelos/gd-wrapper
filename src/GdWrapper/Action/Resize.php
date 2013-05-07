@@ -35,11 +35,11 @@ class Resize implements Action
      *
      * @see GdWrapper\Action.Action::execute()
      */
-    public function execute(Resource $resource) {
+    public function execute(Resource $src) {
         try {
             $dimensions = $this->strategy->getNewDimensions(
-                $resource->getWidth(),
-                $resource->getHeight()
+                $src->getWidth(),
+                $src->getHeight()
             );
         } catch (\InvalidArgumentException $e) {
             throw new \UnexpectedValueException(
@@ -55,10 +55,10 @@ class Resize implements Action
         $dst = $factory->create();
         
         imagecopyresampled(
-            $dst->getRaw(), $resource->getRaw(),
+            $dst->getRaw(), $src->getRaw(),
             0, 0, 0, 0,
             $dst->getWidth(), $dst->getHeight(),
-            $resource->getWidth(), $resource->getHeight()
+            $src->getWidth(), $src->getHeight()
         );
         
         return $dst;
