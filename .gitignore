@@ -1,2 +1,9 @@
+# Eclipse
+.buildpath
+.project
+.settings/
+
+# Documents and test assets / logs
+docs/
 test/assets/
 test/log/
