@@ -84,7 +84,7 @@ abstract class AbstractResource implements Resource
      * @throws \InvalidArgumentException If <code>$resource</code> is not a
      * 		valid resource.
      */
-    protected function setRaw($resource)
+    public function setRaw($resource)
     {
         if (!is_resource($resource)) {
             throw new \InvalidArgumentException('Invalid resource passed to ' . get_class($this));

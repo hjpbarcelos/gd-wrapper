@@ -33,7 +33,7 @@ class Resize implements Action
      *
      * {@inheritdoc}
      *
-     * @see GdWrapper\Action.Action::execute()
+     * @see GdWrapper\Action\Action::execute()
      */
     public function execute(Resource $src) {
         try {
@@ -61,6 +61,6 @@ class Resize implements Action
             $src->getWidth(), $src->getHeight()
         );
         
-        return $dst;
+        $src->setRaw($dst->getRaw());
     }
 }

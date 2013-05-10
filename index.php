@@ -24,13 +24,13 @@ $iFactory = new ImageResourceFactory('test/assets/images/file1.jpg');
 $src = $iFactory->create();
 
 $resize = new Resize(new ResizeProportional(.5));
-$dst = $resize->execute($src);
+$resize->execute($src);
 
-$crop = new Crop(new CropFixedPoints(new Point(10, 10), new Point(810, 810)));
-$dst2 = $crop->execute($dst);
+$crop = new Crop(new CropFixedEdges(20));
+$crop->execute($src);
 
 $wFactory = new WriterFactory();
-$writer = $wFactory->factory('jpg', $dst2->getRaw());
+$writer = $wFactory->factory('jpg', $src->getRaw());
 $writer->write(Writer::STDOUT);
 
 // $resource = new EmptyResource(400, 300);

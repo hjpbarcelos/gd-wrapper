@@ -29,7 +29,7 @@ class Crop implements Action
     
     /**
      * (non-PHPdoc)
-     * @see GdWrapper\Action.Action::execute()
+     * @see GdWrapper\Action\Action::execute()
      */
     public function execute(Resource $src)
     {
@@ -49,6 +49,6 @@ class Crop implements Action
             $dst->getWidth(), $dst->getHeight()
         );
         
-        return $dst;
+        $src->setRaw($dst->getRaw());
     }
 }
