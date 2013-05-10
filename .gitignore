@@ -1,3 +1,6 @@
+# Igonores all hidden files, but itself
+.!gitignore!
+
 # Eclipse
 .buildpath
 .project
