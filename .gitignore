@@ -3,7 +3,12 @@
 .project
 .settings/
 
-# Documents and test assets / logs
+# Documentation 
 docs/
+
+# Test assets and logging
 test/assets/
 test/log/
+
+# UML Project
+project/
