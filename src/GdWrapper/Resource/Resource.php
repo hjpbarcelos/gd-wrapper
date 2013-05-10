@@ -19,6 +19,13 @@ interface Resource
     public function getRaw();
     
     /**
+     * Sets the raw GD2 image resource of this wrapper object.
+     *
+     * @return void
+     */
+    public function setRaw($resource);
+    
+    /**
      * Get image width.
      *
      * @return int The image width

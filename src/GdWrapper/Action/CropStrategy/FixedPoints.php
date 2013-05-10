@@ -62,7 +62,7 @@ class FixedPoints implements Strategy
     
     /**
      * (non-PHPdoc)
-     * @see GdWrapper\Action\CropStrategy.Strategy::getCropInfo()
+     * @see GdWrapper\Action\CropStrategy\Strategy::getCropInfo()
      */
     public function getCropInfo($width, $height)
     {
