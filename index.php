@@ -25,6 +25,7 @@ use GdWrapper\Geometry\Point;
 use GdWrapper\Geometry\Margin\Fixed as FixedMargin;
 use GdWrapper\Geometry\Margin\Proportional as ProportionalMargin;
 use GdWrapper\Geometry\Position\Aligned;
+use GdWrapper\Geometry\Position\FixedPoint;
 use GdWrapper\Geometry\Alignment\Start;
 use GdWrapper\Geometry\Alignment\Center;
 use GdWrapper\Geometry\Alignment\End;
@@ -36,7 +37,7 @@ $src = $iFactory->create();
 $resize = new Resize(new ResizeProportional(.5));
 // $resize->execute($src);
 
-$crop = new Crop(new CropProportional(new Aligned(new Start(new ProportionalMargin(-0.2)), new End(new ProportionalMargin(0.8))), .5));
+$crop = new Crop(new CropProportional(new FixedPoint(new Point(200,400)), 0.5));
 $crop->execute($src);
 
 $wFactory = new WriterFactory();

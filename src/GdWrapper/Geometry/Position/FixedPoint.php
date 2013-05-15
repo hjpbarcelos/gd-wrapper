@@ -20,19 +20,19 @@ class FixedPoint implements Position
 	
 	/**
 	 * Creates a fixed point positioning strategy.
-	 * 
+	 *
 	 * @param Point $start The start point of an operation
 	 */
 	public function __construct(Point $start)
 	{
-		$this->setStart($startPoint);
+		$this->setStartPoint($start);
 	}
 	
 	/**
 	 * Seths the start point of an operation.
-	 * 
+	 *
 	 * @param Point $start
-	 * 
+	 *
 	 * @return void
 	 */
 	public function setStartPoint(Point $start)
@@ -44,7 +44,7 @@ class FixedPoint implements Position
 	 * {@inherit-doc}
 	 * @see GdWrapper\Geometry\Position\Position::getStartPoint()
 	 */
-	public function getStartPoint()
+	public function getStartPoint(Point $outsideDimensions, Point $insideDimensions)
 	{
 		return $this->startPoint;
 	}
