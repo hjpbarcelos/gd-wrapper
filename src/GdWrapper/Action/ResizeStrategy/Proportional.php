@@ -68,7 +68,7 @@ class Proportional implements Strategy
     /**
      * {@inheritdoc}
      *
-     * @see GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()
+     * @see GdWrapper\Action\ResizeStrategy\Strategy::getNewDimensions()
      */
     public function getNewDimensions($width, $height)
     {

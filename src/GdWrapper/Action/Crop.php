@@ -10,6 +10,9 @@ use GdWrapper\Action\CropStrategy\Strategy;
 use GdWrapper\Resource\Resource;
 use GdWrapper\Resource\EmptyResourceFactory;
 
+/**
+ * Abstraction for cropping an image.
+ */
 class Crop implements Action
 {
     /**
@@ -19,7 +22,7 @@ class Crop implements Action
     
     /**
      * Creates a Crop action.
-     * 
+     *
      * @param Strategy $strategy The cropping strategy.
      */
     public function __construct(Strategy $strategy)
@@ -36,15 +39,16 @@ class Crop implements Action
         $info = $this->strategy->getCropInfo($src->getWidth(), $src->getHeight());
         
         $factory = new EmptyResourceFactory(
-            $info['width'],
-            $info['height']
+            $info->getWidth(),
+            $info->getHeight()
         );
         
         $dst = $factory->create();
         
         imagecopyresampled(
             $dst->getRaw(), $src->getRaw(),
-            0, 0, $info['start_x'], $info['start_y'],
+            0, 0,
+            $info->getStartPoint()->getX(), $info->getStartPoint()->getY(),
             $dst->getWidth(), $dst->getHeight(),
             $dst->getWidth(), $dst->getHeight()
         );

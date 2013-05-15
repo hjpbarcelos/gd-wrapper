@@ -84,7 +84,7 @@ class KeepRatio implements Strategy
     /**
      * Sets the desired max width of the image.
      *
-     * @param int $height
+     * @param int $maxHeight
      *
      * @return void
      *
@@ -103,7 +103,7 @@ class KeepRatio implements Strategy
     /**
      * {@inheritdoc}
      *
-     * @see GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()
+     * @see GdWrapper\Action\ResizeStrategy\Strategy::getNewDimensions()
      *
      * @throws \InvalidArgumentException If `$width <= 0` or `$height <= 0` .
      */

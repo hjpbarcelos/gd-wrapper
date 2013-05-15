@@ -11,7 +11,7 @@ use GdWrapper\Resource\EmptyResourceFactory;
 use GdWrapper\Resource\Resource;
 
 /**
- * Resizes an image.
+ * Abstraction for resizing an image.
  */
 class Resize implements Action
 {

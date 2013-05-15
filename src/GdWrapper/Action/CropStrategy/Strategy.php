@@ -17,8 +17,7 @@ interface Strategy
      * @param int $width The width of the original image.
      * @param int $height The height of the original image.
      *
-     * @return array An array like: 
-     *     `['start_x' => value, 'start_y' => value, 'width' => value, 'height' => value]`
+     * @return GdWrapper\Action\CropStrategy\CropInfo The information for cropping.
      *
      * @throws \InvalidArgumentException On error calculating crop info.
      */

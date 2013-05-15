@@ -43,7 +43,7 @@ class FixedPoints implements Strategy
      * 
      * @return void
      */
-    public function setStart($start)
+    public function setStart(Point $start)
     {
         $this->start = $start;
     }
@@ -55,7 +55,7 @@ class FixedPoints implements Strategy
      * 
      * @return void
      */
-    public function setEnd($end)
+    public function setEnd(Point $end)
     {
         $this->end = $end;
     }
@@ -66,11 +66,10 @@ class FixedPoints implements Strategy
      */
     public function getCropInfo($width, $height)
     {
-        return array(
-            'start_x' => $this->start->getX(),
-            'start_y' => $this->start->getY(),
-            'width' => $this->end->getX() - $this->start->getX(),
-            'height' => $this->end->getY() - $this->start->getY()
+        return new CropInfo(
+            $this->start, 
+            $this->end->getX() - $this->start->getX(), 
+            $this->end->getY() - $this->start->getY()
         );
     }
 }

@@ -20,6 +20,8 @@ interface Resource
     
     /**
      * Sets the raw GD2 image resource of this wrapper object.
+     * 
+     * @param resource $resource The GD2 image resource
      *
      * @return void
      */

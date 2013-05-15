@@ -12,7 +12,14 @@ namespace GdWrapper\Action\ResizeStrategy;
  */
 class Exact implements Strategy
 {
+	/**
+	 * @var int The width of the resized image.
+	 */
     private $width;
+    
+    /**
+     * @var int The height of the resized imaged.
+     */
     private $height;
     
     /**
@@ -72,7 +79,7 @@ class Exact implements Strategy
     /**
      * {@inheritdoc}
      *
-     * @see GdWrapper\Action\ResizeStrategy.Strategy::getNewDimensions()
+     * @see GdWrapper\Action\ResizeStrategy\Strategy::getNewDimensions()
      */
     public function getNewDimensions($width, $height)
     {

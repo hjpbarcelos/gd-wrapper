@@ -95,7 +95,7 @@ class ImageResourceFactory extends AbstractResourceFactory
 	 *
 	 * {@inheritdoc}
 	 *
-	 * @see GdWrapper\Resource.AbstractResourceFactory::create()
+	 * @see GdWrapper\Resource\AbstractResourceFactory::create()
 	 */
 	public function create()
 	{
