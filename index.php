@@ -20,6 +20,7 @@ use GdWrapper\Action\Crop;
 use GdWrapper\Action\CropStrategy\FromEdges as CropFromEdges;
 use GdWrapper\Action\CropStrategy\FixedPoints as CropFixedPoints;
 use GdWrapper\Action\CropStrategy\Proportional as CropProportional;
+use GdWrapper\Action\CropStrategy\FixedDimensions as CropFixedDimensions;
 
 use GdWrapper\Geometry\Point;
 use GdWrapper\Geometry\Margin\Fixed as FixedMargin;
@@ -37,7 +38,7 @@ $src = $iFactory->create();
 $resize = new Resize(new ResizeProportional(.5));
 // $resize->execute($src);
 
-$crop = new Crop(new CropProportional(new FixedPoint(new Point(200,400)), 0.5));
+$crop = new Crop(new CropFixedDimensions(new Aligned(new Center()), 800, 500));
 $crop->execute($src);
 
 $wFactory = new WriterFactory();

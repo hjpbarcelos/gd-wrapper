@@ -60,7 +60,7 @@ class Proportional extends Positioned
     
     /**
      * {@inherit-doc}
-     * @see GdWrapper\Action\CropStrategy.Strategy::getCropInfo()
+     * @see GdWrapper\Action\CropStrategy\Strategy::getCropInfo()
      */
     public function getCropInfo($width, $height)
     {
