@@ -27,11 +27,10 @@ class JpegWriter extends AbstractWriter
         $_ = null
     ) {
         return call_user_func_array(
-            'imagejpeg',
+            'imagegif',
             array(
                 $this->getResource(),
-                $pathName,
-                $quality
+                $pathName
             )
         );
     }

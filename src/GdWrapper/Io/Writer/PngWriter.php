@@ -32,16 +32,14 @@ class PngWriter extends AbstractWriter
     ) {
         $quality = round((100 - $quality) / (111 / 9));
 
-        if (!call_user_func_array('imagepng', array(
-            $this->getResource(),
-            $pathName,
-            $quality,
-            $filters
-        ))) {
-            throw new Exception(
-                "Failed to write image to path '{$pathName}'! Probably you do not
-                have the right permissions to do so."
-                );
-        }
+        return call_user_func_array(
+            'imagepng',
+            array(
+                $this->getResource(),
+                $pathName,
+                $quality,
+                $filters
+            )
+        );
     }
 }

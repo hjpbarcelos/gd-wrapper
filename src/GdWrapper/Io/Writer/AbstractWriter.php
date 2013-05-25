@@ -79,7 +79,12 @@ abstract class AbstractWriter implements Writer
             }
         }
 
-        $this->doWrite($pathName, $quality, $_);
+        if(!$this->doWrite($pathName, $quality, $_)) {
+            throw new Exception(
+                "Failed to write image to path '{$pathName}'! Probably you do not
+                have the right permissions to do so."
+            );
+        }
     }
 
     /**
