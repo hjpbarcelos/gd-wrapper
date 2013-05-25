@@ -31,6 +31,5 @@ class EmptyResource extends AbstractResource {
         
         $raw = imagecreatetruecolor($width, $height);
         $this->setRaw($raw);
-        imagedestroy($raw);
     }
 }

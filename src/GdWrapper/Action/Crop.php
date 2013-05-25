@@ -52,7 +52,5 @@ class Crop implements Action
             $dst->getWidth(), $dst->getHeight(),
             $dst->getWidth(), $dst->getHeight()
         );
-        
-        $src->setRaw($dst->getRaw());
     }
 }
