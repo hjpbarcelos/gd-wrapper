@@ -22,7 +22,7 @@ class EmptyResourceFactory extends AbstractResourceFactory
     private $height;
     
     /**
-     * Creates a factory object that will create `ImageResource` objects
+     * Creates a factory object that will create `EmptyResource` objects
      * from `$resource`.
      *
      * @param int $width The width of the resources that will be created

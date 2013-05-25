@@ -5,6 +5,8 @@
  */
 namespace GdWrapper\Action\ResizeStrategy;
 
+use GdWrapper\Geometry\Point;
+
 /**
  * Represents an exact resizing. That is, no matter which are the original
  * dimensions of an image file, the new dimensions should be exaclty as
@@ -83,6 +85,6 @@ class Exact implements Strategy
      */
     public function getNewDimensions($width, $height)
     {
-        return array('width' => $this->width, 'height' => $this->height);
+        return new Point($this->width, $this->height);
     }
 }

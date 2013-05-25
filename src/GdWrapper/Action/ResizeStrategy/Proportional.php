@@ -5,6 +5,8 @@
  */
 namespace GdWrapper\Action\ResizeStrategy;
 
+use GdWrapper\Geometry\Point;
+
 /**
  * Represents a proportional resizing.
  */
@@ -81,9 +83,9 @@ class Proportional implements Strategy
             );
         }
         
-        return array(
-            'width' => round($width * $this->proportion),
-            'height' => round($height * $this->proportion)
+        return new Point(
+            round($width * $this->proportion),
+            round($height * $this->proportion)
         );
     }
 }

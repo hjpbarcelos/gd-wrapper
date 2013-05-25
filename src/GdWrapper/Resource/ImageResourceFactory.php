@@ -101,9 +101,10 @@ class ImageResourceFactory extends AbstractResourceFactory
 	{
 	    try {
 	        $reflection = new \ReflectionClass($this->getClassName());
-	        return $reflection->newInstance(
-	            $this->reader->read($this->pathName)
-            );
+	        $raw = $this->reader->read($this->pathName);
+	        $instance = $reflection->newInstance($raw);
+	        imagedestroy($raw);
+	        return $instance;
 	    } catch (\DomainException $e) {
 	        throw $e;
 	    } catch (\Exception $e) {

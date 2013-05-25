@@ -20,11 +20,11 @@ class JpegReader extends AbstractReader {
 	 *
 	 * @see \GdWrapper\Io\Reader\AbstractReader::doRead()
 	 */
-	protected function doRead($path)
+	protected function doRead($pathName)
 	{
-	    $resource = imagecreatefromjpeg($path);
+	    $resource = imagecreatefromjpeg($pathName);
 	    if ($resource === false) {
-		    throw new Exception("Could not create a JPEG resource from path '{$path}'");
+		    throw new Exception("Could not create a JPEG resource from path '{$pathName}'");
 	    }
 	    return $resource;
 	}

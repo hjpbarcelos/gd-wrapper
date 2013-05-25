@@ -13,7 +13,7 @@ use GdWrapper\Resource\EmptyResourceFactory;
 /**
  * Abstraction for cropping an image.
  */
-class Crop implements Action
+class Crop extends AbstractAction
 {
     /**
      * @var \GdWrapper\Action\CropStrategy\Strategy The cropping strategy
@@ -21,13 +21,18 @@ class Crop implements Action
     private $strategy;
     
     /**
+     * {@inherit-doc}
+     *
      * Creates a Crop action.
      *
      * @param Strategy $strategy The cropping strategy.
+     *
+     * @see \GdWrapper\Action\AbstractAction::__construct()
      */
-    public function __construct(Strategy $strategy)
+    public function __construct(Strategy $strategy, $resourceFactoryClass = null)
     {
         $this->strategy = $strategy;
+        parent::__construct($resourceFactoryClass);
     }
     
     /**
@@ -38,7 +43,7 @@ class Crop implements Action
     {
         $info = $this->strategy->getCropInfo($src->getWidth(), $src->getHeight());
         
-        $factory = new EmptyResourceFactory(
+        $factory = $this->getResourceFactory(
             $info->getWidth(),
             $info->getHeight()
         );
@@ -52,5 +57,7 @@ class Crop implements Action
             $dst->getWidth(), $dst->getHeight(),
             $dst->getWidth(), $dst->getHeight()
         );
+        
+        $src->setRaw($dst->getRaw());
     }
 }

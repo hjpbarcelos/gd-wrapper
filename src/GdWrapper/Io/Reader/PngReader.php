@@ -22,10 +22,14 @@ class PngReader extends AbstractReader {
 	 */
 	protected function doRead($pathName)
 	{
-		$resource = imagecreatefrompng($path);
+		$resource = imagecreatefrompng($pathName);
 	    if ($resource === false) {
 		    throw new Exception("Could not create a JPEG resource from path '{$path}'");
 	    }
+	    
+// 	    imagealphablending($resource, false);
+// 	    imagesavealpha($resource, true);
+	    
 	    return $resource;
 	}
 	

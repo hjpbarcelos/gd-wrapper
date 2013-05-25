@@ -6,9 +6,6 @@
  */
 namespace GdWrapper\Action\ResizeStrategy;
 
-/**
- * Represents a resizing strategy.
- */
 interface Strategy
 {
     /**
@@ -17,7 +14,8 @@ interface Strategy
      * @param int $width The width of the original image.
      * @param int $height The height of the original image.
      *
-     * @return array An array like: `['width' => value, 'height' => value]`
+     * @return \GdWrapper\Geometry\Point A point where the X coordinate represents
+     *     the width and the Y corrdinate represents the height.
      *
      * @throws \InvalidArgumentException On error calculating new image dimensions.
      */

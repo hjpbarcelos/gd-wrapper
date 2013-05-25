@@ -5,6 +5,8 @@
  */
 namespace GdWrapper\Action\ResizeStrategy;
 
+use GdWrapper\Geometry\Point;
+
 /**
  * Represents a resizing that respects image aspect ratio.
  */
@@ -118,14 +120,14 @@ class KeepRatio implements Strategy
             );
         }
         
-        $minRatio = round(min(
+        $minRatio = min(
             ($this->maxWidth / $width),
             ($this->maxHeight / $height)
-        ));
+        );
         
-        return array(
-            'width' => $width * $minRatio,
-            'height' => $height * $minRatio
+        return new Point(
+            round($width * $minRatio),
+            round($height * $minRatio)
         );
     }
 }

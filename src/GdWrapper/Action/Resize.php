@@ -13,19 +13,23 @@ use GdWrapper\Resource\Resource;
 /**
  * Abstraction for resizing an image.
  */
-class Resize implements Action
+class Resize extends AbstractAction
 {
     private $strategy;
     
     /**
+     * {@inherit-doc}
+     *
      * Creates a resize operation object.
      *
      * @param \GdWrapper\Action\ResizeStrategy\Strategy $strategy The strategy of resizing.
+     *
+     * @see \GdWrapper\Action\AbstractAction::__construct()
      */
-    public function __construct(
-        Strategy $strategy)
+    public function __construct(Strategy $strategy, $resourceFactoryClass = null)
     {
         $this->strategy = $strategy;
+        parent::__construct($resourceFactoryClass);
     }
     
     /**
@@ -36,6 +40,7 @@ class Resize implements Action
      * @see GdWrapper\Action\Action::execute()
      */
     public function execute(Resource $src) {
+        $dimensions = null;
         try {
             $dimensions = $this->strategy->getNewDimensions(
                 $src->getWidth(),
@@ -47,9 +52,9 @@ class Resize implements Action
             );
         }
 
-        $factory = new EmptyResourceFactory(
-            $dimensions['width'],
-            $dimensions['height']
+        $factory = $this->getResourceFactory(
+            $dimensions->getX(),
+            $dimensions->getY()
         );
         
         $dst = $factory->create();

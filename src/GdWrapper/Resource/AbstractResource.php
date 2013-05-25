@@ -67,7 +67,11 @@ abstract class AbstractResource implements Resource
     private function cloneGdResource($resource) {
         ob_start();
         imagegd2($resource);
-        return imagecreatefromstring(ob_get_clean());
+        $clone = imagecreatefromstring(ob_get_clean());
+        // Only works for images with transparency if we set these
+        imagealphablending($clone, false);
+        imagesavealpha($clone, true);
+        return $clone;
     }
     
     /**

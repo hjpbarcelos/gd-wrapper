@@ -29,7 +29,17 @@ class EmptyResource extends AbstractResource {
         $width = (int) $width;
         $height = (int) $height;
         
-        $raw = imagecreatetruecolor($width, $height);
+        $raw = $this->createRaw($width, $height);
         $this->setRaw($raw);
+        imagedestroy($raw);
+    }
+    
+    /**
+     * Creates a raw resource;
+     *
+     * @return resource
+     */
+    protected function createRaw($width, $height) {
+        return imagecreatetruecolor($width, $height);
     }
 }
