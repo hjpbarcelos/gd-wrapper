@@ -1,4 +1,10 @@
 GdWrapper
 =========
 
-GdWrapper is a wrapper to PHP GD2 library
+GdWrapper is an object oriented wrapper for PHP's GD2 library.
+
+## Installation
+
+## Examples
+
+
