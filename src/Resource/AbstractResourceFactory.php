@@ -84,8 +84,8 @@ abstract class AbstractResourceFactory
      *
      * @return Hjpbarcelos\GdWrapper\Resource\Resource
      *
-     * @throws \DomainException If factory cannot determine which product create.
-     * @throws \LogicException If there is an error in creatign the product, like
+     * @throws \DomainException If factory cannot determine which type of resource to create.
+     * @throws \LogicException If there is an error in creating the product, like
      *     wrong or missing parameters.
      */
     abstract public function create();
