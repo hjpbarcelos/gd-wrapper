@@ -93,6 +93,9 @@ abstract class AbstractResource implements Resource
         if (!is_resource($resource)) {
             throw new \InvalidArgumentException('Invalid resource passed to ' . get_class($this));
         }
+
+        imagedestroy($this->raw);
+
         $this->raw = $this->cloneGdResource($resource);
     }
     
