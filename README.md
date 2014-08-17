@@ -160,7 +160,7 @@ $writer->write(PngWritter::STDOUT); // will save a PNG image on /path/to/new_fil
 
 ### Applying actions over images
 
-Actions are applied to images in a cascading fashion, that is, performed actions are cumulative: if you crop an image an then resize it, you will be resizing the cropped version of the image.
+Actions are applied to images in a cascading fashion, that is, performed actions are cumulative: if you crop an image and then resize it, you will be resizing the cropped version of the image.
 
 #### Resize
 
@@ -182,7 +182,7 @@ $objResource1 = $resourceFactory->create();
 $objResource2 = $resourceFactory->create();
 $objResource3 = $resourceFactory->create(); 
 
-/* Will resize the image to 80% of it's original size (both width and height).
+/* Will resize the image to 80% of its original size (both width and height).
  * You can also scale up an image, by passing a value > 1 to ResizeProportional constructor, 
  * but that is inadivisable, since it will deteriorate the image quality.
  */
@@ -198,7 +198,7 @@ $resizeMode = new ResizeExact(400, 300);
 
 $resizeAction->execute($objResource2); // $objResource1 now refers to the 400x300 px resized image resource
 
-/* This is an hybrid resizing mode: you pass both width and length that will be considered the maximum
+/* This is a hybrid resizing mode: you pass both width and length that will be considered the maximum
  * allowed dimensions for the image. 
  *
  * If the image dimensions have the same ratio as the dimensions passed to ResizeKeepRatio constructor, 
@@ -396,7 +396,7 @@ $cropMode = new CropFixedDimensions($pos, 1200, 900);
  *      end   --> bottom
  */
 
-/* An aligned position consists of an horizontal AND a vertical alignment.
+/* An aligned position consists of a horizontal AND a vertical alignment.
  * The two alignment coordinates will generate a reference point.
  */
 
