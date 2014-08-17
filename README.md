@@ -155,7 +155,7 @@ Sometimes, you want to generate images on the fly instead of outputing it to a f
 
 ```php
 header('Content: image/png'); // This is important to make the image be properly rendered by the browser
-$writer->write(PngWritter::STDOUT); // will save a PNG image on /path/to/new_file.png
+$writer->write(PngWritter::STDOUT); // will generate a PNG image binary and send it to the browser
 ```
 
 ### Applying actions over images
