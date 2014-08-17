@@ -1,24 +1,24 @@
 <?php
 /**
- * Defines a fixed margin implementation.
+ * Defines a fixed padding implementation.
  *  
  * @author Henrique Barcelos
  */
-namespace Hjpbarcelos\GdWrapper\Geometry\Margin;
+namespace Hjpbarcelos\GdWrapper\Geometry\Padding;
 
 /**
- * Fixed margin independ from the reference dimension.
- * This class will always obtain a fixed value for margins. 
+ * Fixed padding independ from the reference dimension.
+ * This class will always obtain a fixed value for paddings. 
  */
-class Fixed implements Margin
+class Fixed implements Padding
 {
 	/**
-	 * @var int The margin distance represented by this object.
+	 * @var int The padding distance represented by this object.
 	 */
 	private $distance;
 	
 	/**
-	 * Creates a fixed margin object.
+	 * Creates a fixed padding object.
 	 * 
 	 * @param int $distance The fixed distance from the limits that will be used.
 	 */
@@ -28,7 +28,7 @@ class Fixed implements Margin
 	}
 	
 	/**
-	 * Sets the margin distance for the object.
+	 * Sets the padding distance for the object.
 	 *
 	 * @param int $distance The fixed distance from the limits that will be used.
 	 * 
@@ -40,12 +40,12 @@ class Fixed implements Margin
 	}
 	
 	/**
-	 * Fixed margin independ from the reference dimension.
- 	 * This method will always obtain a fixed value for margins.
+	 * Fixed padding independ from the reference dimension.
+ 	 * This method will always obtain a fixed value for paddings.
  	 *  
 	 * {@inherit-doc}
 	 * 
-	 * @see Hjpbarcelos\GdWrapper\Geometry\Margin\Margin::getDistance()
+	 * @see Hjpbarcelos\GdWrapper\Geometry\Padding\Padding::getDistance()
 	 */
 	public function getDistance($refDimension)
 	{

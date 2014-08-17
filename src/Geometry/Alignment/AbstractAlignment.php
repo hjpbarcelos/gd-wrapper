@@ -6,7 +6,7 @@
  */
 namespace Hjpbarcelos\GdWrapper\Geometry\Alignment;
 
-use Hjpbarcelos\GdWrapper\Geometry\Margin\Margin;
+use Hjpbarcelos\GdWrapper\Geometry\Padding\Padding;
 
 /**
  * Common aspects of a Alignment class.
@@ -14,51 +14,51 @@ use Hjpbarcelos\GdWrapper\Geometry\Margin\Margin;
 abstract class AbstractAlignment implements Alignment
 {
 	/**
-	 * @var Margin Keeps a margin for calculating the distance from the original Alignment.
+	 * @var Padding Keeps a padding for calculating the distance from the original Alignment.
 	 */
-	private $margin;
+	private $padding;
 	
 	/**
-	 * @param Margin $margin [OPTIONAL] This parameter should be provided if you want
-	 * 		that the alignment to have a margin form the reference Alignment.
+	 * @param Padding $padding [OPTIONAL] This parameter should be provided if you want
+	 * 		that the alignment to have a padding form the reference Alignment.
 	 */
-	public function __construct(Margin $margin = null)
+	public function __construct(Padding $padding = null)
 	{
-		if ($margin !== null) {
-			$this->setMargin($margin);
+		if ($padding !== null) {
+			$this->setPadding($padding);
 		}
 	}
 	
 	/**
-	 * Sets a margin for the alignment.
+	 * Sets a padding for the alignment.
 	 *
-	 * @param Margin $margin
+	 * @param Padding $padding
 	 *
 	 * @return void
 	 */
-	public function setMargin(Margin $margin)
+	public function setPadding(Padding $padding)
 	{
-		$this->margin = $margin;
+		$this->padding = $padding;
 	}
 	
 	/**
-	 * Obtains the alignment margin
+	 * Obtains the alignment padding
 	 *
 	 * @return int
 	 */
-	public function getMargin()
+	public function getPadding()
 	{
-		return $this->margin;
+		return $this->padding;
 	}
 	
 	/**
-	 * Obtains the integer value for the margin, or `0` if ther is none.
+	 * Obtains the integer value for the padding, or `0` if ther is none.
 	 *
 	 * @param int $refDimension
 	 * @return int
 	 */
-	protected function getMarginValue($refDimension)
+	protected function getPaddingValue($refDimension)
 	{
-		return $this->getMargin() === null ? 0 : $this->getMargin()->getDistance($refDimension);
+		return $this->getPadding() === null ? 0 : $this->getPadding()->getDistance($refDimension);
 	}
 }

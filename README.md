@@ -47,7 +47,7 @@ This package is responsible for image IO (reading from the disc and writting it 
 
 ### Geometry
 
-Helper component that simplifies operation over image dimensions, such as positioning, orientation, margins, etc.
+Helper component that simplifies operation over image dimensions, such as positioning, orientation, paddings, etc.
 
 ### Action
 
@@ -219,7 +219,7 @@ Cropping can be done in 4 ways:
 
 * With fixed dimensions (width and height), based on a referencial position
 * Based on fixed points, one working as a referencial and the other used to calculate the width and the height
-* Using its edges as referencials, creating "margins"
+* Using its edges as referencials, creating "paddings"
 * Proportionally, based on a referencial position
 
 ```php
@@ -232,8 +232,8 @@ use Hjpbarcelos\GdWrapper\Action\CropMode\FixedPoints as CropFixedPoints;
 
 use Hjpbarcelos\GdWrapper\Geometry\Point;
 
-use Hjpbarcelos\GdWrapper\Geometry\Margin\Fixed as FixedMargin;
-use Hjpbarcelos\GdWrapper\Geometry\Margin\Proportional as ProportionalMargin;
+use Hjpbarcelos\GdWrapper\Geometry\Padding\Fixed as FixedPadding;
+use Hjpbarcelos\GdWrapper\Geometry\Padding\Proportional as ProportionalPadding;
 
 use Hjpbarcelos\GdWrapper\Geometry\Position\FixedPoint as FixedPointPosition;
 use Hjpbarcelos\GdWrapper\Geometry\Position\Aligned as AlignedPosition;
@@ -288,7 +288,7 @@ $cropAction = new Crop($cropMode);
 $crop->execute($objResource1);
 
 
-/* Margin cropping can be done using fixed margins...
+/* Padding cropping can be done using fixed paddings...
  *
  * Will Generate a 1720x880 image, cropping out 100 px from each side of the original image.
  *
@@ -315,13 +315,13 @@ $crop->execute($objResource1);
  *                                                           v
  *                                                         1080 px
  */
-$margin = new FixedMargin(100); // --> same margin for both sides
-// To use different vertical and horizontal margins: new FixedMargin(100, 200) --> 100 px on vert. and 200 horiz.
-// To use 4 different margins: new FixedMargin(100, 200, 50, 80) --> top, right, bottom, left
-$cropMode = new CropFromEdges($margin);
+$padding = new FixedPadding(100); // --> same padding for both sides
+// To use different vertical and horizontal paddings: new FixedPadding(100, 200) --> 100 px on vert. and 200 horiz.
+// To use 4 different paddings: new FixedPadding(100, 200, 50, 80) --> top, right, bottom, left
+$cropMode = new CropFromEdges($padding);
 $crop->execute($objResource2);
 
-/* ... or it can be done with proportional margins.
+/* ... or it can be done with proportional paddings.
  * The proportion will be relative to the original image dimensions.
  *
  * Imagine this:
@@ -347,9 +347,9 @@ $crop->execute($objResource2);
  *                                                           v
  *                                                         1200 px
  */
-$margin = new ProportionalMargin(0.1); // 10%
-// Different margins can be used just like the example above
-$cropMode = new CropFromEdges($margin);
+$padding = new ProportionalPadding(0.1); // 10%
+// Different paddings can be used just like the example above
+$cropMode = new CropFromEdges($padding);
 $crop->execute($objResource3);
 
 /* FixedDimensionsCrop is a Positioned cropping mode.
